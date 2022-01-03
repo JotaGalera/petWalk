@@ -25,6 +25,7 @@
 		3543502827832D920024FB5A /* petWalk_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543502727832D920024FB5A /* petWalk_WatchKit_AppTests.swift */; };
 		3543503227832D920024FB5A /* petWalk_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543503127832D920024FB5A /* petWalk_WatchKit_AppUITests.swift */; };
 		3543503427832D920024FB5A /* petWalk_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543503327832D920024FB5A /* petWalk_WatchKit_AppUITestsLaunchTests.swift */; };
+		3543504F27833D830024FB5A /* Images.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3543504E27833D830024FB5A /* Images.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		3543502D27832D920024FB5A /* petWalk WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "petWalk WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3543503127832D920024FB5A /* petWalk_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petWalk_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		3543503327832D920024FB5A /* petWalk_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petWalk_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3543504E27833D830024FB5A /* Images.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Images.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 		3543501227832D910024FB5A /* petWalk WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3543504E27833D830024FB5A /* Images.atlas */,
 				3543501327832D910024FB5A /* ContentView.swift */,
 				3543501527832D910024FB5A /* petWalkApp.swift */,
 				3543501727832D910024FB5A /* ComplicationController.swift */,
@@ -505,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3543504F27833D830024FB5A /* Images.atlas in Resources */,
 				3543501D27832D920024FB5A /* Preview Assets.xcassets in Resources */,
 				3543501A27832D920024FB5A /* Assets.xcassets in Resources */,
 			);
