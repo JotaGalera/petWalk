@@ -1,6 +1,6 @@
 # Pet Walk
 
-It is un project to create a virtual pet that grows depending on your daily steps
+It is a project in order to simulate a virtual pet that grows depending on your daily steps.
 
 # Credits: 
 
