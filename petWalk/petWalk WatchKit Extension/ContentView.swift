@@ -8,33 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Spacer()
-            PetScene(petImageName: "pet",
-                     petName: "Beldrick")
-            Spacer()
-            StatusBarMenu()
-        }
-    }
-}
-
-struct PetScene: View {
-    let width: CGFloat = 80
-    let height: CGFloat = 80
-    var petImageName: String
-    var petName: String
+    let petMock = Swordman(name: "Beldrick")
     
     var body: some View {
         VStack {
-            Text(petName)
-                .bold()
-            Spacer().frame(height: 15)
-            Image(petImageName)
-                .resizable()
-                .frame(width: width,
-                       height: height,
-                       alignment: .center)
+            Spacer()
+            
+            petAnimationScene(pet: petMock)
+            
+            Spacer()
+            
+            StatusBarMenu()
         }
     }
 }
