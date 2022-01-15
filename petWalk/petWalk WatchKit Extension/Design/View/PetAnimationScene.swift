@@ -26,7 +26,8 @@ struct petAnimationScene: View {
                        height: height,
                        alignment: .center)
                 .onAppear {
-                    Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+                    Timer.scheduledTimer(withTimeInterval: 0.1,
+                                         repeats: true) { timer in
                         withAnimation() {
                             self.count = count == 7 ? 0 : count + 1
                         }

@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    let petMock = Swordman(name: "Beldrick")
+    private let petMock = Swordman(name: "Beldrick")
+    private let healthStore: HealthStore
+    @ObservedObject var contentViewModel: ContentViewModel
+    
+    init() {
+        healthStore = HealthStore()
+        contentViewModel = ContentViewModel(healthStore: healthStore)
+    }
     
     var body: some View {
         VStack {
             Spacer()
-            
+            Text(String(contentViewModel.currentSteps))
             petAnimationScene(pet: petMock)
             
             Spacer()
             
             StatusBarMenu()
+        }
+        .onAppear {
+            contentViewModel.requestPermissions()
         }
     }
 }
