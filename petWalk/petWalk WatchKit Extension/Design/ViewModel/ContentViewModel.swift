@@ -8,22 +8,29 @@
 import Foundation
 
 class ContentViewModel: ObservableObject {
-    @Published var currentSteps: Double = 0
-    var healthStore: HealthStore
+    @Published var currentSteps: Int = 0
     
-    init(healthStore: HealthStore) {
-        self.healthStore = healthStore
+    private var requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase
+    private var saveDailyStepsUseCase: SaveDailyStepsUseCase
+    private var getDailyStepsUseCase: GetDailyStepsUseCase
+    
+    init(requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase, saveDailyStepsUseCase: SaveDailyStepsUseCase, getDailyStepsUseCase: GetDailyStepsUseCase) {
+        self.requestDailyStepsPermissionUseCase = requestDailyStepsPermissionUseCase
+        self.saveDailyStepsUseCase = saveDailyStepsUseCase
+        self.getDailyStepsUseCase = getDailyStepsUseCase
         
-        healthStore.getTodaysSteps { steps in
+        getDailyStepsUseCase.getTodaySteps { steps in
+            self.saveDailyStepsUseCase.saveDailySteps(steps)
             self.currentSteps = steps
         }
     }
     
     func requestPermissions() {
-        healthStore.requestAuthorization { request in
-            if request {
-                self.healthStore.getTodaysSteps { steps in
+        requestDailyStepsPermissionUseCase.execute { authorization in
+            if authorization {
+                self.getDailyStepsUseCase.getTodaySteps { steps in
                     self.currentSteps = steps
+                    self.saveDailyStepsUseCase.saveDailySteps(steps)
                 }
             }
         }

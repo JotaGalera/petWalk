@@ -8,7 +8,12 @@
 import Foundation
 import HealthKit
 
-class HealthStore {
+protocol HealthStoreDataSource {
+    func requestAuthorization(completion: @escaping (Bool) -> Void)
+    func getTodaySteps(completion: @escaping (Int) -> Void)
+}
+
+class HealthStoreDataSourceImplementation: HealthStoreDataSource {
     var healthStore: HKHealthStore?
     
     init() {
@@ -27,7 +32,7 @@ class HealthStore {
         }
     }
     
-    func getTodaysSteps(completion: @escaping (Double) -> Void) {
+    func getTodaySteps(completion: @escaping (Int) -> Void) {
         let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         
         let now = Date()
@@ -40,10 +45,11 @@ class HealthStore {
                                       quantitySamplePredicate: predicate,
                                       options: .cumulativeSum) { _, result, _ in
             guard let result = result, let sum = result.sumQuantity() else {
-                completion(0.0)
+                completion(0)
                 return
             }
-            completion(sum.doubleValue(for: HKUnit.count()))
+            let steps = Int(sum.doubleValue(for: HKUnit.count()))
+            completion(steps)
         }
         
         healthStore?.execute(query)

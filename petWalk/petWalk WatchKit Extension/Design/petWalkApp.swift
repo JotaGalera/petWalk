@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct petWalkApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {

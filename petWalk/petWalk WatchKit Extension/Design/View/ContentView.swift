@@ -9,12 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     private let petMock = Swordman(name: "Beldrick")
-    private let healthStore: HealthStore
+    private let contentViewConfigurator = ContentViewConfigurator()
     @ObservedObject var contentViewModel: ContentViewModel
     
     init() {
-        healthStore = HealthStore()
-        contentViewModel = ContentViewModel(healthStore: healthStore)
+        self.contentViewModel = contentViewConfigurator.configure()
     }
     
     var body: some View {
@@ -64,6 +63,8 @@ struct ItemBarMenu: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    let contentViewModel = ContentViewConfigurator().configure()
+    
     static var previews: some View {
         ContentView()
     }
