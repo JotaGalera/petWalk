@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetDailyStepsUseCase {
-    func getTodaySteps(completion: @escaping (Int) -> Void)
+    func execute(completion: @escaping (Int) -> Void)
 }
 
 class GetDailyStepsUseCaseImplementation: GetDailyStepsUseCase {
@@ -18,7 +18,7 @@ class GetDailyStepsUseCaseImplementation: GetDailyStepsUseCase {
         self.repository = repository
     }
     
-    func getTodaySteps(completion: @escaping (Int) -> Void) {
+    func execute(completion: @escaping (Int) -> Void) {
         repository.getTodaySteps(completion: completion)
     }
 }

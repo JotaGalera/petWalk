@@ -19,8 +19,8 @@ class ContentViewModel: ObservableObject {
         self.saveDailyStepsUseCase = saveDailyStepsUseCase
         self.getDailyStepsUseCase = getDailyStepsUseCase
         
-        getDailyStepsUseCase.getTodaySteps { steps in
-            self.saveDailyStepsUseCase.saveDailySteps(steps)
+        getDailyStepsUseCase.execute { steps in
+            self.saveDailyStepsUseCase.execute(steps)
             self.currentSteps = steps
         }
     }
@@ -28,9 +28,9 @@ class ContentViewModel: ObservableObject {
     func requestPermissions() {
         requestDailyStepsPermissionUseCase.execute { authorization in
             if authorization {
-                self.getDailyStepsUseCase.getTodaySteps { steps in
+                self.getDailyStepsUseCase.execute { steps in
                     self.currentSteps = steps
-                    self.saveDailyStepsUseCase.saveDailySteps(steps)
+                    self.saveDailyStepsUseCase.execute(steps)
                 }
             }
         }
