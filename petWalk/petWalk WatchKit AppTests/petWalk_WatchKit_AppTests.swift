@@ -4,7 +4,6 @@
 //
 //  Created by Galera, Javier on 3/1/22.
 //
-asdfasdf
 import XCTest
 @testable import petWalk_WatchKit_Extension
 

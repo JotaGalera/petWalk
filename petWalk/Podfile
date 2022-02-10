@@ -1,11 +1,32 @@
-platform :ios, '14.0'
+$ios_deployment_target = '14.0'
+$watchos_deployment_target = '8.0'
+use_frameworks!
+inhibit_all_warnings!
 
 def default_pods 
   pod 'Sourcery'
 end
 
 target 'petWalk' do
-  use_frameworks!
+  platform :ios, $deployment_target
+  default_pods
+
+  target 'petWalkTests' do
+    inherit! :search_paths
+  end
+
+  target 'petWalkUITests' do
+    inherit! :search_paths
+  end
+
+end
+
+target 'petWalk WatchKit App' do
+  platform :watchos, $watchos_deployment_target
+end 
+
+target 'petWalk WatchKit Extension' do
+  platform :watchos, $watchos_deployment_target
   default_pods
 
   target 'petWalk WatchKit AppTests' do
@@ -14,38 +35,6 @@ target 'petWalk' do
   end
 
   target 'petWalk WatchKit AppUITests' do
-  end
-
-  target 'petWalkTests' do
     inherit! :search_paths
   end
-
-  target 'petWalkUITests' do
-  end
-
 end
-
-# target 'petWalk WatchKit App' do
-#   # Comment the next line if you don't want to use dynamic frameworks
-#   use_frameworks!
-
-#   # Pods for petWalk WatchKit App
-
-#   target 'petWalk WatchKit AppTests' do
-#     inherit! :search_paths
-#     # Pods for testing
-#   end
-
-#   target 'petWalk WatchKit AppUITests' do
-#     # Pods for testing
-#   end
-
-# end
-
-# target 'petWalk WatchKit Extension' do
-#   # Comment the next line if you don't want to use dynamic frameworks
-#   use_frameworks!
-
-#   # Pods for petWalk WatchKit Extension
-
-# end

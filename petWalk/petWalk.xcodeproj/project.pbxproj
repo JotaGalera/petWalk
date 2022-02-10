@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D4F45AAF4B0FFC180875DB5 /* Pods_petWalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0722FACF4D8D98479DD3F20 /* Pods_petWalk.framework */; };
-		2FD157BD2432B36062CEAA7F /* Pods_petWalk_petWalkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FBAE845E2DE15EBCD62B3B /* Pods_petWalk_petWalkUITests.framework */; };
+		21E38BE86C850874828E4AF9 /* Pods_petWalkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DE13B055A0DF53CC3B0EA0 /* Pods_petWalkUITests.framework */; };
+		32ED5553E31C593978A5E387 /* Pods_petWalk_WatchKit_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83F569D0B9C2447E5D1FFFB /* Pods_petWalk_WatchKit_AppUITests.framework */; };
+		353A6CFA27B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353A6CF927B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework */; };
+		353A6CFB27B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 353A6CF927B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		353A6CFE27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353A6CFD27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework */; };
+		353A6CFF27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 353A6CFD27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35434FE327832D8E0024FB5A /* petWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35434FE227832D8E0024FB5A /* petWalkApp.swift */; };
 		35434FE527832D8E0024FB5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35434FE427832D8E0024FB5A /* ContentView.swift */; };
 		35434FE727832D8F0024FB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35434FE627832D8F0024FB5A /* Assets.xcassets */; };
@@ -40,9 +44,9 @@
 		35969397278B4E2A00B68BEF /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35969396278B4E2A00B68BEF /* ContentViewModel.swift */; };
 		35AB46FF278A185000401FB7 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB46FE278A185000401FB7 /* Pets.swift */; };
 		35FE1DBC2789C7060087ECCA /* PetAnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */; };
-		5412445FC97F1052D03ED8FA /* Pods_petWalk_WatchKit_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6A101F477AB040B3876653 /* Pods_petWalk_WatchKit_AppTests.framework */; };
-		6F84A195A584D81AD01CA2CF /* Pods_petWalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D19AC624E8F71ADA3BFA186 /* Pods_petWalkTests.framework */; };
-		A207964BEBE0D2E832329E53 /* Pods_petWalk_petWalk_WatchKit_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997A31AED3C138A21A0D04C /* Pods_petWalk_petWalk_WatchKit_AppUITests.framework */; };
+		CD98E4EBE9F8F579E47D4900 /* Pods_petWalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F6B8B69770B55CB8E925A4 /* Pods_petWalk.framework */; };
+		E68C8BDA93A1783ED7C6001B /* Pods_petWalk_WatchKit_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C9CD3749795D06FD89B382 /* Pods_petWalk_WatchKit_AppTests.framework */; };
+		EA467E04ABA45F2349AF97E4 /* Pods_petWalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A732039BB8903FFD0828672A /* Pods_petWalkTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		353A6CFC27B5C60F0076FB92 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				353A6CFB27B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		353A6D0027B5C6180076FB92 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				353A6CFF27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3543503A27832D920024FB5A /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,10 +142,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		038F71223C660C32A7568220 /* Pods-petWalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkTests.release.xcconfig"; path = "Target Support Files/Pods-petWalkTests/Pods-petWalkTests.release.xcconfig"; sourceTree = "<group>"; };
-		1D1AB42D129F9B6F61FED599 /* Pods-petWalk-petWalkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk-petWalkUITests.debug.xcconfig"; path = "Target Support Files/Pods-petWalk-petWalkUITests/Pods-petWalk-petWalkUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1F78CDA5F8B313CC0024FD8E /* Pods-petWalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkTests.debug.xcconfig"; path = "Target Support Files/Pods-petWalkTests/Pods-petWalkTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2B17F8DF74B94C5BFF0FEEBB /* Pods-petWalk WatchKit AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit AppTests.debug.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit AppTests/Pods-petWalk WatchKit AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C6E61C4ECF6610782E45A94 /* Pods-petWalkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkUITests.debug.xcconfig"; path = "Target Support Files/Pods-petWalkUITests/Pods-petWalkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		230C2228881AA3C4C45A7BF1 /* Pods-petWalkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkUITests.release.xcconfig"; path = "Target Support Files/Pods-petWalkUITests/Pods-petWalkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		25817A511D849BE1016DC106 /* Pods_petWalk_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		324381D4EE5BD9199D0C6D13 /* Pods-petWalk WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit Extension/Pods-petWalk WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		353A6CF927B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_petWalk_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		353A6CFD27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_petWalk_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35434FDF27832D8E0024FB5A /* petWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35434FE227832D8E0024FB5A /* petWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petWalkApp.swift; sourceTree = "<group>"; };
 		35434FE427832D8E0024FB5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,17 +187,23 @@
 		35969396278B4E2A00B68BEF /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		35AB46FE278A185000401FB7 /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
 		35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAnimationScene.swift; sourceTree = "<group>"; };
-		3997A31AED3C138A21A0D04C /* Pods_petWalk_petWalk_WatchKit_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_petWalk_WatchKit_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D7C7E33778EF44C2B720356 /* Pods-petWalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk.debug.xcconfig"; path = "Target Support Files/Pods-petWalk/Pods-petWalk.debug.xcconfig"; sourceTree = "<group>"; };
-		5D19AC624E8F71ADA3BFA186 /* Pods_petWalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		71FBAE845E2DE15EBCD62B3B /* Pods_petWalk_petWalkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_petWalkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		832C7595970654EDC53B8C75 /* Pods-petWalk-petWalk WatchKit AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk-petWalk WatchKit AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-petWalk-petWalk WatchKit AppUITests/Pods-petWalk-petWalk WatchKit AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B9D4AA181DC3F053F4AEC76B /* Pods-petWalk WatchKit AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit AppTests.release.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit AppTests/Pods-petWalk WatchKit AppTests.release.xcconfig"; sourceTree = "<group>"; };
-		CA9E4B58F260E31CBDF1F0DC /* Pods-petWalk-petWalk WatchKit AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk-petWalk WatchKit AppUITests.release.xcconfig"; path = "Target Support Files/Pods-petWalk-petWalk WatchKit AppUITests/Pods-petWalk-petWalk WatchKit AppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D0722FACF4D8D98479DD3F20 /* Pods_petWalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC6A101F477AB040B3876653 /* Pods_petWalk_WatchKit_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1FEDC6E227E6C0D37C44D43 /* Pods-petWalk-petWalkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk-petWalkUITests.release.xcconfig"; path = "Target Support Files/Pods-petWalk-petWalkUITests/Pods-petWalk-petWalkUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F88823972E45B57153754288 /* Pods-petWalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk.release.xcconfig"; path = "Target Support Files/Pods-petWalk/Pods-petWalk.release.xcconfig"; sourceTree = "<group>"; };
+		412373C1210C25B4875A19BD /* Pods-petWalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkTests.release.xcconfig"; path = "Target Support Files/Pods-petWalkTests/Pods-petWalkTests.release.xcconfig"; sourceTree = "<group>"; };
+		44E9E6C17E0C426D8B17A495 /* Pods-petWalk WatchKit AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit AppTests.debug.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit AppTests/Pods-petWalk WatchKit AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D9B7CC8FF28E0F1115737B7 /* Pods-petWalk WatchKit AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit AppUITests/Pods-petWalk WatchKit AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E2818429F9B1615AD4C18C6 /* Pods-petWalk WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit App/Pods-petWalk WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		67CC37C0BEFA6D0B97663BB7 /* Pods-petWalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkTests.debug.xcconfig"; path = "Target Support Files/Pods-petWalkTests/Pods-petWalkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		871D7D1AECC1F4D457115CFD /* Pods-petWalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk.release.xcconfig"; path = "Target Support Files/Pods-petWalk/Pods-petWalk.release.xcconfig"; sourceTree = "<group>"; };
+		87DE13B055A0DF53CC3B0EA0 /* Pods_petWalkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		902D191EE7C79228617C0D39 /* Pods-petWalk WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit App/Pods-petWalk WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		994BBD1D6499A293DCF5E844 /* Pods-petWalk WatchKit AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit AppUITests.release.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit AppUITests/Pods-petWalk WatchKit AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		997C401A80CDE3EB3068F571 /* Pods-petWalk WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit Extension/Pods-petWalk WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9AA39CB7CABAB7EFE4048036 /* Pods_petWalk_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0F6B8B69770B55CB8E925A4 /* Pods_petWalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C9CD3749795D06FD89B382 /* Pods_petWalk_WatchKit_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A732039BB8903FFD0828672A /* Pods_petWalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C5ECA9EE0EBF23510159DE /* Pods-petWalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk.debug.xcconfig"; path = "Target Support Files/Pods-petWalk/Pods-petWalk.debug.xcconfig"; sourceTree = "<group>"; };
+		D83F569D0B9C2447E5D1FFFB /* Pods_petWalk_WatchKit_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08E4D9C848EE5A8C7233163 /* Pods-petWalk WatchKit AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalk WatchKit AppTests.release.xcconfig"; path = "Target Support Files/Pods-petWalk WatchKit AppTests/Pods-petWalk WatchKit AppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3596938F278B473400B68BEF /* HealthKit.framework in Frameworks */,
-				2D4F45AAF4B0FFC180875DB5 /* Pods_petWalk.framework in Frameworks */,
+				CD98E4EBE9F8F579E47D4900 /* Pods_petWalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F84A195A584D81AD01CA2CF /* Pods_petWalkTests.framework in Frameworks */,
+				EA467E04ABA45F2349AF97E4 /* Pods_petWalkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FD157BD2432B36062CEAA7F /* Pods_petWalk_petWalkUITests.framework in Frameworks */,
+				21E38BE86C850874828E4AF9 /* Pods_petWalkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353A6CFA27B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework in Frameworks */,
 				35969392278B47A300B68BEF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5412445FC97F1052D03ED8FA /* Pods_petWalk_WatchKit_AppTests.framework in Frameworks */,
+				E68C8BDA93A1783ED7C6001B /* Pods_petWalk_WatchKit_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A207964BEBE0D2E832329E53 /* Pods_petWalk_petWalk_WatchKit_AppUITests.framework in Frameworks */,
+				32ED5553E31C593978A5E387 /* Pods_petWalk_WatchKit_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353A6CFE27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,16 +271,20 @@
 		0C6BBB52D519BB6B2174E18F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4D7C7E33778EF44C2B720356 /* Pods-petWalk.debug.xcconfig */,
-				F88823972E45B57153754288 /* Pods-petWalk.release.xcconfig */,
-				2B17F8DF74B94C5BFF0FEEBB /* Pods-petWalk WatchKit AppTests.debug.xcconfig */,
-				B9D4AA181DC3F053F4AEC76B /* Pods-petWalk WatchKit AppTests.release.xcconfig */,
-				832C7595970654EDC53B8C75 /* Pods-petWalk-petWalk WatchKit AppUITests.debug.xcconfig */,
-				CA9E4B58F260E31CBDF1F0DC /* Pods-petWalk-petWalk WatchKit AppUITests.release.xcconfig */,
-				1D1AB42D129F9B6F61FED599 /* Pods-petWalk-petWalkUITests.debug.xcconfig */,
-				F1FEDC6E227E6C0D37C44D43 /* Pods-petWalk-petWalkUITests.release.xcconfig */,
-				1F78CDA5F8B313CC0024FD8E /* Pods-petWalkTests.debug.xcconfig */,
-				038F71223C660C32A7568220 /* Pods-petWalkTests.release.xcconfig */,
+				D0C5ECA9EE0EBF23510159DE /* Pods-petWalk.debug.xcconfig */,
+				871D7D1AECC1F4D457115CFD /* Pods-petWalk.release.xcconfig */,
+				902D191EE7C79228617C0D39 /* Pods-petWalk WatchKit App.debug.xcconfig */,
+				4E2818429F9B1615AD4C18C6 /* Pods-petWalk WatchKit App.release.xcconfig */,
+				44E9E6C17E0C426D8B17A495 /* Pods-petWalk WatchKit AppTests.debug.xcconfig */,
+				E08E4D9C848EE5A8C7233163 /* Pods-petWalk WatchKit AppTests.release.xcconfig */,
+				4D9B7CC8FF28E0F1115737B7 /* Pods-petWalk WatchKit AppUITests.debug.xcconfig */,
+				994BBD1D6499A293DCF5E844 /* Pods-petWalk WatchKit AppUITests.release.xcconfig */,
+				324381D4EE5BD9199D0C6D13 /* Pods-petWalk WatchKit Extension.debug.xcconfig */,
+				997C401A80CDE3EB3068F571 /* Pods-petWalk WatchKit Extension.release.xcconfig */,
+				67CC37C0BEFA6D0B97663BB7 /* Pods-petWalkTests.debug.xcconfig */,
+				412373C1210C25B4875A19BD /* Pods-petWalkTests.release.xcconfig */,
+				0C6E61C4ECF6610782E45A94 /* Pods-petWalkUITests.debug.xcconfig */,
+				230C2228881AA3C4C45A7BF1 /* Pods-petWalkUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -397,13 +437,17 @@
 		3596938D278B473400B68BEF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				353A6CFD27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework */,
+				353A6CF927B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework */,
 				35969391278B47A300B68BEF /* HealthKit.framework */,
 				3596938E278B473400B68BEF /* HealthKit.framework */,
-				D0722FACF4D8D98479DD3F20 /* Pods_petWalk.framework */,
-				DC6A101F477AB040B3876653 /* Pods_petWalk_WatchKit_AppTests.framework */,
-				3997A31AED3C138A21A0D04C /* Pods_petWalk_petWalk_WatchKit_AppUITests.framework */,
-				71FBAE845E2DE15EBCD62B3B /* Pods_petWalk_petWalkUITests.framework */,
-				5D19AC624E8F71ADA3BFA186 /* Pods_petWalkTests.framework */,
+				A0F6B8B69770B55CB8E925A4 /* Pods_petWalk.framework */,
+				A3C9CD3749795D06FD89B382 /* Pods_petWalk_WatchKit_AppTests.framework */,
+				A732039BB8903FFD0828672A /* Pods_petWalkTests.framework */,
+				9AA39CB7CABAB7EFE4048036 /* Pods_petWalk_WatchKit_Extension.framework */,
+				D83F569D0B9C2447E5D1FFFB /* Pods_petWalk_WatchKit_AppUITests.framework */,
+				87DE13B055A0DF53CC3B0EA0 /* Pods_petWalkUITests.framework */,
+				25817A511D849BE1016DC106 /* Pods_petWalk_WatchKit_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -549,9 +593,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3543503B27832D920024FB5A /* Build configuration list for PBXNativeTarget "petWalk WatchKit App" */;
 			buildPhases = (
+				DB804F547A630DCD0BBAC112 /* [CP] Check Pods Manifest.lock */,
 				3543500127832D900024FB5A /* Resources */,
 				3543503A27832D920024FB5A /* Embed App Extensions */,
 				C446CC7F364E1857381702B9 /* Frameworks */,
+				353A6D0027B5C6180076FB92 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -567,9 +613,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3543503727832D920024FB5A /* Build configuration list for PBXNativeTarget "petWalk WatchKit Extension" */;
 			buildPhases = (
+				BEE9DE526DA1FF5DB02D687A /* [CP] Check Pods Manifest.lock */,
 				3543500A27832D910024FB5A /* Sources */,
 				3543500B27832D910024FB5A /* Frameworks */,
 				3543500C27832D910024FB5A /* Resources */,
+				353A6CFC27B5C60F0076FB92 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -753,7 +801,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Pods/Sourcery/bin/sourcery --sources ./petWalk --templates ./AutoMockable.stencil --output ./Autogenerated\n";
+			shellScript = "#Pods/Sourcery/bin/sourcery --sources ./petWalk --templates ./AutoMockable.stencil --output ./Autogenerated\n\n";
 		};
 		3937785C16BB9DBC133CB281 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -792,7 +840,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-petWalk-petWalkUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-petWalkUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -836,7 +884,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-petWalk-petWalk WatchKit AppUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-petWalk WatchKit AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEE9DE526DA1FF5DB02D687A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-petWalk WatchKit Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -859,6 +929,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-petWalk WatchKit AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB804F547A630DCD0BBAC112 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-petWalk WatchKit App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1081,6 +1173,7 @@
 		};
 		3543503827832D920024FB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324381D4EE5BD9199D0C6D13 /* Pods-petWalk WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "petWalk WatchKit Extension/petWalk WatchKit Extension.entitlements";
@@ -1116,6 +1209,7 @@
 		};
 		3543503927832D920024FB5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 997C401A80CDE3EB3068F571 /* Pods-petWalk WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "petWalk WatchKit Extension/petWalk WatchKit Extension.entitlements";
@@ -1152,6 +1246,7 @@
 		};
 		3543503C27832D920024FB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 902D191EE7C79228617C0D39 /* Pods-petWalk WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1164,6 +1259,10 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "petWalk WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.JavierGalera.petWalk;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JavierGalera.petWalk.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1178,6 +1277,7 @@
 		};
 		3543503D27832D920024FB5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E2818429F9B1615AD4C18C6 /* Pods-petWalk WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1190,6 +1290,10 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "petWalk WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.JavierGalera.petWalk;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JavierGalera.petWalk.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1205,7 +1309,7 @@
 		};
 		3543504027832D920024FB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D7C7E33778EF44C2B720356 /* Pods-petWalk.debug.xcconfig */;
+			baseConfigurationReference = D0C5ECA9EE0EBF23510159DE /* Pods-petWalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1238,7 +1342,7 @@
 		};
 		3543504127832D920024FB5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F88823972E45B57153754288 /* Pods-petWalk.release.xcconfig */;
+			baseConfigurationReference = 871D7D1AECC1F4D457115CFD /* Pods-petWalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1272,7 +1376,7 @@
 		};
 		3543504327832D920024FB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F78CDA5F8B313CC0024FD8E /* Pods-petWalkTests.debug.xcconfig */;
+			baseConfigurationReference = 67CC37C0BEFA6D0B97663BB7 /* Pods-petWalkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1294,7 +1398,7 @@
 		};
 		3543504427832D920024FB5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 038F71223C660C32A7568220 /* Pods-petWalkTests.release.xcconfig */;
+			baseConfigurationReference = 412373C1210C25B4875A19BD /* Pods-petWalkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1317,7 +1421,7 @@
 		};
 		3543504627832D920024FB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D1AB42D129F9B6F61FED599 /* Pods-petWalk-petWalkUITests.debug.xcconfig */;
+			baseConfigurationReference = 0C6E61C4ECF6610782E45A94 /* Pods-petWalkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1338,7 +1442,7 @@
 		};
 		3543504727832D920024FB5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1FEDC6E227E6C0D37C44D43 /* Pods-petWalk-petWalkUITests.release.xcconfig */;
+			baseConfigurationReference = 230C2228881AA3C4C45A7BF1 /* Pods-petWalkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1360,7 +1464,7 @@
 		};
 		3543504927832D920024FB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B17F8DF74B94C5BFF0FEEBB /* Pods-petWalk WatchKit AppTests.debug.xcconfig */;
+			baseConfigurationReference = 44E9E6C17E0C426D8B17A495 /* Pods-petWalk WatchKit AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1382,7 +1486,7 @@
 		};
 		3543504A27832D920024FB5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9D4AA181DC3F053F4AEC76B /* Pods-petWalk WatchKit AppTests.release.xcconfig */;
+			baseConfigurationReference = E08E4D9C848EE5A8C7233163 /* Pods-petWalk WatchKit AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1405,7 +1509,7 @@
 		};
 		3543504C27832D920024FB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 832C7595970654EDC53B8C75 /* Pods-petWalk-petWalk WatchKit AppUITests.debug.xcconfig */;
+			baseConfigurationReference = 4D9B7CC8FF28E0F1115737B7 /* Pods-petWalk WatchKit AppUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1425,7 +1529,7 @@
 		};
 		3543504D27832D920024FB5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA9E4B58F260E31CBDF1F0DC /* Pods-petWalk-petWalk WatchKit AppUITests.release.xcconfig */;
+			baseConfigurationReference = 994BBD1D6499A293DCF5E844 /* Pods-petWalk WatchKit AppUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
