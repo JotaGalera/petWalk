@@ -21,20 +21,20 @@ target 'petWalk' do
 
 end
 
-target 'petWalk WatchKit App' do
+target 'petWalkWatchKitApp' do
   platform :watchos, $watchos_deployment_target
 end 
 
-target 'petWalk WatchKit Extension' do
+target 'petWalkWatchKitExtension' do
   platform :watchos, $watchos_deployment_target
   default_pods
 
-  target 'petWalk WatchKit AppTests' do
+  target 'petWalkWatchKitAppTests' do
     inherit! :search_paths
     default_pods
   end
 
-  target 'petWalk WatchKit AppUITests' do
+  target 'petWalkWatchKitAppUITests' do
     inherit! :search_paths
   end
 end

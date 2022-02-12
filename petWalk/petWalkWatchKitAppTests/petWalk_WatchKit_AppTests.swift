@@ -5,7 +5,7 @@
 //  Created by Galera, Javier on 3/1/22.
 //
 import XCTest
-@testable import petWalk_WatchKit_Extension
+@testable import petWalkWatchKitExtension
 
 class petWalk_WatchKit_AppTests: XCTestCase {
 

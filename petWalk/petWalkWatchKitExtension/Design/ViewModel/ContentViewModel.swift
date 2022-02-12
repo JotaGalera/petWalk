@@ -29,7 +29,9 @@ class ContentViewModel: ObservableObject {
         requestDailyStepsPermissionUseCase.execute { authorization in
             if authorization {
                 self.getDailyStepsUseCase.execute { steps in
-                    self.currentSteps = steps
+                    DispatchQueue.main.async {
+                        self.currentSteps = steps
+                    }
                     self.saveDailyStepsUseCase.execute(steps)
                 }
             }

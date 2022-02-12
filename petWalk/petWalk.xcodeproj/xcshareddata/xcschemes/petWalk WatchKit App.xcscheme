@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3543500227832D900024FB5A"
-               BuildableName = "petWalk WatchKit App.app"
-               BlueprintName = "petWalk WatchKit App"
+               BuildableName = "petWalkWatchKitApp.app"
+               BlueprintName = "petWalkWatchKitApp"
                ReferencedContainer = "container:petWalk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3543502227832D920024FB5A"
-               BuildableName = "petWalk WatchKit AppTests.xctest"
-               BlueprintName = "petWalk WatchKit AppTests"
+               BuildableName = "petWalkWatchKitAppTests.xctest"
+               BlueprintName = "petWalkWatchKitAppTests"
                ReferencedContainer = "container:petWalk.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,8 +57,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3543502C27832D920024FB5A"
-               BuildableName = "petWalk WatchKit AppUITests.xctest"
-               BlueprintName = "petWalk WatchKit AppUITests"
+               BuildableName = "petWalkWatchKitAppUITests.xctest"
+               BlueprintName = "petWalkWatchKitAppUITests"
                ReferencedContainer = "container:petWalk.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -79,8 +79,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3543500227832D900024FB5A"
-            BuildableName = "petWalk WatchKit App.app"
-            BlueprintName = "petWalk WatchKit App"
+            BuildableName = "petWalkWatchKitApp.app"
+            BlueprintName = "petWalkWatchKitApp"
             ReferencedContainer = "container:petWalk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,8 +96,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3543500227832D900024FB5A"
-            BuildableName = "petWalk WatchKit App.app"
-            BlueprintName = "petWalk WatchKit App"
+            BuildableName = "petWalkWatchKitApp.app"
+            BlueprintName = "petWalkWatchKitApp"
             ReferencedContainer = "container:petWalk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

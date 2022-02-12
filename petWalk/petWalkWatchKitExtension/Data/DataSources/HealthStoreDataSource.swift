@@ -8,7 +8,7 @@
 import Foundation
 import HealthKit
 
-protocol HealthStoreDataSource {
+protocol HealthStoreDataSource: AutoMockable {
     func requestAuthorization(completion: @escaping (Bool) -> Void)
     func getTodaySteps(completion: @escaping (Int) -> Void)
 }

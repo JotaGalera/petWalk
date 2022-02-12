@@ -1,6 +1,6 @@
 import Foundation
 
-protocol HealthStoreRepository {
+protocol HealthStoreRepository: AutoMockable {
     func requestAuthorization(completion: @escaping (Bool) -> Void)
     func getTodaySteps(completion: @escaping (Int) -> Void)
 }

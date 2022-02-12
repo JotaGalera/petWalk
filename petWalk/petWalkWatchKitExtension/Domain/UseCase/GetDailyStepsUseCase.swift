@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol GetDailyStepsUseCase {
+protocol GetDailyStepsUseCase: AutoMockable {
     func execute(completion: @escaping (Int) -> Void)
 }
 

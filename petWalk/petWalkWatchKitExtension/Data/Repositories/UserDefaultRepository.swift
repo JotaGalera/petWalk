@@ -1,6 +1,6 @@
 import Foundation
 
-protocol UserDefaultRepository {
+protocol UserDefaultRepository: AutoMockable {
     func saveDailySteps(_ steps: Int)
 }
 

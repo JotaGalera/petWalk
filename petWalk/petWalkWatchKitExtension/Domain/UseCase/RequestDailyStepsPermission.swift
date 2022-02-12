@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RequestDailyStepsPermissionUseCase {
+protocol RequestDailyStepsPermissionUseCase: AutoMockable {
     func execute(completion: @escaping (Bool) -> Void)
 }
 

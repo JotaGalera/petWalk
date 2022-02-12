@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3543500227832D900024FB5A"
-               BuildableName = "petWalk WatchKit App.app"
-               BlueprintName = "petWalk WatchKit App"
+               BuildableName = "petWalkWatchKitApp.app"
+               BlueprintName = "petWalkWatchKitApp"
                ReferencedContainer = "container:petWalk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -60,8 +60,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3543500227832D900024FB5A"
-            BuildableName = "petWalk WatchKit App.app"
-            BlueprintName = "petWalk WatchKit App"
+            BuildableName = "petWalkWatchKitApp.app"
+            BlueprintName = "petWalkWatchKitApp"
             ReferencedContainer = "container:petWalk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -78,8 +78,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3543500227832D900024FB5A"
-            BuildableName = "petWalk WatchKit App.app"
-            BlueprintName = "petWalk WatchKit App"
+            BuildableName = "petWalkWatchKitApp.app"
+            BlueprintName = "petWalkWatchKitApp"
             ReferencedContainer = "container:petWalk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
