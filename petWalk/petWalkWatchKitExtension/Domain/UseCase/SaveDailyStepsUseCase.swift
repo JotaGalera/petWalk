@@ -5,9 +5,9 @@ protocol SaveDailyStepsUseCase: AutoMockable {
 }
 
 class SaveDailyStepsUseCaseImplementation: SaveDailyStepsUseCase {
-    private var repository: UserDefaultRepository
+    private var repository: UserDefaultsRepository
     
-    public init(repository: UserDefaultRepository) {
+    public init(repository: UserDefaultsRepository) {
         self.repository = repository
     }
     

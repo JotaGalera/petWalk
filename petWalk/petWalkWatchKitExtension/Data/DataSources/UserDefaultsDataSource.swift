@@ -1,18 +1,22 @@
 import Foundation
 
-protocol UserDefaultDataSource {
-    func get<T>(forKey: String) -> T?
-    func set<T>(value: T, forKey: String)
+protocol UserDefaultsDataSource {
+    func get<T>(forKey: UserDefaultsKeys) -> T?
+    func set<T>(value: T, forKey: UserDefaultsKeys)
 }
 
-class UserDefaultDataSourceImplementation: UserDefaultDataSource {
-    private let userDefault = UserDefaults.standard
+class UserDefaultsDataSourceImplementation: UserDefaultsDataSource {
+    private var userDefault: UserDefaults
     
-    func get<T>(forKey: String) -> T? {
-        return userDefault.object(forKey: forKey) as? T
+    init(userDefault: UserDefaults = UserDefaults.standard) {
+        self.userDefault = userDefault
     }
     
-    func set<T>(value: T, forKey: String) {
-        self.userDefault.set(value, forKey: forKey)
+    func get<T>(forKey: UserDefaultsKeys) -> T? {
+        return userDefault.object(forKey: forKey.rawValue) as? T
+    }
+    
+    func set<T>(value: T, forKey: UserDefaultsKeys) {
+        self.userDefault.set(value, forKey: forKey.rawValue)
     }
 }

@@ -24,23 +24,32 @@
 		3543501827832D910024FB5A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543501727832D910024FB5A /* ComplicationController.swift */; };
 		3543501A27832D920024FB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3543501927832D920024FB5A /* Assets.xcassets */; };
 		3543501D27832D920024FB5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3543501C27832D920024FB5A /* Preview Assets.xcassets */; };
-		3543502827832D920024FB5A /* petWalk_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543502727832D920024FB5A /* petWalk_WatchKit_AppTests.swift */; };
 		3543503227832D920024FB5A /* petWalk_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543503127832D920024FB5A /* petWalk_WatchKit_AppUITests.swift */; };
 		3543503427832D920024FB5A /* petWalk_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543503327832D920024FB5A /* petWalk_WatchKit_AppUITestsLaunchTests.swift */; };
 		355EA4C827B053CA00461F2F /* UserDefaultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4C727B053CA00461F2F /* UserDefaultsDataSource.swift */; };
 		355EA4CA27B0564300461F2F /* SaveDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4C927B0564300461F2F /* SaveDailyStepsUseCase.swift */; };
-		355EA4CF27B056DF00461F2F /* UserDefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4CE27B056DF00461F2F /* UserDefaultRepository.swift */; };
+		355EA4CF27B056DF00461F2F /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */; };
 		355EA4D227B0645A00461F2F /* HealthStorieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */; };
 		355EA4D427B0661200461F2F /* GetDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D327B0661200461F2F /* GetDailyStepsUseCase.swift */; };
 		355EA4D627B0673200461F2F /* ContentViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D527B0673200461F2F /* ContentViewConfigurator.swift */; };
-		355EA4D827B069E200461F2F /* RequestDailyStepsPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D727B069E200461F2F /* RequestDailyStepsPermission.swift */; };
+		355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D727B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift */; };
 		357A5E0F27B5D0AB0020B71C /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A5E0E27B5D0AB0020B71C /* AutoMockable.swift */; };
 		3596938B278B42E600B68BEF /* HealthStoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3596938A278B42E600B68BEF /* HealthStoreDataSource.swift */; };
 		3596938F278B473400B68BEF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3596938E278B473400B68BEF /* HealthKit.framework */; };
 		35969392278B47A300B68BEF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35969391278B47A300B68BEF /* HealthKit.framework */; };
 		35969397278B4E2A00B68BEF /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35969396278B4E2A00B68BEF /* ContentViewModel.swift */; };
+		3596E92C27BE9CB100B41828 /* HealthDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3596E92B27BE9CB100B41828 /* HealthDataSourceTest.swift */; };
 		35AB46FF278A185000401FB7 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB46FE278A185000401FB7 /* Pets.swift */; };
+		35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1B27BEC407000922BF /* GetDailyStepsUseCaseTest.swift */; };
+		35BF2E1E27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1D27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift */; };
+		35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */; };
+		35BF2E2327BEC93D000922BF /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E2227BEC93D000922BF /* UserDefaultsKeys.swift */; };
+		35BF2E2527BECD5F000922BF /* UserDefaultsDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E2427BECD5F000922BF /* UserDefaultsDataSourceTest.swift */; };
+		35BF2E2727BEE910000922BF /* ContentViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E2627BEE910000922BF /* ContentViewModelTest.swift */; };
 		35E999CF27B8358700221C81 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E999CE27B8358700221C81 /* AutoMockable.generated.swift */; };
+		35F83B9527BEBB420082EFA6 /* HealthStorieRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */; };
+		35F83B9727BEBFB90082EFA6 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */; };
+		35F83B9B27BEC1850082EFA6 /* RequestDailyStepsPermissionUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9A27BEC1850082EFA6 /* RequestDailyStepsPermissionUseCaseTest.swift */; };
 		35FE1DBC2789C7060087ECCA /* PetAnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */; };
 		39BFF41008262A61E8233909 /* Pods_petWalkWatchKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA772F744C45AB11080B7E6 /* Pods_petWalkWatchKitExtension.framework */; };
 		9CAD7BA56EDFF236377A3126 /* Pods_petWalkWatchKitAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DF1698C71C3437A95C32F3 /* Pods_petWalkWatchKitAppTests.framework */; };
@@ -146,17 +155,16 @@
 		3543501C27832D920024FB5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3543501E27832D920024FB5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3543502327832D920024FB5A /* petWalkWatchKitAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petWalkWatchKitAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3543502727832D920024FB5A /* petWalk_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petWalk_WatchKit_AppTests.swift; sourceTree = "<group>"; };
 		3543502D27832D920024FB5A /* petWalkWatchKitAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petWalkWatchKitAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3543503127832D920024FB5A /* petWalk_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petWalk_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		3543503327832D920024FB5A /* petWalk_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petWalk_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		355EA4C727B053CA00461F2F /* UserDefaultsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataSource.swift; sourceTree = "<group>"; };
 		355EA4C927B0564300461F2F /* SaveDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDailyStepsUseCase.swift; sourceTree = "<group>"; };
-		355EA4CE27B056DF00461F2F /* UserDefaultRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultRepository.swift; sourceTree = "<group>"; };
+		355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
 		355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStorieRepository.swift; sourceTree = "<group>"; };
 		355EA4D327B0661200461F2F /* GetDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDailyStepsUseCase.swift; sourceTree = "<group>"; };
 		355EA4D527B0673200461F2F /* ContentViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewConfigurator.swift; sourceTree = "<group>"; };
-		355EA4D727B069E200461F2F /* RequestDailyStepsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDailyStepsPermission.swift; sourceTree = "<group>"; };
+		355EA4D727B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDailyStepsPermissionUseCase.swift; sourceTree = "<group>"; };
 		357A5E0E27B5D0AB0020B71C /* AutoMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.swift; sourceTree = "<group>"; };
 		3596938A278B42E600B68BEF /* HealthStoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreDataSource.swift; sourceTree = "<group>"; };
 		3596938C278B473400B68BEF /* petWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = petWalk.entitlements; sourceTree = "<group>"; };
@@ -164,8 +172,18 @@
 		35969390278B47A300B68BEF /* petWalkWatchKitExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = petWalkWatchKitExtension.entitlements; sourceTree = "<group>"; };
 		35969391278B47A300B68BEF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		35969396278B4E2A00B68BEF /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		3596E92B27BE9CB100B41828 /* HealthDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataSourceTest.swift; sourceTree = "<group>"; };
 		35AB46FE278A185000401FB7 /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
+		35BF2E1B27BEC407000922BF /* GetDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
+		35BF2E1D27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
+		35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTest.swift; sourceTree = "<group>"; };
+		35BF2E2227BEC93D000922BF /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		35BF2E2427BECD5F000922BF /* UserDefaultsDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataSourceTest.swift; sourceTree = "<group>"; };
+		35BF2E2627BEE910000922BF /* ContentViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModelTest.swift; sourceTree = "<group>"; };
 		35E999CE27B8358700221C81 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStorieRepositoryTest.swift; sourceTree = "<group>"; };
+		35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
+		35F83B9A27BEC1850082EFA6 /* RequestDailyStepsPermissionUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDailyStepsPermissionUseCaseTest.swift; sourceTree = "<group>"; };
 		35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAnimationScene.swift; sourceTree = "<group>"; };
 		37F87C289068B4FAAF0028B7 /* Pods_petWalkWatchKitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkWatchKitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C74907A1EFDA6A539FD7175 /* Pods-petWalkWatchKitAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkWatchKitAppTests.debug.xcconfig"; path = "Target Support Files/Pods-petWalkWatchKitAppTests/Pods-petWalkWatchKitAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -377,7 +395,7 @@
 				359A549B27B5A56800C55BF6 /* Data */,
 				359A549C27B5A5DC00C55BF6 /* Domain */,
 				359A549D27B5A5E500C55BF6 /* Design */,
-				3543502727832D920024FB5A /* petWalk_WatchKit_AppTests.swift */,
+				35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */,
 			);
 			path = petWalkWatchKitAppTests;
 			sourceTree = "<group>";
@@ -404,7 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */,
-				355EA4CE27B056DF00461F2F /* UserDefaultRepository.swift */,
+				355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -414,7 +432,7 @@
 			children = (
 				355EA4C927B0564300461F2F /* SaveDailyStepsUseCase.swift */,
 				355EA4D327B0661200461F2F /* GetDailyStepsUseCase.swift */,
-				355EA4D727B069E200461F2F /* RequestDailyStepsPermission.swift */,
+				355EA4D727B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -494,6 +512,8 @@
 		359A549B27B5A56800C55BF6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				35F83B9827BEC14D0082EFA6 /* DataSource */,
+				35F83B9927BEC1580082EFA6 /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -501,6 +521,9 @@
 		359A549C27B5A5DC00C55BF6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				35F83B9A27BEC1850082EFA6 /* RequestDailyStepsPermissionUseCaseTest.swift */,
+				35BF2E1B27BEC407000922BF /* GetDailyStepsUseCaseTest.swift */,
+				35BF2E1D27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -508,6 +531,7 @@
 		359A549D27B5A5E500C55BF6 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				35BF2E2627BEE910000922BF /* ContentViewModelTest.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -520,9 +544,18 @@
 			path = BO;
 			sourceTree = "<group>";
 		};
+		35BF2E2127BEC928000922BF /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				35BF2E2227BEC93D000922BF /* UserDefaultsKeys.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		35C9A55E279313AE00B56C71 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				35BF2E2127BEC928000922BF /* Enum */,
 				355EA4CB27B0569C00461F2F /* DataSources */,
 				355EA4CC27B056AC00461F2F /* Repositories */,
 			);
@@ -536,6 +569,24 @@
 				35AB4700278A18DA00401FB7 /* BO */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		35F83B9827BEC14D0082EFA6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3596E92B27BE9CB100B41828 /* HealthDataSourceTest.swift */,
+				35BF2E2427BECD5F000922BF /* UserDefaultsDataSourceTest.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		35F83B9927BEC1580082EFA6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */,
+				35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1002,6 +1053,7 @@
 				3596938B278B42E600B68BEF /* HealthStoreDataSource.swift in Sources */,
 				355EA4D627B0673200461F2F /* ContentViewConfigurator.swift in Sources */,
 				3543501427832D910024FB5A /* ContentView.swift in Sources */,
+				35BF2E2327BEC93D000922BF /* UserDefaultsKeys.swift in Sources */,
 				35969397278B4E2A00B68BEF /* ContentViewModel.swift in Sources */,
 				355EA4D427B0661200461F2F /* GetDailyStepsUseCase.swift in Sources */,
 				355EA4C827B053CA00461F2F /* UserDefaultsDataSource.swift in Sources */,
@@ -1009,8 +1061,8 @@
 				355EA4CA27B0564300461F2F /* SaveDailyStepsUseCase.swift in Sources */,
 				35AB46FF278A185000401FB7 /* Pets.swift in Sources */,
 				355EA4D227B0645A00461F2F /* HealthStorieRepository.swift in Sources */,
-				355EA4CF27B056DF00461F2F /* UserDefaultRepository.swift in Sources */,
-				355EA4D827B069E200461F2F /* RequestDailyStepsPermission.swift in Sources */,
+				355EA4CF27B056DF00461F2F /* UserDefaultsRepository.swift in Sources */,
+				355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */,
 				357A5E0F27B5D0AB0020B71C /* AutoMockable.swift in Sources */,
 				3543501827832D910024FB5A /* ComplicationController.swift in Sources */,
 			);
@@ -1020,8 +1072,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3543502827832D920024FB5A /* petWalk_WatchKit_AppTests.swift in Sources */,
+				35BF2E1E27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift in Sources */,
+				35F83B9B27BEC1850082EFA6 /* RequestDailyStepsPermissionUseCaseTest.swift in Sources */,
+				3596E92C27BE9CB100B41828 /* HealthDataSourceTest.swift in Sources */,
+				35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */,
+				35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */,
+				35BF2E2527BECD5F000922BF /* UserDefaultsDataSourceTest.swift in Sources */,
+				35BF2E2727BEE910000922BF /* ContentViewModelTest.swift in Sources */,
+				35F83B9727BEBFB90082EFA6 /* UtilsTest.swift in Sources */,
 				35E999CF27B8358700221C81 /* AutoMockable.generated.swift in Sources */,
+				35F83B9527BEBB420082EFA6 /* HealthStorieRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,8 @@ class ContentViewConfigurator {
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)
         let requestDailyStepsPermissionUseCase = RequestDailyStepsPermissionUseCaseImplementation(healthStoreRepository: healthStoreRepository)
         
-        let userDefaultDataSource = UserDefaultDataSourceImplementation()
-        let userDefaultRepository = UserDefaultRepositoryImplementation(userDefaultDataSource: userDefaultDataSource)
+        let userDefaultDataSource = UserDefaultsDataSourceImplementation()
+        let userDefaultRepository = UserDefaultsRepositoryImplementation(userDefaultDataSource: userDefaultDataSource)
         let saveDailyStepsUseCase = SaveDailyStepsUseCaseImplementation(repository: userDefaultRepository)
         
         let getDailyStepsUseCase = GetDailyStepsUseCaseImplementation(repository: healthStoreRepository)

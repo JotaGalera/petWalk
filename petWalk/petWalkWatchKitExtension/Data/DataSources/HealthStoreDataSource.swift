@@ -14,11 +14,11 @@ protocol HealthStoreDataSource: AutoMockable {
 }
 
 class HealthStoreDataSourceImplementation: HealthStoreDataSource {
-    var healthStore: HKHealthStore?
+    private var healthStore: HKHealthStore?
     
-    init() {
+    init(healthStore: HKHealthStore = HKHealthStore()) {
         if HKHealthStore.isHealthDataAvailable() {
-            healthStore = HKHealthStore()
+            self.healthStore = healthStore
         }
     }
     

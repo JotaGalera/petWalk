@@ -30,6 +30,4 @@ struct Swordman: Pets {
     init(name: String) {
         self.name = name
     }
-    
-    
 }
