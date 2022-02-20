@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12C10A382DF7508E18097A18 /* Pods_petWalkWatchKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8216F4C4042A5D1D20E015 /* Pods_petWalkWatchKitApp.framework */; };
 		21E38BE86C850874828E4AF9 /* Pods_petWalkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DE13B055A0DF53CC3B0EA0 /* Pods_petWalkUITests.framework */; };
+		350127BB27C2606A00AB2B1D /* PetDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350127BA27C2606900AB2B1D /* PetDataView.swift */; };
 		35434FE327832D8E0024FB5A /* petWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35434FE227832D8E0024FB5A /* petWalkApp.swift */; };
 		35434FE527832D8E0024FB5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35434FE427832D8E0024FB5A /* ContentView.swift */; };
 		35434FE727832D8F0024FB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35434FE627832D8F0024FB5A /* Assets.xcassets */; };
@@ -133,6 +134,7 @@
 		12D04BC7A246312B92A2AF43 /* Pods-petWalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkTests.debug.xcconfig"; path = "Target Support Files/Pods-petWalkTests/Pods-petWalkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		25817A511D849BE1016DC106 /* Pods_petWalk_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		290ED32978534F5D38F9751C /* Pods-petWalkWatchKitExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkWatchKitExtension.release.xcconfig"; path = "Target Support Files/Pods-petWalkWatchKitExtension/Pods-petWalkWatchKitExtension.release.xcconfig"; sourceTree = "<group>"; };
+		350127BA27C2606900AB2B1D /* PetDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataView.swift; sourceTree = "<group>"; };
 		353A6CF927B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_petWalk_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		353A6CFD27B5C6180076FB92 /* Pods_petWalk_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_petWalk_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35434FDF27832D8E0024FB5A /* petWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -496,6 +498,7 @@
 			children = (
 				35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */,
 				3543501327832D910024FB5A /* ContentView.swift */,
+				350127BA27C2606900AB2B1D /* PetDataView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1055,6 +1058,7 @@
 				3543501427832D910024FB5A /* ContentView.swift in Sources */,
 				35BF2E2327BEC93D000922BF /* UserDefaultsKeys.swift in Sources */,
 				35969397278B4E2A00B68BEF /* ContentViewModel.swift in Sources */,
+				350127BB27C2606A00AB2B1D /* PetDataView.swift in Sources */,
 				355EA4D427B0661200461F2F /* GetDailyStepsUseCase.swift in Sources */,
 				355EA4C827B053CA00461F2F /* UserDefaultsDataSource.swift in Sources */,
 				35FE1DBC2789C7060087ECCA /* PetAnimationScene.swift in Sources */,
@@ -1259,7 +1263,7 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires to access your health data";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Data will be used by pet to growth";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1295,7 +1299,7 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires to access your health data";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Data will be used by pet to growth";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

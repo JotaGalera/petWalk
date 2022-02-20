@@ -12,13 +12,16 @@ struct petAnimationScene: View {
     private let width: CGFloat = 70
     private let height: CGFloat = 70
     var pet: Pets
+    @State var timer: Timer? = nil
 
     var body: some View {
         VStack {
+            Spacer()
+            
             Text(pet.name)
                 .bold()
             
-            Spacer().frame(height: 25)
+            Spacer()
             
             Image(pet.images[count])
                 .resizable()
@@ -26,12 +29,16 @@ struct petAnimationScene: View {
                        height: height,
                        alignment: .center)
                 .onAppear {
-                    Timer.scheduledTimer(withTimeInterval: 0.1,
+                    timer = Timer.scheduledTimer(withTimeInterval: 0.1,
                                          repeats: true) { timer in
                         withAnimation() {
                             self.count = count == 7 ? 0 : count + 1
                         }
                     }
+                }
+                .onDisappear {
+                    guard let timer = timer else { return }
+                    timer.invalidate()
                 }
         }
     }

@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
     private let petMock = Swordman(name: "Beldrick")
     private let contentViewConfigurator = ContentViewConfigurator()
+    
+    private let deviceSize = WKInterfaceDevice.current().screenBounds
+    
     @ObservedObject var contentViewModel: ContentViewModel
     
     init() {
@@ -17,18 +20,25 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            Spacer()
-            Text(String(contentViewModel.currentSteps))
-            petAnimationScene(pet: petMock)
-            
-            Spacer()
-            
-            StatusBarMenu()
+        NavigationView {
+            VStack {
+                Spacer()
+                
+                petAnimationScene(pet: petMock)
+                
+                Spacer()
+                
+                StatusBarMenu()
+                
+                Spacer()
+            }
         }
+        .frame(width: deviceSize.width,
+                height: deviceSize.height)
         .onAppear {
             contentViewModel.requestPermissions()
         }
+        .environmentObject(contentViewModel)
     }
 }
 
@@ -49,14 +59,19 @@ struct ItemBarMenu: View {
     var imageName: String
     var valueText: String
     
+    @EnvironmentObject var contentViewModel: ContentViewModel
+    
     var body: some View {
         HStack {
-            Image(imageName)
-                .resizable()
-                .frame(width: 25,
-                       height: 25,
-                       alignment: .center)
-            Text("10")
+            NavigationLink(destination: PetDataView(dailySteps: contentViewModel.currentSteps)) {
+                Image(imageName)
+                    .resizable()
+                    .frame(width: 25,
+                           height: 25,
+                           alignment: .center)
+                
+                Text("10")
+            }
         }
         .padding()
     }
