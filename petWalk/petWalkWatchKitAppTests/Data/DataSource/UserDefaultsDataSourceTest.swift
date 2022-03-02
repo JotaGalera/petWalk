@@ -23,8 +23,8 @@ class UserDefaultsDataSourceTest: XCTestCase {
 
     func testThatDailyStepsAreReadableFromMemory_When_TheyWereSaved() throws {
         let valueMocked: Int = 10
-        sut.set(value: valueMocked, forKey: .dailySteps)
+        sut.set(value: valueMocked, forKey: .accumulatedDailySteps)
         
-        XCTAssertEqual(10, sut.get(forKey: .dailySteps))
+        XCTAssertEqual(10, sut.get(forKey: .accumulatedDailySteps))
     }
 }

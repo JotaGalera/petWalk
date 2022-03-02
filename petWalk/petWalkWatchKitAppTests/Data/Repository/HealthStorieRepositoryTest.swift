@@ -37,12 +37,12 @@ class HealthStorieRepositoryTest: XCTestCase {
     
     func testThatDailyStepsAreCollected_When_GetTodayStepsIsCalled() {
         let expectation = expectation(description: "Getting steps")
-        dataSourceMock.getTodayStepsCompletionClosure = { onSuccess in
+        dataSourceMock.getDailyStepsCompletionClosure = { onSuccess in
             onSuccess(10)
         }
         
-        sut.getTodaySteps { steps in
-            XCTAssertEqual(1, self.dataSourceMock.getTodayStepsCompletionCallsCount)
+        sut.getDailySteps { steps in
+            XCTAssertEqual(1, self.dataSourceMock.getDailyStepsCompletionCallsCount)
             XCTAssertEqual(10, steps)
             expectation.fulfill()
         }

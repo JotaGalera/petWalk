@@ -13,5 +13,6 @@ class SaveDailyStepsUseCaseImplementation: SaveDailyStepsUseCase {
     
     func execute(_ steps: Int) {
         repository.saveDailySteps(steps)
+        repository.saveDateDailySteps(Date())
     }
 }

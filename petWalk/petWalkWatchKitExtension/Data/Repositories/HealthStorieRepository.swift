@@ -2,7 +2,7 @@ import Foundation
 
 protocol HealthStoreRepository: AutoMockable {
     func requestAuthorization(completion: @escaping (Bool) -> Void)
-    func getTodaySteps(completion: @escaping (Int) -> Void)
+    func getDailySteps(completion: @escaping (Int) -> Void)
 }
 
 class HealthStoreRepositoryImplementation: HealthStoreRepository {
@@ -16,7 +16,7 @@ class HealthStoreRepositoryImplementation: HealthStoreRepository {
         dataSource.requestAuthorization(completion: completion)
     }
     
-    func getTodaySteps(completion: @escaping (Int) -> Void) {
-        dataSource.getTodaySteps(completion: completion)
+    func getDailySteps(completion: @escaping (Int) -> Void) {
+        dataSource.getDailySteps(completion: completion)
     }
 }

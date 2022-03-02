@@ -16,18 +16,18 @@ class GetDailyStepsUseCaseTest: XCTestCase {
         try super.setUpWithError()
         
         repository = HealthStoreRepositoryMock()
-        sut = GetDailyStepsUseCaseImplementation(repository: repository)
+        sut = GetDailyStepsUseCaseImplementation(healthStoreRepository: repository)
     }
 
     func testThatDailyStepsAreReturned_When_ExecuteIsCalled() throws {
         let expectation = expectation(description: "Getting daily steps")
-        repository.getTodayStepsCompletionClosure = { onSuccess in
+        repository.getDailyStepsCompletionClosure = { onSuccess in
             onSuccess(10)
         }
         
         sut.execute { steps in
             XCTAssertEqual(10, steps)
-            XCTAssertEqual(1, self.repository.getTodayStepsCompletionCallsCount)
+            XCTAssertEqual(1, self.repository.getDailyStepsCompletionCallsCount)
             expectation.fulfill()
         }
         

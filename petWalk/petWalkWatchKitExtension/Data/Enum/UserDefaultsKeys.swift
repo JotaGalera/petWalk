@@ -8,5 +8,7 @@
 import Foundation
 
 enum UserDefaultsKeys: String {
-    case dailySteps = "dailySteps"
+    case accumulatedDailySteps = "accumulatedDailySteps"
+    case totalSteps = "totalSteps"
+    case dateDailySteps = "dateDailySteps"
 }

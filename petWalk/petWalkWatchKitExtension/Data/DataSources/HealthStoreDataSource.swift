@@ -10,7 +10,7 @@ import HealthKit
 
 protocol HealthStoreDataSource: AutoMockable {
     func requestAuthorization(completion: @escaping (Bool) -> Void)
-    func getTodaySteps(completion: @escaping (Int) -> Void)
+    func getDailySteps(completion: @escaping (Int) -> Void)
 }
 
 class HealthStoreDataSourceImplementation: HealthStoreDataSource {
@@ -32,7 +32,7 @@ class HealthStoreDataSourceImplementation: HealthStoreDataSource {
         }
     }
     
-    func getTodaySteps(completion: @escaping (Int) -> Void) {
+    func getDailySteps(completion: @escaping (Int) -> Void) {
         let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         
         let now = Date()

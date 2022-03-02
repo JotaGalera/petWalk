@@ -14,17 +14,19 @@ class SaveDailyStepsUseCaseTest: XCTestCase {
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        
         repository = UserDefaultsRepositoryMock()
+        
         sut = SaveDailyStepsUseCaseImplementation(repository: repository)
     }
 
-    func testThatDailyStepsAreSavedOnMemory_When_ExecuteIsCalled() throws {
-        let stepsMock = 10
+    func testThatDailyStepsAndDateAreSavedOnMemory_When_ExecuteIsCalled() {
+        let stepsMocked = 10
         
-        sut.execute(stepsMock)
+        sut.execute(stepsMocked)
         
         XCTAssertEqual(1, repository.saveDailyStepsCallsCount)
         XCTAssertEqual(10, repository.saveDailyStepsReceivedSteps)
+        XCTAssertEqual(1, repository.saveDateDailyStepsCallsCount)
+        XCTAssertGreaterThanOrEqual(Date(), repository.saveDateDailyStepsReceivedDate!)
     }
 }

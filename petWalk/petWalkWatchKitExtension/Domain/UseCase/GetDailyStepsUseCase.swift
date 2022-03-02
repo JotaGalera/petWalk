@@ -12,13 +12,13 @@ protocol GetDailyStepsUseCase: AutoMockable {
 }
 
 class GetDailyStepsUseCaseImplementation: GetDailyStepsUseCase {
-    private var repository: HealthStoreRepository
+    private var healthStoreRepository: HealthStoreRepository
     
-    public init(repository: HealthStoreRepository) {
-        self.repository = repository
+    public init(healthStoreRepository: HealthStoreRepository) {
+        self.healthStoreRepository = healthStoreRepository
     }
     
     func execute(completion: @escaping (Int) -> Void) {
-        repository.getTodaySteps(completion: completion)
+        healthStoreRepository.getDailySteps(completion: completion)
     }
 }
