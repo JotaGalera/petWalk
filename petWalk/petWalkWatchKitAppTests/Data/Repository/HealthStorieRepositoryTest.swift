@@ -20,33 +20,21 @@ class HealthStorieRepositoryTest: XCTestCase {
         sut = HealthStoreRepositoryImplementation(dataSource: dataSourceMock)
     }
 
-    func testThatAuthorizationHasBeenRequestedProperly_When_RequestAuthorizationIsCalled() throws {
-        let expectation = expectation(description: "Requesting permission")
-        dataSourceMock.requestAuthorizationCompletionClosure = { onSuccess in
-            onSuccess(true)
-        }
+    func testThatAuthorizationHasBeenRequestedProperly_When_RequestAuthorizationIsCalled() async throws {
+        dataSourceMock.requestAuthorizationReturnValue = true
         
-        sut.requestAuthorization { permission in
-            XCTAssertEqual(1, self.dataSourceMock.requestAuthorizationCompletionCallsCount)
-            XCTAssertTrue(permission)
-            expectation.fulfill()
-        }
+        let permission = try! await sut.requestAuthorization()
         
-        waitForExpectation(timeOut: 3)
+        XCTAssertEqual(1, self.dataSourceMock.requestAuthorizationCallsCount)
+        XCTAssertTrue(permission)
     }
     
-    func testThatDailyStepsAreCollected_When_GetTodayStepsIsCalled() {
-        let expectation = expectation(description: "Getting steps")
-        dataSourceMock.getDailyStepsCompletionClosure = { onSuccess in
-            onSuccess(10)
-        }
+    func testThatDailyStepsAreCollected_When_GetTodayStepsIsCalled() async throws {
+        dataSourceMock.getDailyStepsReturnValue = 10
         
-        sut.getDailySteps { steps in
-            XCTAssertEqual(1, self.dataSourceMock.getDailyStepsCompletionCallsCount)
-            XCTAssertEqual(10, steps)
-            expectation.fulfill()
-        }
+        let steps = try! await sut.getDailySteps()
         
-        waitForExpectation(timeOut: 3)
+        XCTAssertEqual(1, self.dataSourceMock.getDailyStepsCallsCount)
+        XCTAssertEqual(10, steps)
     }
 }

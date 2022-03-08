@@ -20,14 +20,9 @@ class HealthDataSourceTest: XCTestCase {
         sut = HealthStoreDataSourceImplementation(healthStore: healthStoreMock)
     }
     
-    func testThatHealthStoreHasPermission_When_RequestAuthorizationIsSuccesful() {
-        let expectation = expectation(description: "Request permission succesful")
+    func testThatHealthStoreHasPermission_When_RequestAuthorizationIsSuccesful() async throws {
+        let permission = try! await sut.requestAuthorization()
         
-        sut.requestAuthorization { permission in
-            XCTAssertTrue(permission)
-            expectation.fulfill()
-        }
-        
-        waitForExpectation(timeOut: 3)
+        XCTAssertTrue(permission)
     }
 }

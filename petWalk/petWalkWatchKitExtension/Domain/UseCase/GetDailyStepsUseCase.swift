@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetDailyStepsUseCase: AutoMockable {
-    func execute(completion: @escaping (Int) -> Void)
+    func execute() async throws -> Int
 }
 
 class GetDailyStepsUseCaseImplementation: GetDailyStepsUseCase {
@@ -17,8 +17,8 @@ class GetDailyStepsUseCaseImplementation: GetDailyStepsUseCase {
     public init(healthStoreRepository: HealthStoreRepository) {
         self.healthStoreRepository = healthStoreRepository
     }
-    
-    func execute(completion: @escaping (Int) -> Void) {
-        healthStoreRepository.getDailySteps(completion: completion)
+
+    func execute() async throws -> Int {
+        return try await healthStoreRepository.getDailySteps()
     }
 }

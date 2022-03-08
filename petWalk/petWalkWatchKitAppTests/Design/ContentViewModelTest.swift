@@ -16,7 +16,7 @@ class ContentViewModelTest: XCTestCase {
     private var getDailyStepsUseCaseMock: GetDailyStepsUseCaseMock!
     private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCaseMock!
     
-    override func setUpWithError() throws {
+    @MainActor override func setUpWithError() throws {
         try super.setUpWithError()
         
         requestDailyStepsPermissionUseCaseMock = RequestDailyStepsPermissionUseCaseMock()
@@ -32,55 +32,26 @@ class ContentViewModelTest: XCTestCase {
                                getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCase)
     }
 
-    func testThatDailyStepsAreReceived_When_PermissionIsGranted() throws {
-        requestDailyStepsPermissionUseCaseMock.executeCompletionClosure = { onSuccess in
-            onSuccess(true)
-        }
-        getDailyStepsUseCaseMock.executeCompletionClosure = { onSuccess in
-            onSuccess(10)
-        }
+    @MainActor func testThatDailyStepsAreRequested_When_PermissionIsGranted() async throws {
+        requestDailyStepsPermissionUseCaseMock.executeReturnValue = true
+        getDailyStepsUseCaseMock.executeReturnValue = 10
         getAccumulatedDailyStepsUseCase.executeReturnValue = 0
         
-        self.sut.requestPermissions()
+        await sut.requestPermissions()
         
-        XCTAssertEqual(1, requestDailyStepsPermissionUseCaseMock.executeCompletionCallsCount)
-        XCTAssertEqual(1, getDailyStepsUseCaseMock.executeCompletionCallsCount)
+        XCTAssertEqual(1, requestDailyStepsPermissionUseCaseMock.executeCallsCount)
+        XCTAssertEqual(1, getDailyStepsUseCaseMock.executeCallsCount)
         XCTAssertEqual(1, saveDailyStepsUseCaseMock.executeCallsCount)
-    }
-    
-    func testThatDailyStepsAreUpdated_When_PermissionIsGranted() throws {
-        let expectation = expectation(description: "accumulated daily steps updated")
-        requestDailyStepsPermissionUseCaseMock.executeCompletionClosure = { onSuccess in
-            onSuccess(true)
-        }
-        getDailyStepsUseCaseMock.executeCompletionClosure = { onSuccess in
-            onSuccess(10)
-            DispatchQueue.main.async {
-                expectation.fulfill()
-            }
-        }
-        getAccumulatedDailyStepsUseCase.executeReturnValue = 20
-        
-        self.sut.requestPermissions()
-        
-        waitForExpectation(timeOut: 3)
         XCTAssertEqual(10, sut.currentSteps)
     }
     
-    func testThatAnimationDailyStepsAreUpdated_When_PermissionIsGranted_And_ThereArePreviousSteps() throws {
-        let expectation = expectation(description: "accumulated daily steps updated")
-        requestDailyStepsPermissionUseCaseMock.executeCompletionClosure = { onSuccess in
-            onSuccess(true)
-        }
-        getDailyStepsUseCaseMock.executeCompletionClosure = { onSuccess in
-            onSuccess(40)
-            expectation.fulfill()
-        }
+    @MainActor func testThatAnimationDailyStepsAreUpdated_When_PermissionIsGranted_And_ThereArePreviousSteps() async throws {
+        requestDailyStepsPermissionUseCaseMock.executeReturnValue = true
+        getDailyStepsUseCaseMock.executeReturnValue = 50
         getAccumulatedDailyStepsUseCase.executeReturnValue = 20
         
-        self.sut.requestPermissions()
+        await sut.requestPermissions()
         
-        waitForExpectation(timeOut: 3)
-        XCTAssertEqual(20, sut.animationDailySteps)
+        XCTAssertEqual(30, sut.animationDailySteps)
     }
 }

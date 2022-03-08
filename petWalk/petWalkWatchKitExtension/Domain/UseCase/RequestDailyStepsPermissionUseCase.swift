@@ -8,7 +8,7 @@
 import Foundation
 
 protocol RequestDailyStepsPermissionUseCase: AutoMockable {
-    func execute(completion: @escaping (Bool) -> Void)
+    func execute() async throws -> Bool
 }
 
 class RequestDailyStepsPermissionUseCaseImplementation: RequestDailyStepsPermissionUseCase {
@@ -18,7 +18,7 @@ class RequestDailyStepsPermissionUseCaseImplementation: RequestDailyStepsPermiss
         self.healthStoreRepository = healthStoreRepository
     }
     
-    func execute(completion: @escaping (Bool) -> Void) {
-        healthStoreRepository.requestAuthorization(completion: completion)
+    func execute() async throws -> Bool {
+        return try await healthStoreRepository.requestAuthorization()
     }
 }

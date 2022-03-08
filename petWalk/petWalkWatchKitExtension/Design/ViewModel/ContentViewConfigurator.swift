@@ -8,7 +8,7 @@
 import Foundation
 
 class ContentViewConfigurator {
-    func configure() -> ContentViewModel {
+    @MainActor func configure() -> ContentViewModel {
         let healthStoreDataSource = HealthStoreDataSourceImplementation()
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)
         

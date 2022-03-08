@@ -19,18 +19,12 @@ class GetDailyStepsUseCaseTest: XCTestCase {
         sut = GetDailyStepsUseCaseImplementation(healthStoreRepository: repository)
     }
 
-    func testThatDailyStepsAreReturned_When_ExecuteIsCalled() throws {
-        let expectation = expectation(description: "Getting daily steps")
-        repository.getDailyStepsCompletionClosure = { onSuccess in
-            onSuccess(10)
-        }
+    func testThatDailyStepsAreReturned_When_ExecuteIsCalled() async throws {
+        repository.getDailyStepsReturnValue = 10
         
-        sut.execute { steps in
-            XCTAssertEqual(10, steps)
-            XCTAssertEqual(1, self.repository.getDailyStepsCompletionCallsCount)
-            expectation.fulfill()
-        }
+        let dailySteps = try! await sut.execute()
         
-        waitForExpectation(timeOut: 3)
+        XCTAssertEqual(10, dailySteps)
+        XCTAssertEqual(1, self.repository.getDailyStepsCallsCount)
     }
 }

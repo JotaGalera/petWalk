@@ -1,8 +1,9 @@
 import Foundation
+import Combine
 
 protocol HealthStoreRepository: AutoMockable {
-    func requestAuthorization(completion: @escaping (Bool) -> Void)
-    func getDailySteps(completion: @escaping (Int) -> Void)
+    func requestAuthorization() async throws -> Bool
+    func getDailySteps() async throws -> Int
 }
 
 class HealthStoreRepositoryImplementation: HealthStoreRepository {
@@ -11,12 +12,12 @@ class HealthStoreRepositoryImplementation: HealthStoreRepository {
     public init(dataSource: HealthStoreDataSource) {
         self.dataSource = dataSource
     }
-    
-    func requestAuthorization(completion: @escaping (Bool) -> Void) {
-        dataSource.requestAuthorization(completion: completion)
+
+    func requestAuthorization() async throws -> Bool {
+        return try await dataSource.requestAuthorization()
     }
     
-    func getDailySteps(completion: @escaping (Int) -> Void) {
-        dataSource.getDailySteps(completion: completion)
+    func getDailySteps() async throws -> Int {
+        return try await dataSource.getDailySteps()
     }
 }

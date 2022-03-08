@@ -19,18 +19,12 @@ class RequestDailyStepsPermissionUseCaseTest: XCTestCase {
         sut = RequestDailyStepsPermissionUseCaseImplementation(healthStoreRepository: repository)
     }
 
-    func testThatPermissionIsRequestedProperly_When_ExecuteIsCalled() throws {
-        let expectation = expectation(description: "permission requested")
-        repository.requestAuthorizationCompletionClosure = { onSuccess in
-            onSuccess(true)
-        }
+    func testThatPermissionIsRequestedProperly_When_ExecuteIsCalled() async throws {
+        repository.requestAuthorizationReturnValue = true
         
-        sut.execute { permission in
-            XCTAssertTrue(permission)
-            XCTAssertEqual(1, self.repository.requestAuthorizationCompletionCallsCount)
-            expectation.fulfill()
-        }
+        let permission = try! await sut.execute()
         
-        waitForExpectation(timeOut: 3)
+        XCTAssertTrue(permission)
+        XCTAssertEqual(1, self.repository.requestAuthorizationCallsCount)
     }
 }

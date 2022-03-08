@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class ContentViewModel: ObservableObject {
     @Published var currentSteps: Int = 0
     var animationDailySteps: Int = 0
@@ -25,25 +26,23 @@ class ContentViewModel: ObservableObject {
         self.getAccumulatedDailyStepsUseCase = getAccumulatedDailyStepsUseCase
     }
     
-    func requestPermissions() {
-        requestDailyStepsPermissionUseCase.execute { authorization in
-            if authorization {
-                self.getDailySteps()
+    func requestPermissions() async {
+        do {
+            let permission = try await requestDailyStepsPermissionUseCase.execute()
+            if permission {
+                try await getDailySteps()
             }
+        } catch {
+            print (error)
         }
     }
     
-    func getDailySteps() {
-        getDailyStepsUseCase.execute { steps in
-            self.calculateAnimationDailySteps(steps)
-            
-            self.saveDailyStepsUseCase.execute(steps)
-            DispatchQueue.main.async {
-                self.currentSteps = steps
-            }
-            
-            self.saveTotalDailyStepsUseCase.execute(steps)
-        }
+    func getDailySteps() async throws {
+        let steps = try await getDailyStepsUseCase.execute()
+        calculateAnimationDailySteps(steps)
+        saveDailyStepsUseCase.execute(steps)
+        saveTotalDailyStepsUseCase.execute(steps)
+        currentSteps = steps
     }
     
     private func calculateAnimationDailySteps(_ steps: Int) {

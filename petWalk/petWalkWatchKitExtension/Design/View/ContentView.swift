@@ -35,8 +35,8 @@ struct ContentView: View {
         }
         .frame(width: deviceSize.width,
                 height: deviceSize.height)
-        .onAppear {
-            contentViewModel.requestPermissions()
+        .task {
+            await contentViewModel.requestPermissions()
         }
         .environmentObject(contentViewModel)
     }
