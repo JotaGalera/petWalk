@@ -9,14 +9,14 @@ import XCTest
 @testable import petWalkWatchKitExtension
 
 class SaveDailyStepsUseCaseTest: XCTestCase {
-    private var sut: SaveDailyStepsUseCase!
+    private var sut: SaveAccumulatedDailyStepsUseCase!
     private var repository: UserDefaultsRepositoryMock!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         repository = UserDefaultsRepositoryMock()
         
-        sut = SaveDailyStepsUseCaseImplementation(repository: repository)
+        sut = SaveAccumulatedDailyStepsUseCaseImplementation(repository: repository)
     }
 
     func testThatDailyStepsAndDateAreSavedOnMemory_When_ExecuteIsCalled() {

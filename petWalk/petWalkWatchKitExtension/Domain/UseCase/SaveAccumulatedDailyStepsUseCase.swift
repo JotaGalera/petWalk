@@ -1,10 +1,10 @@
 import Foundation
 
-protocol SaveDailyStepsUseCase: AutoMockable {
+protocol SaveAccumulatedDailyStepsUseCase: AutoMockable {
     func execute(_ steps: Int)
 }
 
-class SaveDailyStepsUseCaseImplementation: SaveDailyStepsUseCase {
+class SaveAccumulatedDailyStepsUseCaseImplementation: SaveAccumulatedDailyStepsUseCase {
     private var repository: UserDefaultsRepository
     
     public init(repository: UserDefaultsRepository) {
@@ -12,7 +12,7 @@ class SaveDailyStepsUseCaseImplementation: SaveDailyStepsUseCase {
     }
     
     func execute(_ steps: Int) {
-        repository.saveDailySteps(steps)
+        repository.saveAccumulatedDailySteps(steps)
         repository.saveDateDailySteps(Date())
     }
 }

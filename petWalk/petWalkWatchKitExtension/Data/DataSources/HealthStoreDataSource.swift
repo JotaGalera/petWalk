@@ -27,9 +27,15 @@ class HealthStoreDataSourceImplementation: HealthStoreDataSource {
         try await withCheckedThrowingContinuation { continuation in
             let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
             
-            guard let healthStore = healthStore else { return continuation.resume(returning: false) }
+            guard let healthStore = healthStore else {
+                continuation.resume(returning: false)
+                return
+            }
             
             healthStore.requestAuthorization(toShare: [], read: [stepType]) { success, error in
+                if let error = error {
+                    continuation.resume(throwing: error)
+                }
                 continuation.resume(returning: success)
             }
         }

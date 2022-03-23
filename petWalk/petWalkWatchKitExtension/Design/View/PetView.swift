@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PetView.swift
 //  petWalk WatchKit Extension
 //
 //  Created by Galera, Javier on 3/1/22.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PetView: View {
     private let petMock = Swordman(name: "Beldrick")
-    private let contentViewConfigurator = ContentViewConfigurator()
+    private let contentViewConfigurator = PetViewConfigurator()
     
     private let deviceSize = WKInterfaceDevice.current().screenBounds
     
-    @ObservedObject var contentViewModel: ContentViewModel
+    @ObservedObject var contentViewModel: PetViewModel
     
     init() {
         self.contentViewModel = contentViewConfigurator.configure()
@@ -59,11 +59,11 @@ struct ItemBarMenu: View {
     var imageName: String
     var valueText: String
     
-    @EnvironmentObject var contentViewModel: ContentViewModel
+    @EnvironmentObject var contentViewModel: PetViewModel
     
     var body: some View {
         HStack {
-            NavigationLink(destination: PetDataView(dailySteps: contentViewModel.currentSteps)) {
+            NavigationLink(destination: PetDataView()) {
                 Image(imageName)
                     .resizable()
                     .frame(width: 25,
@@ -78,9 +78,7 @@ struct ItemBarMenu: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    let contentViewModel = ContentViewConfigurator().configure()
-    
     static var previews: some View {
-        ContentView()
+        PetView()
     }
 }

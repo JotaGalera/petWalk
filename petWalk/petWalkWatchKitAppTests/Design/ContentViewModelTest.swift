@@ -9,9 +9,9 @@ import XCTest
 @testable import petWalkWatchKitExtension
 
 class ContentViewModelTest: XCTestCase {
-    private var sut: ContentViewModel!
+    private var sut: PetViewModel!
     private var requestDailyStepsPermissionUseCaseMock: RequestDailyStepsPermissionUseCaseMock!
-    private var saveDailyStepsUseCaseMock: SaveDailyStepsUseCaseMock!
+    private var saveDailyStepsUseCaseMock: SaveAccumulatedDailyStepsUseCaseMock!
     private var saveTotalDailyStepsUseCaseMock : SaveTotalStepsUseCaseMock!
     private var getDailyStepsUseCaseMock: GetDailyStepsUseCaseMock!
     private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCaseMock!
@@ -20,13 +20,13 @@ class ContentViewModelTest: XCTestCase {
         try super.setUpWithError()
         
         requestDailyStepsPermissionUseCaseMock = RequestDailyStepsPermissionUseCaseMock()
-        saveDailyStepsUseCaseMock = SaveDailyStepsUseCaseMock()
+        saveDailyStepsUseCaseMock = SaveAccumulatedDailyStepsUseCaseMock()
         saveTotalDailyStepsUseCaseMock = SaveTotalStepsUseCaseMock()
         getDailyStepsUseCaseMock = GetDailyStepsUseCaseMock()
         getAccumulatedDailyStepsUseCase = GetAccumulatedDailyStepsUseCaseMock()
         
-        sut = ContentViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCaseMock,
-                               saveDailyStepsUseCase: saveDailyStepsUseCaseMock,
+        sut = PetViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCaseMock,
+                           saveAccumulatedDailyStepsUseCase: saveDailyStepsUseCaseMock,
                                saveTotalDailyStepsUseCase: saveTotalDailyStepsUseCaseMock,
                                getDailyStepsUseCase: getDailyStepsUseCaseMock,
                                getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCase)

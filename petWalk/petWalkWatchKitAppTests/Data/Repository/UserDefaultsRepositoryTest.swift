@@ -23,7 +23,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
     func testThatDailyStepsAreSavedOnMemory_When_SaveDailyStepsIsCalled() throws {
         let stepsMocked = 10
         
-        sut.saveDailySteps(stepsMocked)
+        sut.saveAccumulatedDailySteps(stepsMocked)
         
         XCTAssertEqual(1, dataSource.setCallsCount)
         XCTAssertEqual(10, dataSource.setParamValueReceived as! Int)

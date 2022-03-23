@@ -7,8 +7,8 @@
 
 import Foundation
 
-class ContentViewConfigurator {
-    @MainActor func configure() -> ContentViewModel {
+class PetViewConfigurator {
+    @MainActor func configure() -> PetViewModel {
         let healthStoreDataSource = HealthStoreDataSourceImplementation()
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)
         
@@ -18,15 +18,15 @@ class ContentViewConfigurator {
         let userDefaultDataSource = UserDefaultsDataSourceImplementation()
         let userDefaultRepository = UserDefaultsRepositoryImplementation(userDefaultDataSource: userDefaultDataSource)
         
-        let saveDailyStepsUseCase = SaveDailyStepsUseCaseImplementation(repository: userDefaultRepository)
+        let saveAccumulatedDailyStepsUseCase = SaveAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
         let saveTotalStepsUseCase = SaveTotalStepsUseCaseImplementation(repository: userDefaultRepository)
         let getAccumulatedDailyStepsUseCase = GetAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
         
         
         
         
-        return ContentViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCase,
-                                saveDailyStepsUseCase: saveDailyStepsUseCase,
+        return PetViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCase,
+                            saveAccumulatedDailyStepsUseCase: saveAccumulatedDailyStepsUseCase,
                                 saveTotalDailyStepsUseCase: saveTotalStepsUseCase,
                                 getDailyStepsUseCase: getDailyStepsUseCase,
                                 getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCase)

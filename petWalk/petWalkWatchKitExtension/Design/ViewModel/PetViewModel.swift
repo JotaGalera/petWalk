@@ -8,19 +8,19 @@
 import Foundation
 
 @MainActor
-class ContentViewModel: ObservableObject {
+class PetViewModel: ObservableObject {
     @Published var currentSteps: Int = 0
     var animationDailySteps: Int = 0
     
     private var requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase
-    private var saveDailyStepsUseCase: SaveDailyStepsUseCase
+    private var saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase
     private var saveTotalDailyStepsUseCase: SaveTotalStepsUseCase
     private var getDailyStepsUseCase: GetDailyStepsUseCase
     private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase
     
-    init(requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase, saveDailyStepsUseCase: SaveDailyStepsUseCase, saveTotalDailyStepsUseCase: SaveTotalStepsUseCase, getDailyStepsUseCase: GetDailyStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase) {
+    init(requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalDailyStepsUseCase: SaveTotalStepsUseCase, getDailyStepsUseCase: GetDailyStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase) {
         self.requestDailyStepsPermissionUseCase = requestDailyStepsPermissionUseCase
-        self.saveDailyStepsUseCase = saveDailyStepsUseCase
+        self.saveAccumulatedDailyStepsUseCase = saveAccumulatedDailyStepsUseCase
         self.saveTotalDailyStepsUseCase = saveTotalDailyStepsUseCase
         self.getDailyStepsUseCase = getDailyStepsUseCase
         self.getAccumulatedDailyStepsUseCase = getAccumulatedDailyStepsUseCase
@@ -32,15 +32,16 @@ class ContentViewModel: ObservableObject {
             if permission {
                 try await getDailySteps()
             }
+            // TODO: Manage no permission
         } catch {
             print (error)
         }
     }
     
-    func getDailySteps() async throws {
+    func getDailySteps() async throws { // TODO: Probably this should be on PetDataViewModel
         let steps = try await getDailyStepsUseCase.execute()
         calculateAnimationDailySteps(steps)
-        saveDailyStepsUseCase.execute(steps)
+        saveAccumulatedDailyStepsUseCase.execute(steps)
         saveTotalDailyStepsUseCase.execute(steps)
         currentSteps = steps
     }
