@@ -1,6 +1,7 @@
 import Foundation
 
 protocol UserDefaultsRepository: AutoMockable {
+    func saveTrackingDailySteps(_ permission: Bool)
     func saveAccumulatedDailySteps(_ steps: Int)
     func saveTotalSteps(_ steps: Int)
     func saveDateDailySteps(_ date: Date)
@@ -14,6 +15,10 @@ class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
     
     public init(userDefaultDataSource: UserDefaultsDataSource) {
         self.userDefaultDataSource = userDefaultDataSource
+    }
+    
+    func saveTrackingDailySteps(_ permission: Bool) {
+        userDefaultDataSource.set(value: permission, forKey: .trackingDailyStepsPermission)
     }
     
     func saveAccumulatedDailySteps(_ steps: Int) {

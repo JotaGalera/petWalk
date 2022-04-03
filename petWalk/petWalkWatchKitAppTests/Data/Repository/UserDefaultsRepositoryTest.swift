@@ -20,13 +20,24 @@ class UserDefaultsRepositoryTest: XCTestCase {
         sut = UserDefaultsRepositoryImplementation(userDefaultDataSource: dataSource)
     }
     
+    func testThatTrackingDailyStepsIsSavedOnMemory_When_SaveTrackingDailyStepsIsCalled() {
+        let permission = true
+        
+        sut.saveTrackingDailySteps(permission)
+        
+        XCTAssertEqual(1, dataSource.setCallsCount)
+        XCTAssertEqual(permission, dataSource.setParamValueReceived as! Bool)
+        XCTAssertEqual(.trackingDailyStepsPermission, dataSource.setParamForKeyReceived)
+
+    }
+    
     func testThatDailyStepsAreSavedOnMemory_When_SaveDailyStepsIsCalled() throws {
         let stepsMocked = 10
         
         sut.saveAccumulatedDailySteps(stepsMocked)
         
         XCTAssertEqual(1, dataSource.setCallsCount)
-        XCTAssertEqual(10, dataSource.setParamValueReceived as! Int)
+        XCTAssertEqual(stepsMocked, dataSource.setParamValueReceived as! Int)
         XCTAssertEqual(.accumulatedDailySteps, dataSource.setParamForKeyReceived)
     }
     
@@ -36,18 +47,18 @@ class UserDefaultsRepositoryTest: XCTestCase {
         sut.saveTotalSteps(stepsMocked)
         
         XCTAssertEqual(1, dataSource.setCallsCount)
-        XCTAssertEqual(10, dataSource.setParamValueReceived as! Int)
+        XCTAssertEqual(stepsMocked, dataSource.setParamValueReceived as! Int)
         XCTAssertEqual(.totalSteps, dataSource.setParamForKeyReceived)
     }
     
     func testThatDateDailyStepsAreSavedOnMemory_When_SaveDateDailyStepsIsCalled() throws {
-        let stepsMocked = 10
+        let date = Date()
         
-        sut.saveTotalSteps(stepsMocked)
+        sut.saveDateDailySteps(date)
         
         XCTAssertEqual(1, dataSource.setCallsCount)
-        XCTAssertEqual(10, dataSource.setParamValueReceived as! Int)
-        XCTAssertEqual(.totalSteps, dataSource.setParamForKeyReceived)
+        XCTAssertEqual(date, dataSource.setParamValueReceived as! Date)
+        XCTAssertEqual(.dateDailySteps, dataSource.setParamForKeyReceived)
     }
     
     func testThatAccumulatedDailyStepsAreRequested_When_GetAccumulatedDailyStepsIsCalled() {
@@ -88,6 +99,8 @@ class UserDefaultDataSourceMock: UserDefaultsDataSource {
         getCallsCount += 1
         getParamForKeyReceived = forKey
         switch forKey {
+        case .trackingDailyStepsPermission:
+            getReturnValue = true
         case .accumulatedDailySteps:
             getReturnValue = 10
         case .totalSteps:

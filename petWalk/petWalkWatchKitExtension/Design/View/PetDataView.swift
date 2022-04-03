@@ -10,28 +10,24 @@ import SwiftUI
 struct PetDataView: View {
     private let petDataViewConfigurator = PetDataViewConfigurator()
     
-    @State var dailySteps: Int
-    @State var newExp: Int
-    @State var expNextLevel: Int = 100
-    
+    @State var expNextLevel: Int = 100 // TODO: this value has to be provided by PetViewModel
     
     @ObservedObject var petDataViewModel: PetDataViewModel
     
     init() {
         petDataViewModel = petDataViewConfigurator.configure()
-        newExp = petDataViewModel.animationDailySteps
     }
     
     var body: some View {
         ZStack {
             VStack {
-                Text("Exp: \(dailySteps)")
-                Text("Next Lvl: \(expNextLevel - dailySteps)")
+                Text("Exp: \(petDataViewModel.currentSteps)")
+                Text("Next Lvl: \(expNextLevel - petDataViewModel.currentSteps)")
             }
-            Animation(newExp: $newExp, expNextLevel: $expNextLevel)
+            Animation(newExp: $petDataViewModel.animationDailySteps, expNextLevel: $expNextLevel)
         }
         .onAppear {
-            petDataViewModel.calculateAnimationDailySteps(dailySteps)
+            petDataViewModel.calculateAnimationDailySteps(petDataViewModel.currentSteps)
         }
     }
 }

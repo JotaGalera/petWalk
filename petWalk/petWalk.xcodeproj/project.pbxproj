@@ -10,6 +10,8 @@
 		12C10A382DF7508E18097A18 /* Pods_petWalkWatchKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8216F4C4042A5D1D20E015 /* Pods_petWalkWatchKitApp.framework */; };
 		21E38BE86C850874828E4AF9 /* Pods_petWalkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DE13B055A0DF53CC3B0EA0 /* Pods_petWalkUITests.framework */; };
 		350127BB27C2606A00AB2B1D /* PetDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350127BA27C2606900AB2B1D /* PetDataView.swift */; };
+		350246A727F9AC0A0060E489 /* SaveTrackingDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350246A627F9AC0A0060E489 /* SaveTrackingDailyStepsUseCaseTest.swift */; };
+		350246A927FA166A0060E489 /* PetDataViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350246A827FA166A0060E489 /* PetDataViewModelTest.swift */; };
 		35094B3127E3E33A0035D7B7 /* PetDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */; };
 		35094B3327E3E4920035D7B7 /* PetDataViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3227E3E4920035D7B7 /* PetDataViewConfigurator.swift */; };
 		35338BD727CD6E58007ECF47 /* SaveTotalStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35338BD627CD6E58007ECF47 /* SaveTotalStepsUseCase.swift */; };
@@ -52,7 +54,10 @@
 		35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */; };
 		35BF2E2327BEC93D000922BF /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E2227BEC93D000922BF /* UserDefaultsKeys.swift */; };
 		35BF2E2527BECD5F000922BF /* UserDefaultsDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E2427BECD5F000922BF /* UserDefaultsDataSourceTest.swift */; };
-		35BF2E2727BEE910000922BF /* ContentViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E2627BEE910000922BF /* ContentViewModelTest.swift */; };
+		35BF2E2727BEE910000922BF /* PetViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E2627BEE910000922BF /* PetViewModelTest.swift */; };
+		35CEDF0927F99C54004DF2B5 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEDF0827F99C54004DF2B5 /* TrackingManager.swift */; };
+		35CEDF0B27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEDF0A27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift */; };
+		35CEDF0D27F9A7BF004DF2B5 /* TrackingManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEDF0C27F9A7BF004DF2B5 /* TrackingManagerTest.swift */; };
 		35E999CF27B8358700221C81 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E999CE27B8358700221C81 /* AutoMockable.generated.swift */; };
 		35F83B9527BEBB420082EFA6 /* HealthStorieRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */; };
 		35F83B9727BEBFB90082EFA6 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */; };
@@ -141,6 +146,8 @@
 		25817A511D849BE1016DC106 /* Pods_petWalk_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		290ED32978534F5D38F9751C /* Pods-petWalkWatchKitExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkWatchKitExtension.release.xcconfig"; path = "Target Support Files/Pods-petWalkWatchKitExtension/Pods-petWalkWatchKitExtension.release.xcconfig"; sourceTree = "<group>"; };
 		350127BA27C2606900AB2B1D /* PetDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataView.swift; sourceTree = "<group>"; };
+		350246A627F9AC0A0060E489 /* SaveTrackingDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTrackingDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
+		350246A827FA166A0060E489 /* PetDataViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModelTest.swift; sourceTree = "<group>"; };
 		35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModel.swift; sourceTree = "<group>"; };
 		35094B3227E3E4920035D7B7 /* PetDataViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewConfigurator.swift; sourceTree = "<group>"; };
 		35338BD627CD6E58007ECF47 /* SaveTotalStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTotalStepsUseCase.swift; sourceTree = "<group>"; };
@@ -193,7 +200,10 @@
 		35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTest.swift; sourceTree = "<group>"; };
 		35BF2E2227BEC93D000922BF /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		35BF2E2427BECD5F000922BF /* UserDefaultsDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataSourceTest.swift; sourceTree = "<group>"; };
-		35BF2E2627BEE910000922BF /* ContentViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModelTest.swift; sourceTree = "<group>"; };
+		35BF2E2627BEE910000922BF /* PetViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModelTest.swift; sourceTree = "<group>"; };
+		35CEDF0827F99C54004DF2B5 /* TrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
+		35CEDF0A27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTrackingDailyStepsUseCase.swift; sourceTree = "<group>"; };
+		35CEDF0C27F9A7BF004DF2B5 /* TrackingManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManagerTest.swift; sourceTree = "<group>"; };
 		35E999CE27B8358700221C81 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStorieRepositoryTest.swift; sourceTree = "<group>"; };
 		35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
@@ -426,6 +436,7 @@
 		355EA4CB27B0569C00461F2F /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				35CEDF0727F99C3F004DF2B5 /* Tracking */,
 				3596938A278B42E600B68BEF /* HealthStoreDataSource.swift */,
 				355EA4C727B053CA00461F2F /* UserDefaultsDataSource.swift */,
 			);
@@ -449,6 +460,7 @@
 				355EA4D727B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift */,
 				355EA4C927B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift */,
 				35338BD627CD6E58007ECF47 /* SaveTotalStepsUseCase.swift */,
+				35CEDF0A27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -545,6 +557,7 @@
 				35BF2E1D27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift */,
 				3563C31E27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift */,
 				3563C32027D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift */,
+				350246A627F9AC0A0060E489 /* SaveTrackingDailyStepsUseCaseTest.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -552,7 +565,8 @@
 		359A549D27B5A5E500C55BF6 /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				35BF2E2627BEE910000922BF /* ContentViewModelTest.swift */,
+				35BF2E2627BEE910000922BF /* PetViewModelTest.swift */,
+				350246A827FA166A0060E489 /* PetDataViewModelTest.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -592,11 +606,20 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		35CEDF0727F99C3F004DF2B5 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				35CEDF0827F99C54004DF2B5 /* TrackingManager.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
 		35F83B9827BEC14D0082EFA6 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
 				3596E92B27BE9CB100B41828 /* HealthDataSourceTest.swift */,
 				35BF2E2427BECD5F000922BF /* UserDefaultsDataSourceTest.swift */,
+				35CEDF0C27F9A7BF004DF2B5 /* TrackingManagerTest.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -1074,6 +1097,7 @@
 				3543501627832D910024FB5A /* petWalkApp.swift in Sources */,
 				3596938B278B42E600B68BEF /* HealthStoreDataSource.swift in Sources */,
 				355EA4D627B0673200461F2F /* PetViewConfigurator.swift in Sources */,
+				35CEDF0927F99C54004DF2B5 /* TrackingManager.swift in Sources */,
 				35338BD727CD6E58007ECF47 /* SaveTotalStepsUseCase.swift in Sources */,
 				3543501427832D910024FB5A /* PetView.swift in Sources */,
 				35BF2E2327BEC93D000922BF /* UserDefaultsKeys.swift in Sources */,
@@ -1084,6 +1108,7 @@
 				35FE1DBC2789C7060087ECCA /* PetAnimationScene.swift in Sources */,
 				355EA4CA27B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift in Sources */,
 				35AB46FF278A185000401FB7 /* Pets.swift in Sources */,
+				35CEDF0B27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift in Sources */,
 				355EA4D227B0645A00461F2F /* HealthStorieRepository.swift in Sources */,
 				355EA4CF27B056DF00461F2F /* UserDefaultsRepository.swift in Sources */,
 				355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */,
@@ -1105,8 +1130,11 @@
 				35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */,
 				3563C32127D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift in Sources */,
 				35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */,
+				35CEDF0D27F9A7BF004DF2B5 /* TrackingManagerTest.swift in Sources */,
 				35BF2E2527BECD5F000922BF /* UserDefaultsDataSourceTest.swift in Sources */,
-				35BF2E2727BEE910000922BF /* ContentViewModelTest.swift in Sources */,
+				350246A927FA166A0060E489 /* PetDataViewModelTest.swift in Sources */,
+				350246A727F9AC0A0060E489 /* SaveTrackingDailyStepsUseCaseTest.swift in Sources */,
+				35BF2E2727BEE910000922BF /* PetViewModelTest.swift in Sources */,
 				35F83B9727BEBFB90082EFA6 /* UtilsTest.swift in Sources */,
 				35E999CF27B8358700221C81 /* AutoMockable.generated.swift in Sources */,
 				35F83B9527BEBB420082EFA6 /* HealthStorieRepositoryTest.swift in Sources */,

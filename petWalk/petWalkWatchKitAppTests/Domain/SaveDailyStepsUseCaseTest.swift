@@ -24,8 +24,8 @@ class SaveDailyStepsUseCaseTest: XCTestCase {
         
         sut.execute(stepsMocked)
         
-        XCTAssertEqual(1, repository.saveDailyStepsCallsCount)
-        XCTAssertEqual(10, repository.saveDailyStepsReceivedSteps)
+        XCTAssertEqual(1, repository.saveAccumulatedDailyStepsCallsCount)
+        XCTAssertEqual(10, repository.saveAccumulatedDailyStepsReceivedSteps)
         XCTAssertEqual(1, repository.saveDateDailyStepsCallsCount)
         XCTAssertGreaterThanOrEqual(Date(), repository.saveDateDailyStepsReceivedDate!)
     }

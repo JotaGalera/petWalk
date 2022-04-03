@@ -9,45 +9,23 @@ import Foundation
 
 @MainActor
 class PetViewModel: ObservableObject {
-    @Published var currentSteps: Int = 0
-    var animationDailySteps: Int = 0
-    
     private var requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase
-    private var saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase
-    private var saveTotalDailyStepsUseCase: SaveTotalStepsUseCase
-    private var getDailyStepsUseCase: GetDailyStepsUseCase
-    private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase
+    private var saveTrackingDailyStepsUseCase: SaveTrackingDailyStepsUseCase
     
-    init(requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalDailyStepsUseCase: SaveTotalStepsUseCase, getDailyStepsUseCase: GetDailyStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase) {
+    init(requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase, saveTrackingDailyStepsUseCase: SaveTrackingDailyStepsUseCase) {
         self.requestDailyStepsPermissionUseCase = requestDailyStepsPermissionUseCase
-        self.saveAccumulatedDailyStepsUseCase = saveAccumulatedDailyStepsUseCase
-        self.saveTotalDailyStepsUseCase = saveTotalDailyStepsUseCase
-        self.getDailyStepsUseCase = getDailyStepsUseCase
-        self.getAccumulatedDailyStepsUseCase = getAccumulatedDailyStepsUseCase
+        self.saveTrackingDailyStepsUseCase = saveTrackingDailyStepsUseCase
     }
     
     func requestPermissions() async {
         do {
             let permission = try await requestDailyStepsPermissionUseCase.execute()
             if permission {
-                try await getDailySteps()
+                saveTrackingDailyStepsUseCase.execute(permission)
             }
             // TODO: Manage no permission
         } catch {
             print (error)
         }
-    }
-    
-    func getDailySteps() async throws { // TODO: Probably this should be on PetDataViewModel
-        let steps = try await getDailyStepsUseCase.execute()
-        calculateAnimationDailySteps(steps)
-        saveAccumulatedDailyStepsUseCase.execute(steps)
-        saveTotalDailyStepsUseCase.execute(steps)
-        currentSteps = steps
-    }
-    
-    private func calculateAnimationDailySteps(_ steps: Int) {
-        let accumulatedDailySteps = self.getAccumulatedDailyStepsUseCase.execute()
-        self.animationDailySteps = steps - accumulatedDailySteps
     }
 }

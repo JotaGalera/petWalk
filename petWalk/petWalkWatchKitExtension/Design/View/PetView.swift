@@ -38,7 +38,6 @@ struct PetView: View {
         .task {
             await contentViewModel.requestPermissions()
         }
-        .environmentObject(contentViewModel)
     }
 }
 
@@ -58,8 +57,6 @@ struct ItemBarMenu: View {
     let height: CGFloat = 25
     var imageName: String
     var valueText: String
-    
-    @EnvironmentObject var contentViewModel: PetViewModel
     
     var body: some View {
         HStack {

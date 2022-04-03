@@ -13,22 +13,13 @@ class PetViewConfigurator {
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)
         
         let requestDailyStepsPermissionUseCase = RequestDailyStepsPermissionUseCaseImplementation(healthStoreRepository: healthStoreRepository)
-        let getDailyStepsUseCase = GetDailyStepsUseCaseImplementation(healthStoreRepository: healthStoreRepository)
         
         let userDefaultDataSource = UserDefaultsDataSourceImplementation()
         let userDefaultRepository = UserDefaultsRepositoryImplementation(userDefaultDataSource: userDefaultDataSource)
         
-        let saveAccumulatedDailyStepsUseCase = SaveAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
-        let saveTotalStepsUseCase = SaveTotalStepsUseCaseImplementation(repository: userDefaultRepository)
-        let getAccumulatedDailyStepsUseCase = GetAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
-        
-        
-        
+        let saveTrackingDailyStepsUseCase = SaveTrackingDailyStepsUseCaseImplementation(userDefaultRepository: userDefaultRepository)
         
         return PetViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCase,
-                            saveAccumulatedDailyStepsUseCase: saveAccumulatedDailyStepsUseCase,
-                                saveTotalDailyStepsUseCase: saveTotalStepsUseCase,
-                                getDailyStepsUseCase: getDailyStepsUseCase,
-                                getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCase)
+                            saveTrackingDailyStepsUseCase: saveTrackingDailyStepsUseCase)
     }
 }
