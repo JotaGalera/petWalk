@@ -45,9 +45,11 @@ struct StatusBarMenu: View {
     var body: some View {
         HStack {
             ItemBarMenu(imageName: "Sword",
-                        valueText: "10")
+                        valueText: "10",
+                        accessibilityIdentifer: "strength")
             ItemBarMenu(imageName: "Heart",
-                        valueText: "10")
+                        valueText: "10",
+                        accessibilityIdentifer: "life")
         }
     }
 }
@@ -57,6 +59,7 @@ struct ItemBarMenu: View {
     let height: CGFloat = 25
     var imageName: String
     var valueText: String
+    var accessibilityIdentifer: String
     
     var body: some View {
         HStack {
@@ -66,6 +69,7 @@ struct ItemBarMenu: View {
                     .frame(width: 25,
                            height: 25,
                            alignment: .center)
+                    .accessibilityIdentifier(accessibilityIdentifer)
                 
                 Text("10")
             }

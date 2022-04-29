@@ -22,7 +22,9 @@ struct PetDataView: View {
         ZStack {
             VStack {
                 Text("Exp: \(petDataViewModel.currentSteps)")
+                    .accessibilityIdentifier("Exp")
                 Text("Next Lvl: \(expNextLevel - petDataViewModel.currentSteps)")
+                    .accessibilityIdentifier("NextLevel")
             }
             Animation(newExp: $petDataViewModel.animationDailySteps, expNextLevel: $expNextLevel)
         }
