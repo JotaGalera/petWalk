@@ -84,6 +84,24 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(.dateDailySteps, dataSource.getParamForKeyReceived)
         XCTAssertEqual(dataSource.dateMock, dateDailySteps)
     }
+    
+    func testThatPreviousAnimationProgressIsObtained_When_() {
+        let previousAnimationProgressMock = sut.getPreviousAnimationProgress()
+        
+        XCTAssertEqual(1, dataSource.getCallsCount)
+        XCTAssertEqual(.previousAnimationProgress, dataSource.getParamForKeyReceived)
+        XCTAssertEqual(40.0, previousAnimationProgressMock)
+    }
+    
+    func testThatPreviousAnimationProgressIsSaved_When_() {
+        let previousAnimationProgressMock = 50.0
+        
+        sut.savePreviousAnimationProgress(previousAnimationProgressMock)
+        
+        XCTAssertEqual(1, dataSource.setCallsCount)
+        XCTAssertEqual(previousAnimationProgressMock, dataSource.setParamValueReceived as! Double)
+        XCTAssertEqual(.previousAnimationProgress, dataSource.setParamForKeyReceived)
+    }
 }
 
 class UserDefaultDataSourceMock: UserDefaultsDataSource {
@@ -107,6 +125,8 @@ class UserDefaultDataSourceMock: UserDefaultsDataSource {
             getReturnValue = 100
         case .dateDailySteps:
             getReturnValue = dateMock
+        case .previousAnimationProgress:
+            getReturnValue = 40.0
         }
         return getReturnValue as? T
     }

@@ -11,6 +11,7 @@ import Foundation
 class PetDataViewModel: ObservableObject {
     @Published var currentSteps: Int = 0
     @Published var animationDailySteps: Int = 0
+    @Published var previousAnimationProgress: Double = 0.0
     
     private var trackingManager: TrackingManager
     private var saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase

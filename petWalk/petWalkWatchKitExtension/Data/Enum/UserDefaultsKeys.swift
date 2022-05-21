@@ -12,4 +12,5 @@ enum UserDefaultsKeys: String {
     case totalSteps = "totalSteps"
     case dateDailySteps = "dateDailySteps"
     case trackingDailyStepsPermission = "trackingDailyStepsPermission"
+    case previousAnimationProgress = "previousAnimationProgress"
 }

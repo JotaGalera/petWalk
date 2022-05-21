@@ -10,7 +10,7 @@ import SwiftUI
 struct PetDataView: View {
     private let petDataViewConfigurator = PetDataViewConfigurator()
     
-    @State var expNextLevel: Int = 100 // TODO: this value has to be provided by PetViewModel
+    @State var levelUpExp: Int = 100 // TODO: this value has to be provided by PetViewModel
     
     @ObservedObject var petDataViewModel: PetDataViewModel
     
@@ -23,25 +23,31 @@ struct PetDataView: View {
             VStack {
                 Text("Exp: \(petDataViewModel.currentSteps)")
                     .accessibilityIdentifier("Exp")
-                Text("Next Lvl: \(expNextLevel - petDataViewModel.currentSteps)")
+                Text("Next Lvl: \(levelUpExp - petDataViewModel.currentSteps)")
                     .accessibilityIdentifier("NextLevel")
             }
-            Animation(newExp: $petDataViewModel.animationDailySteps, expNextLevel: $expNextLevel)
+            Animation(newExp: $petDataViewModel.animationDailySteps,
+                      levelUpExp: $levelUpExp,
+                      previousExpAnimated: $petDataViewModel.previousAnimationProgress)
         }
         .onAppear {
-            petDataViewModel.calculateAnimationDailySteps(petDataViewModel.currentSteps)
+            Task {
+                await petDataViewModel.getDailySteps()
+                //await petDataViewModel.getPreviousProgressAnimation()
+            }
         }
+        .environmentObject(petDataViewModel)
     }
 }
 
 struct Animation: View {
     private let endCircleShape = 0.8
     
-    @State var previousExp = 0.0
     @State var progressUntilNextLevel = 0.0
     
     @Binding var newExp: Int
-    @Binding var expNextLevel: Int
+    @Binding var levelUpExp: Int
+    @Binding var previousExpAnimated: Double
     
     var body: some View {
         ZStack {
@@ -49,7 +55,7 @@ struct Animation: View {
                 .fill(Color.clear)
             .overlay(
             Circle()
-                .trim(from: self.previousExp, to: self.progressUntilNextLevel)
+                .trim(from: self.previousExpAnimated, to: self.progressUntilNextLevel)
                 .rotation(Angle(degrees: 125))
                 .stroke(style: StrokeStyle(lineWidth: 12, lineCap: .round, lineJoin: .round))
                 .fill(Color.red)
@@ -57,9 +63,10 @@ struct Animation: View {
         }
         .animation(.spring(response: 2.0, dampingFraction: 1.0, blendDuration: 1.0), value: self.progressUntilNextLevel)
         .onAppear {
-            self.progressUntilNextLevel = (Double(newExp) * endCircleShape) / Double(expNextLevel)
+            self.progressUntilNextLevel = ( (Double(newExp) * endCircleShape) / Double(levelUpExp) / 10 ) + previousExpAnimated
             
-            // Save progressUntilNextLevel as newPreviousExp 
+            // Save progressUntilNextLevel as newPreviousExpAnimated
+            //PetDataViewModel.savePreviousProgressAnimation()
         }
     }
     
