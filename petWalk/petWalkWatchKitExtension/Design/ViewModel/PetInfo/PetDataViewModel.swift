@@ -11,20 +11,25 @@ import Foundation
 class PetDataViewModel: ObservableObject {
     @Published var currentSteps: Int = 0
     @Published var animationDailySteps: Int = 0
-    @Published var previousAnimationProgress: Double = 0.0
+    @Published var previousAnimationProgress: Double = 0
+    @Published var levelUpExp: Int = 1000
     
     private var trackingManager: TrackingManager
     private var saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase
     private var saveTotalStepsUseCase: SaveTotalStepsUseCase
+    private var savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase
     private var getDailyStepsUseCase: GetDailyStepsUseCase
     private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase
+    private var getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase
     
-    init(trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, getDailyStepsUseCase: GetDailyStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase) {
+    init(trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, getDailyStepsUseCase: GetDailyStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase) {
         self.trackingManager = trackingManager
         self.saveAccumulatedDailyStepsUseCase = saveAccumulatedDailyStepsUseCase
         self.saveTotalStepsUseCase = saveTotalStepsUseCase
+        self.savePreviousAnimationProgressUseCase = savePreviousAnimationProgressUseCase
         self.getDailyStepsUseCase = getDailyStepsUseCase
         self.getAccumulatedDailyStepsUseCase = getAccumulatedDailyStepsUseCase
+        self.getPreviousAnimationProgressUseCase = getPreviousAnimationProgressUseCase
     }
     
     func getDailySteps() async {
@@ -47,5 +52,13 @@ class PetDataViewModel: ObservableObject {
     func calculateAnimationDailySteps(_ steps: Int) {
         let accumulatedDailySteps = self.getAccumulatedDailyStepsUseCase.execute()
         self.animationDailySteps = steps - accumulatedDailySteps
+    }
+    
+    func getPreviousProgressAnimation() {
+        previousAnimationProgress = getPreviousAnimationProgressUseCase.execute()
+    }
+    
+    func savePreviousProgressAnimation(_ previousAnimationProgress: Double) {
+        savePreviousAnimationProgressUseCase.execute(previousAnimationProgress)
     }
 }

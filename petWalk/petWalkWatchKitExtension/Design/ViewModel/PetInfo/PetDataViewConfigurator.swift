@@ -19,12 +19,16 @@ class PetDataViewConfigurator {
         
         let saveAccumulatedDailyStepsUseCase = SaveAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
         let saveTotalStepsUseCase = SaveTotalStepsUseCaseImplementation(repository: userDefaultRepository)
+        let savePreviousAnimationProgressUseCase = SavePreviousAnimationProgressUseCaseImplementation(repository: userDefaultRepository)
         let getAccumulatedDailyStepsUseCase = GetAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
+        let getPreviousAnimationProgressUseCase = GetPreviousAnimationProgressUseCaseImplementation(repository: userDefaultRepository)
         
         return PetDataViewModel(trackingManager: TrackingManagerImplementation.instance,
                                 saveAccumulatedDailyStepsUseCase: saveAccumulatedDailyStepsUseCase,
                                 saveTotalStepsUseCase: saveTotalStepsUseCase,
+                                savePreviousAnimationProgressUseCase: savePreviousAnimationProgressUseCase,
                                 getDailyStepsUseCase: getDailyStepsUseCase,
-                                getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCase)
+                                getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCase,
+                                getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCase)
     }
 }
