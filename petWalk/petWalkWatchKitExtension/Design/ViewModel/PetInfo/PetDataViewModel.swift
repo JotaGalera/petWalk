@@ -50,8 +50,8 @@ class PetDataViewModel: ObservableObject {
     }
     
     func calculateAnimationDailySteps(_ steps: Int) {
-        let accumulatedDailySteps = self.getAccumulatedDailyStepsUseCase.execute()
-        self.animationDailySteps = steps - accumulatedDailySteps
+        let previousSteps = self.getAccumulatedDailyStepsUseCase.execute()
+        self.animationDailySteps = steps - previousSteps
     }
     
     func getPreviousProgressAnimation() {

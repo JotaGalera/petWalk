@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PetDataView: View {
     private let petDataViewConfigurator = PetDataViewConfigurator()
+    private let deviceSize = WKInterfaceDevice.current().screenBounds
     
     @ObservedObject var petDataViewModel: PetDataViewModel
     
@@ -26,13 +27,13 @@ struct PetDataView: View {
                 Text("Next Lvl: \(petDataViewModel.levelUpExp - petDataViewModel.currentSteps)")
                     .accessibilityIdentifier("NextLevel")
             }
-            
             if pendingFetch {
                 Animation(newExp: petDataViewModel.animationDailySteps,
-                      levelUpExp: petDataViewModel.levelUpExp,
-                      previousExpAnimated: petDataViewModel.previousAnimationProgress)
+                          levelUpExp: petDataViewModel.levelUpExp,
+                          previousExpAnimated: petDataViewModel.previousAnimationProgress)
             }
         }
+        .frame(width: deviceSize.width, height: deviceSize.height/1.6)
         .task() {
             await petDataViewModel.getDailySteps()
             petDataViewModel.getPreviousProgressAnimation()
@@ -59,14 +60,17 @@ struct Animation: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(Color.clear)
-            .overlay(
-                Circle()
-                    .trim(from: 0.0, to: previousExpAnimated + progressUntilNextLevel)
-                    .rotation(Angle(degrees: 125))
-                    .stroke(style: StrokeStyle(lineWidth: 12, lineCap: .round, lineJoin: .round))
-                    .fill(Color.red)
-            )
+                .trim(from: 0.0, to: 0.8)
+                .rotation(Angle(degrees: 125))
+                .stroke(style: StrokeStyle(lineWidth: 12, lineCap: .round, lineJoin: .round))
+                .fill(.blue)
+                .overlay(
+                    Circle()
+                        .trim(from: 0.0, to: 0.7)
+                        .rotation(Angle(degrees: 125))
+                        .stroke(style: StrokeStyle(lineWidth: 9, lineCap: .round, lineJoin: .round))
+                        .fill(Color.orange)
+                )
         }
         .animation(.spring(response: 2.0, dampingFraction: 1.0, blendDuration: 1.0), value: previousExpAnimated + progressUntilNextLevel)
         .onAppear {

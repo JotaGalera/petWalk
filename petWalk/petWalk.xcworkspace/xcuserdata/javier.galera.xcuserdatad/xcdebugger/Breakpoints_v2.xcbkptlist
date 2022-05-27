@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4C8792FE-A937-461E-AAF0-B46F668B4826"
+            uuid = "EC0808C0-3735-4D7A-B1B6-B86EE965A678"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "petWalkWatchKitExtension/Design/ViewModel/PetInfo/PetDataViewModel.swift"
+            filePath = "petWalkWatchKitExtension/Domain/UseCase/Steps/GetAccumulatedDailyStepsUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "getPreviousProgressAnimation()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "areDailySteps()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
