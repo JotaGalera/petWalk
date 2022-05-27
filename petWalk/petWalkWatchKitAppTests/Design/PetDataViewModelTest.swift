@@ -13,8 +13,10 @@ class PetDataViewModelTest: XCTestCase {
     private var trackingManagerMock: TrackingManagerMock!
     private var saveAccumulateDailyStepsUseCaseMock: SaveAccumulatedDailyStepsUseCaseMock!
     private var saveTotalStepsUseCaseMock : SaveTotalStepsUseCaseMock!
-    private var getDailyStepsUseCaseMock: GetDailyStepsUseCaseMock!
+    private var savePreviousAnimationProgressUseCaseMock: SavePreviousAnimationProgressUseCaseMock!
+    private var getStepsUseCaseMock: GetStepsUseCaseMock!
     private var getAccumulatedDailyStepsUseCaseMock: GetAccumulatedDailyStepsUseCaseMock!
+    private var getPreviousAnimationProgressUseCaseMock: GetPreviousAnimationProgressUseCaseMock!
     
     @MainActor override func setUpWithError() throws {
         try super.setUpWithError()
@@ -22,52 +24,73 @@ class PetDataViewModelTest: XCTestCase {
         trackingManagerMock = TrackingManagerMock()
         saveAccumulateDailyStepsUseCaseMock = SaveAccumulatedDailyStepsUseCaseMock()
         saveTotalStepsUseCaseMock = SaveTotalStepsUseCaseMock()
-        getDailyStepsUseCaseMock = GetDailyStepsUseCaseMock()
+        savePreviousAnimationProgressUseCaseMock = SavePreviousAnimationProgressUseCaseMock()
+        getStepsUseCaseMock = GetStepsUseCaseMock()
         getAccumulatedDailyStepsUseCaseMock = GetAccumulatedDailyStepsUseCaseMock()
+        getPreviousAnimationProgressUseCaseMock = GetPreviousAnimationProgressUseCaseMock()
         
         sut = PetDataViewModel(trackingManager: trackingManagerMock,
                                saveAccumulatedDailyStepsUseCase: saveAccumulateDailyStepsUseCaseMock,
                                saveTotalStepsUseCase: saveTotalStepsUseCaseMock,
-                               getDailyStepsUseCase: getDailyStepsUseCaseMock,
-                               getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCaseMock)
+                               savePreviousAnimationProgressUseCase: savePreviousAnimationProgressUseCaseMock,
+                               getStepsUseCase: getStepsUseCaseMock,
+                               getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCaseMock,
+                               getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCaseMock)
     }
     
-    func testThatDailyStepsAreNotRequested_When_TrackingDailySetepsIsNotGranted() async throws {
+    func testThatStepsAreNotRequested_When_TrackingDailyStepsIsNotGranted() async throws {
         trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = false
         
-        await sut.getDailySteps()
+        await sut.getSteps()
         
-        XCTAssertEqual(0, getDailyStepsUseCaseMock.executeCallsCount)
+        XCTAssertEqual(0, getStepsUseCaseMock.executeCallsCount)
     }
     
-    func testThatGetDailyStepsUseCaseIsCalled_When_TrackingDailyStepsIsGranted() async throws {
+    func testThatGetStepsUseCaseIsCalled_When_TrackingDailyStepsIsGranted() async throws {
         trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
-        getDailyStepsUseCaseMock.executeReturnValue = 10
+        getStepsUseCaseMock.executeReturnValue = 10
         getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 10
         
-        await sut.getDailySteps()
+        await sut.getSteps()
         
-        XCTAssertEqual(1, getDailyStepsUseCaseMock.executeCallsCount)
+        XCTAssertEqual(1, getStepsUseCaseMock.executeCallsCount)
     }
     
-    @MainActor func testThatDailyStepsAreRequested_When_PermissionIsGranted() async throws {
+    @MainActor func testThatStepsAreRequested_When_PermissionIsGranted() async throws {
         trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
-        getDailyStepsUseCaseMock.executeReturnValue = 10
+        getStepsUseCaseMock.executeReturnValue = 10
         getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
         
-        await sut.getDailySteps()
+        await sut.getSteps()
         
         XCTAssertEqual(10, sut.currentSteps)
     }
     
     @MainActor func testThatAnimationDailyStepsAreCalculated_When_TrackingDailyStepsIsGranted() async throws {
         trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
-        getDailyStepsUseCaseMock.executeReturnValue = 50
+        getStepsUseCaseMock.executeReturnValue = 50
         getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 20
         
-        await sut.getDailySteps()
+        await sut.getSteps()
         
         XCTAssertEqual(1, getAccumulatedDailyStepsUseCaseMock.executeCallsCount)
         XCTAssertEqual(30, sut.animationDailySteps)
+    }
+    
+    @MainActor func testThatPreviousProgressAnimationIsObtained_When_GetPreviousProgressAnimationIsCalled() {
+        getPreviousAnimationProgressUseCaseMock.executeReturnValue = 100
+        
+         sut.getPreviousProgressAnimation()
+        
+        XCTAssertEqual(100, sut.previousAnimationProgress)
+    }
+    
+    @MainActor func testThatPreviousProgressAnimationIsSaved_When_SavePreviousProgressAnimationIsCalled() {
+        let previousProgressMock = 10.0
+        
+        sut.savePreviousProgressAnimation(previousProgressMock)
+        
+        XCTAssertEqual(1, savePreviousAnimationProgressUseCaseMock.executeCallsCount)
+        XCTAssertEqual(previousProgressMock, savePreviousAnimationProgressUseCaseMock.executeReceivedPreviousAnimationProgress)
     }
 }

@@ -29,12 +29,13 @@ class HealthStorieRepositoryTest: XCTestCase {
         XCTAssertTrue(permission)
     }
     
-    func testThatDailyStepsAreCollected_When_GetTodayStepsIsCalled() async throws {
-        dataSourceMock.getDailyStepsReturnValue = 10
+    func testThatStepsAreCollected_When_GetStepsIsCalled() async throws {
+        let dateMock = Date.now
+        dataSourceMock.getStepsDateReturnValue = 10
         
-        let steps = try! await sut.getDailySteps()
+        let steps = try! await sut.getSteps(date: dateMock)
         
-        XCTAssertEqual(1, self.dataSourceMock.getDailyStepsCallsCount)
+        XCTAssertEqual(1, self.dataSourceMock.getStepsDateCallsCount)
         XCTAssertEqual(10, steps)
     }
 }

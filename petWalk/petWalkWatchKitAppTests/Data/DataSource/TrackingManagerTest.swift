@@ -19,10 +19,19 @@ class TrackingManagerTest: XCTestCase {
     }
     
     func testThatDailyStepsTrackingIsEnabled_When_IsTrackingDailyStepsEnabledReturnTrue() {
-        userDefaultsMock.getReturnValue = true
+        userDefaultsMock.trackingDailyStepsPermissionReturnValue = true
         
         let permission = sut.isTrackingDailyStepsEnabled()
         
         XCTAssertTrue(permission)
+    }
+    
+    func testThatStepsTrackingIsDisabled_When_IsTrackingDailyStepsEnabledReturnFalse() {
+        userDefaultsMock.trackingDailyStepsPermissionReturnValue = false
+        
+        sut = TrackingManagerImplementation(userDefaultDataSource: userDefaultsMock)
+        let permission = sut.isTrackingDailyStepsEnabled()
+        
+        XCTAssertFalse(permission)
     }
 }

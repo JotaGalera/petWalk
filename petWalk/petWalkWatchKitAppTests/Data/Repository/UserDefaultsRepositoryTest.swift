@@ -82,7 +82,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         
         XCTAssertEqual(1, dataSource.getCallsCount)
         XCTAssertEqual(.dateDailySteps, dataSource.getParamForKeyReceived)
-        XCTAssertEqual(dataSource.dateMock, dateDailySteps)
+        XCTAssertEqual(dataSource.dateDailyStepsReturnValue, dateDailySteps)
     }
     
     func testThatPreviousAnimationProgressIsObtained_When_() {
@@ -102,40 +102,4 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(previousAnimationProgressMock, dataSource.setParamValueReceived as! Double)
         XCTAssertEqual(.previousAnimationProgress, dataSource.setParamForKeyReceived)
     }
-}
-
-class UserDefaultDataSourceMock: UserDefaultsDataSource {
-    var getCallsCount = 0
-    var getParamForKeyReceived: UserDefaultsKeys!
-    var getReturnValue: Any!
-    var dateMock = Date()
-    var setCallsCount = 0
-    var setParamValueReceived: Any!
-    var setParamForKeyReceived: UserDefaultsKeys!
-    
-    func get<T>(forKey: UserDefaultsKeys) -> T? {
-        getCallsCount += 1
-        getParamForKeyReceived = forKey
-        switch forKey {
-        case .trackingDailyStepsPermission:
-            getReturnValue = true
-        case .accumulatedDailySteps:
-            getReturnValue = 10
-        case .totalSteps:
-            getReturnValue = 100
-        case .dateDailySteps:
-            getReturnValue = dateMock
-        case .previousAnimationProgress:
-            getReturnValue = 40.0
-        }
-        return getReturnValue as? T
-    }
-    
-    func set<T>(value: T, forKey: UserDefaultsKeys) {
-        setCallsCount += 1
-        setParamValueReceived = value
-        setParamForKeyReceived = forKey
-    }
-    
-    
 }

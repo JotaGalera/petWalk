@@ -19,23 +19,16 @@ class GetAccumulatedDailyStepsUseCaseImplementation: GetAccumulatedDailyStepsUse
     }
     
     func execute() -> Int {
-        if areDailySteps() {
+        let lastTimeAppWasOpened = repository.getDateDailySteps()
+        
+        if lastTimeAppWasOpened.isToday() {
             return repository.getAccumulatedDailySteps()
         } else {
             return 0
         }
     }
-    
-    private func areDailySteps() -> Bool {
-        let calendar = NSCalendar.current
-        
-        let date1 = calendar.startOfDay(for: Date.now)
-        let date2 = calendar.startOfDay(for: repository.getDateDailySteps())
-        
-        let daysBetweenDates = calendar.dateComponents([.day], from: date1, to: date2).day
-        
-        return daysBetweenDates == 0
-    }
 }
+
+
 
 

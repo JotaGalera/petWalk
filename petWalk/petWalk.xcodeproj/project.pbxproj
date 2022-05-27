@@ -41,7 +41,7 @@
 		355EA4CA27B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4C927B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift */; };
 		355EA4CF27B056DF00461F2F /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */; };
 		355EA4D227B0645A00461F2F /* HealthStorieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */; };
-		355EA4D427B0661200461F2F /* GetDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D327B0661200461F2F /* GetDailyStepsUseCase.swift */; };
+		355EA4D427B0661200461F2F /* GetStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D327B0661200461F2F /* GetStepsUseCase.swift */; };
 		355EA4D627B0673200461F2F /* PetViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D527B0673200461F2F /* PetViewConfigurator.swift */; };
 		355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D727B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift */; };
 		3563C31F27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563C31E27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift */; };
@@ -62,6 +62,8 @@
 		35CEDF0927F99C54004DF2B5 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEDF0827F99C54004DF2B5 /* TrackingManager.swift */; };
 		35CEDF0B27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEDF0A27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift */; };
 		35CEDF0D27F9A7BF004DF2B5 /* TrackingManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEDF0C27F9A7BF004DF2B5 /* TrackingManagerTest.swift */; };
+		35D9AECE28414A37002C057A /* UserDefaultDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D9AECD28414A37002C057A /* UserDefaultDataSourceMock.swift */; };
+		35D9AED128414B9D002C057A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D9AED028414B9D002C057A /* Date.swift */; };
 		35E999CF27B8358700221C81 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E999CE27B8358700221C81 /* AutoMockable.generated.swift */; };
 		35F83B9527BEBB420082EFA6 /* HealthStorieRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */; };
 		35F83B9727BEBFB90082EFA6 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */; };
@@ -189,7 +191,7 @@
 		355EA4C927B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAccumulatedDailyStepsUseCase.swift; sourceTree = "<group>"; };
 		355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
 		355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStorieRepository.swift; sourceTree = "<group>"; };
-		355EA4D327B0661200461F2F /* GetDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDailyStepsUseCase.swift; sourceTree = "<group>"; };
+		355EA4D327B0661200461F2F /* GetStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStepsUseCase.swift; sourceTree = "<group>"; };
 		355EA4D527B0673200461F2F /* PetViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewConfigurator.swift; sourceTree = "<group>"; };
 		355EA4D727B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDailyStepsPermissionUseCase.swift; sourceTree = "<group>"; };
 		3563C31E27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccumulatedDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
@@ -212,6 +214,8 @@
 		35CEDF0827F99C54004DF2B5 /* TrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
 		35CEDF0A27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTrackingDailyStepsUseCase.swift; sourceTree = "<group>"; };
 		35CEDF0C27F9A7BF004DF2B5 /* TrackingManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManagerTest.swift; sourceTree = "<group>"; };
+		35D9AECD28414A37002C057A /* UserDefaultDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultDataSourceMock.swift; sourceTree = "<group>"; };
+		35D9AED028414B9D002C057A /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		35E999CE27B8358700221C81 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStorieRepositoryTest.swift; sourceTree = "<group>"; };
 		35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
@@ -341,7 +345,7 @@
 		353B60E728390BDD00A1C4B4 /* Steps */ = {
 			isa = PBXGroup;
 			children = (
-				355EA4D327B0661200461F2F /* GetDailyStepsUseCase.swift */,
+				355EA4D327B0661200461F2F /* GetStepsUseCase.swift */,
 				35338BD827CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift */,
 				355EA4C927B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift */,
 				35338BD627CD6E58007ECF47 /* SaveTotalStepsUseCase.swift */,
@@ -493,6 +497,7 @@
 		3543501227832D910024FB5A /* petWalkWatchKitExtension */ = {
 			isa = PBXGroup;
 			children = (
+				35D9AECF28414B88002C057A /* Extensions */,
 				357A5E0D27B5D0960020B71C /* Utils */,
 				35C9A55E279313AE00B56C71 /* Data */,
 				35C9A55F279313BA00B56C71 /* Domain */,
@@ -516,6 +521,7 @@
 		3543502627832D920024FB5A /* petWalkWatchKitAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				35D9AECC28414A1E002C057A /* ManualMocks */,
 				357A5E0927B5CEE60020B71C /* Autogenerated */,
 				359A549B27B5A56800C55BF6 /* Data */,
 				359A549C27B5A5DC00C55BF6 /* Domain */,
@@ -704,6 +710,22 @@
 				35CEDF0827F99C54004DF2B5 /* TrackingManager.swift */,
 			);
 			path = Tracking;
+			sourceTree = "<group>";
+		};
+		35D9AECC28414A1E002C057A /* ManualMocks */ = {
+			isa = PBXGroup;
+			children = (
+				35D9AECD28414A37002C057A /* UserDefaultDataSourceMock.swift */,
+			);
+			path = ManualMocks;
+			sourceTree = "<group>";
+		};
+		35D9AECF28414B88002C057A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35D9AED028414B9D002C057A /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		35F83B9827BEC14D0082EFA6 /* DataSource */ = {
@@ -1196,7 +1218,8 @@
 				35BF2E2327BEC93D000922BF /* UserDefaultsKeys.swift in Sources */,
 				35969397278B4E2A00B68BEF /* PetViewModel.swift in Sources */,
 				350127BB27C2606A00AB2B1D /* PetDataView.swift in Sources */,
-				355EA4D427B0661200461F2F /* GetDailyStepsUseCase.swift in Sources */,
+				35D9AED128414B9D002C057A /* Date.swift in Sources */,
+				355EA4D427B0661200461F2F /* GetStepsUseCase.swift in Sources */,
 				355EA4C827B053CA00461F2F /* UserDefaultsDataSource.swift in Sources */,
 				35FE1DBC2789C7060087ECCA /* PetAnimationScene.swift in Sources */,
 				355EA4CA27B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift in Sources */,
@@ -1225,6 +1248,7 @@
 				35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */,
 				3563C32127D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift in Sources */,
 				35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */,
+				35D9AECE28414A37002C057A /* UserDefaultDataSourceMock.swift in Sources */,
 				353B60F628390F6C00A1C4B4 /* GetPreviousAnimationProgressUseCaseTest.swift in Sources */,
 				35CEDF0D27F9A7BF004DF2B5 /* TrackingManagerTest.swift in Sources */,
 				35BF2E2527BECD5F000922BF /* UserDefaultsDataSourceTest.swift in Sources */,

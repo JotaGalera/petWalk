@@ -3,7 +3,7 @@ import Combine
 
 protocol HealthStoreRepository: AutoMockable {
     func requestAuthorization() async throws -> Bool
-    func getDailySteps() async throws -> Int
+    func getSteps(date: Date) async throws -> Int
 }
 
 class HealthStoreRepositoryImplementation: HealthStoreRepository {
@@ -17,7 +17,7 @@ class HealthStoreRepositoryImplementation: HealthStoreRepository {
         return try await dataSource.requestAuthorization()
     }
     
-    func getDailySteps() async throws -> Int {
-        return try await dataSource.getDailySteps()
+    func getSteps(date: Date) async throws -> Int {
+        return try await dataSource.getSteps(date: date)
     }
 }

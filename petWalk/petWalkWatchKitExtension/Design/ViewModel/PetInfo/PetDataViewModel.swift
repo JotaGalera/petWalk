@@ -18,27 +18,27 @@ class PetDataViewModel: ObservableObject {
     private var saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase
     private var saveTotalStepsUseCase: SaveTotalStepsUseCase
     private var savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase
-    private var getDailyStepsUseCase: GetDailyStepsUseCase
+    private var getStepsUseCase: GetStepsUseCase
     private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase
     private var getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase
     
-    init(trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, getDailyStepsUseCase: GetDailyStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase) {
+    init(trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, getStepsUseCase: GetStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase) {
         self.trackingManager = trackingManager
         self.saveAccumulatedDailyStepsUseCase = saveAccumulatedDailyStepsUseCase
         self.saveTotalStepsUseCase = saveTotalStepsUseCase
         self.savePreviousAnimationProgressUseCase = savePreviousAnimationProgressUseCase
-        self.getDailyStepsUseCase = getDailyStepsUseCase
+        self.getStepsUseCase = getStepsUseCase
         self.getAccumulatedDailyStepsUseCase = getAccumulatedDailyStepsUseCase
         self.getPreviousAnimationProgressUseCase = getPreviousAnimationProgressUseCase
     }
     
-    func getDailySteps() async {
+    func getSteps() async {
         guard trackingManager.isTrackingDailyStepsEnabled() else {
             return
         }
         
         do {
-            let steps = try await getDailyStepsUseCase.execute()
+            let steps = try await getStepsUseCase.execute()
             calculateAnimationDailySteps(steps)
             saveAccumulatedDailyStepsUseCase.execute(steps)
             saveTotalStepsUseCase.execute(steps)

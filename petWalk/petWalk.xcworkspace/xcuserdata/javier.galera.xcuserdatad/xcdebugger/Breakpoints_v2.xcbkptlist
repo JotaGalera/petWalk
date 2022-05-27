@@ -7,17 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EC0808C0-3735-4D7A-B1B6-B86EE965A678"
+            uuid = "2AE02BB0-7C01-4F64-A02E-1C17CA3E9581"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "petWalkWatchKitExtension/Domain/UseCase/Steps/GetAccumulatedDailyStepsUseCase.swift"
+            filePath = "petWalkWatchKitAppTests/Data/DataSource/TrackingManagerTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "areDailySteps()"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "testThatStepsTrackingIsDisabled_When_IsTrackingDailyStepsEnabledReturnFalse()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2AE02BB0-7C01-4F64-A02E-1C17CA3E9581 - 3662319b76948d85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "petWalkWatchKitAppTests.TrackingManagerTest.testThatStepsTrackingIsDisabled_When_IsTrackingDailyStepsEnabledReturnFalse() -&gt; ()"
+                  moduleName = "petWalkWatchKitAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/javier.galera/Desktop/petWalk/petWalk/petWalkWatchKitAppTests/Data/DataSource/TrackingManagerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  uuid = "2AE02BB0-7C01-4F64-A02E-1C17CA3E9581 - 3662319b76948d85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "petWalkWatchKitAppTests.TrackingManagerTest.testThatStepsTrackingIsDisabled_When_IsTrackingDailyStepsEnabledReturnFalse() -&gt; ()"
+                  moduleName = "petWalkWatchKitAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/javier.galera/Desktop/petWalk/petWalk/petWalkWatchKitAppTests/Data/DataSource/TrackingManagerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "824">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

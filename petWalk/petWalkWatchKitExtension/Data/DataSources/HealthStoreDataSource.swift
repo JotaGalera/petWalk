@@ -11,7 +11,7 @@ import Combine
 
 protocol HealthStoreDataSource: AutoMockable {
     func requestAuthorization() async throws -> Bool
-    func getDailySteps() async throws -> Int
+    func getSteps(date: Date) async throws -> Int
 }
 
 class HealthStoreDataSourceImplementation: HealthStoreDataSource {
@@ -41,14 +41,13 @@ class HealthStoreDataSourceImplementation: HealthStoreDataSource {
         }
     }
     
-    func getDailySteps() async throws -> Int {
+    func getSteps(date: Date) async throws -> Int {
         try await withCheckedThrowingContinuation { continuation in
             let stepType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
             
-            let now = Date()
-            let startOfDay = Calendar.current.startOfDay(for: now)
+            let startOfDay = Calendar.current.startOfDay(for: date)
             let predicate = HKQuery.predicateForSamples(withStart: startOfDay,
-                                                        end: now,
+                                                        end: .now,
                                                         options: .strictStartDate)
             
             let query = HKStatisticsQuery(quantityType: stepType,

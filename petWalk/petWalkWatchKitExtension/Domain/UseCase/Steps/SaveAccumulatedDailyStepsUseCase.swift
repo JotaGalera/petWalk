@@ -13,6 +13,6 @@ class SaveAccumulatedDailyStepsUseCaseImplementation: SaveAccumulatedDailyStepsU
     
     func execute(_ steps: Int) {
         repository.saveAccumulatedDailySteps(steps)
-        repository.saveDateDailySteps(Date())
+        repository.saveDateDailySteps(Date.now)
     }
 }
