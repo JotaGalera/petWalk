@@ -16,13 +16,9 @@ struct petAnimationScene: View {
 
     var body: some View {
         VStack {
-            Spacer()
-            
             Text(pet.name)
                 .bold()
-            
-            Spacer()
-            
+                .padding(.bottom)
             Image(pet.images[count])
                 .resizable()
                 .frame(width: width,

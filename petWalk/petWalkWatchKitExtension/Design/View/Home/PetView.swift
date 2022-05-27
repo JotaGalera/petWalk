@@ -21,16 +21,13 @@ struct PetView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Spacer()
+            VStack(alignment: .center) {
+                Spacer(minLength: 10)
                 
                 petAnimationScene(pet: petMock)
-                
-                Spacer()
+                    .padding()
                 
                 StatusBarMenu()
-                
-                Spacer()
             }
         }
         .frame(width: deviceSize.width,
@@ -43,13 +40,15 @@ struct PetView: View {
 
 struct StatusBarMenu: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 8) {
             ItemBarMenu(imageName: "Sword",
                         valueText: "10",
                         accessibilityIdentifer: "strength")
+            .padding(.leading)
             ItemBarMenu(imageName: "Heart",
                         valueText: "10",
                         accessibilityIdentifer: "life")
+            .padding(.trailing)
         }
     }
 }
@@ -66,15 +65,14 @@ struct ItemBarMenu: View {
             NavigationLink(destination: PetDataView()) {
                 Image(imageName)
                     .resizable()
-                    .frame(width: 25,
-                           height: 25,
+                    .frame(width: width,
+                           height: height,
                            alignment: .center)
                     .accessibilityIdentifier(accessibilityIdentifer)
                 
                 Text("10")
             }
         }
-        .padding()
     }
 }
 
