@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PetView: View {
-    private let petMock = Swordman(name: "Beldrick")
+    private let petMock = Swordman(name: "Beldrick", level: Level(), stats: Stats())
     private let contentViewConfigurator = PetViewConfigurator()
     
     private let deviceSize = WKInterfaceDevice.current().screenBounds

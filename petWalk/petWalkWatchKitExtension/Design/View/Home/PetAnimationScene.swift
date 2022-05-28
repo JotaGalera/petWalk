@@ -41,6 +41,6 @@ struct petAnimationScene: View {
 }
 struct petAnimationScene_Previews: PreviewProvider {
     static var previews: some View {
-        petAnimationScene(pet: Swordman(name: "Beldrick"))
+        petAnimationScene(pet: Swordman(name: "Beldrick", level: Level(), stats: Stats()))
     }
 }

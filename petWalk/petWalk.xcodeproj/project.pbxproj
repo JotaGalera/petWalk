@@ -53,6 +53,7 @@
 		35969397278B4E2A00B68BEF /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35969396278B4E2A00B68BEF /* PetViewModel.swift */; };
 		3596E92C27BE9CB100B41828 /* HealthDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3596E92B27BE9CB100B41828 /* HealthDataSourceTest.swift */; };
 		35AB46FF278A185000401FB7 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB46FE278A185000401FB7 /* Pets.swift */; };
+		35B5A3E12842B56F00C2722E /* PetsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5A3E02842B56F00C2722E /* PetsTest.swift */; };
 		35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1B27BEC407000922BF /* GetDailyStepsUseCaseTest.swift */; };
 		35BF2E1E27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1D27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift */; };
 		35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */; };
@@ -205,6 +206,7 @@
 		35969396278B4E2A00B68BEF /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
 		3596E92B27BE9CB100B41828 /* HealthDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataSourceTest.swift; sourceTree = "<group>"; };
 		35AB46FE278A185000401FB7 /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
+		35B5A3E02842B56F00C2722E /* PetsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsTest.swift; sourceTree = "<group>"; };
 		35BF2E1B27BEC407000922BF /* GetDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
 		35BF2E1D27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
 		35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTest.swift; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 		359A549C27B5A5DC00C55BF6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				35B5A3DF2842B55C00C2722E /* BO */,
 				353B60F228390F2800A1C4B4 /* Steps */,
 				353B60F128390F2000A1C4B4 /* Permissions */,
 				353B60F028390F1B00A1C4B4 /* Animation */,
@@ -673,6 +676,14 @@
 			isa = PBXGroup;
 			children = (
 				35AB46FE278A185000401FB7 /* Pets.swift */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
+		35B5A3DF2842B55C00C2722E /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				35B5A3E02842B56F00C2722E /* PetsTest.swift */,
 			);
 			path = BO;
 			sourceTree = "<group>";
@@ -1245,6 +1256,7 @@
 				3596E92C27BE9CB100B41828 /* HealthDataSourceTest.swift in Sources */,
 				353B60F428390F6000A1C4B4 /* SavePreviousAnimationProgressUseCaseTest.swift in Sources */,
 				3563C31F27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift in Sources */,
+				35B5A3E12842B56F00C2722E /* PetsTest.swift in Sources */,
 				35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */,
 				3563C32127D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift in Sources */,
 				35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */,

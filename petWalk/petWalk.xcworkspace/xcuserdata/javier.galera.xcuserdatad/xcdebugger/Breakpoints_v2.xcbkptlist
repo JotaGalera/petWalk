@@ -49,6 +49,21 @@
                   endingLineNumber = "35"
                   offsetFromSymbolStart = "824">
                </Location>
+               <Location
+                  uuid = "2AE02BB0-7C01-4F64-A02E-1C17CA3E9581 - 3662319b76948d85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "petWalkWatchKitAppTests.TrackingManagerTest.testThatStepsTrackingIsDisabled_When_IsTrackingDailyStepsEnabledReturnFalse() -&gt; ()"
+                  moduleName = "petWalkWatchKitAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/javier.galera/Desktop/petWalk/petWalk/petWalkWatchKitAppTests/Data/DataSource/TrackingManagerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "784">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
