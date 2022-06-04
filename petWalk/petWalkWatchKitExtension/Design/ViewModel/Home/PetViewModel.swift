@@ -11,10 +11,16 @@ import Foundation
 class PetViewModel: ObservableObject {
     private var requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase
     private var saveTrackingDailyStepsUseCase: SaveTrackingDailyStepsUseCase
+    private var getPetDataUseCase: GetPetDataUseCase
     
-    init(requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase, saveTrackingDailyStepsUseCase: SaveTrackingDailyStepsUseCase) {
+    let pet: Pets
+    
+    init(requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase, saveTrackingDailyStepsUseCase: SaveTrackingDailyStepsUseCase, getPetDataUseCase: GetPetDataUseCase) {
         self.requestDailyStepsPermissionUseCase = requestDailyStepsPermissionUseCase
         self.saveTrackingDailyStepsUseCase = saveTrackingDailyStepsUseCase
+        self.getPetDataUseCase = getPetDataUseCase
+        
+        pet = getPetDataUseCase.execute()
     }
     
     func requestPermissions() async {

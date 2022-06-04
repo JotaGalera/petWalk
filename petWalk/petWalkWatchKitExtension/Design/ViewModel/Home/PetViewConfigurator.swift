@@ -19,7 +19,10 @@ class PetViewConfigurator {
         
         let saveTrackingDailyStepsUseCase = SaveTrackingDailyStepsUseCaseImplementation(userDefaultRepository: userDefaultRepository)
         
+        let getPetDataUseCase = GetPetDataUseCaseImplementation()
+        
         return PetViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCase,
-                            saveTrackingDailyStepsUseCase: saveTrackingDailyStepsUseCase)
+                            saveTrackingDailyStepsUseCase: saveTrackingDailyStepsUseCase,
+                            getPetDataUseCase: getPetDataUseCase)
     }
 }

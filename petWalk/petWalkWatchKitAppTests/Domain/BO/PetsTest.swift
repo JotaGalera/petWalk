@@ -23,7 +23,7 @@ class PetsTest: XCTestCase {
         sut.levelUp()
         
         XCTAssertEqual(2, sut.level.currentLevel)
-        XCTAssertEqual(11, sut.stats.power)
+        XCTAssertEqual(11, sut.stats.strength)
         XCTAssertEqual(12, sut.stats.life)
     }
     

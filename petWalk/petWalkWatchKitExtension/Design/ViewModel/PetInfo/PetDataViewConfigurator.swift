@@ -8,7 +8,7 @@
 import Foundation
 
 class PetDataViewConfigurator {
-    @MainActor func configure() -> PetDataViewModel {
+    @MainActor func configure(expToRaiseNextLevel: Int) -> PetDataViewModel {
         let healthStoreDataSource = HealthStoreDataSourceImplementation()
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)
         
@@ -28,6 +28,7 @@ class PetDataViewConfigurator {
                                 savePreviousAnimationProgressUseCase: savePreviousAnimationProgressUseCase,
                                 getStepsUseCase: getStepsUseCase,
                                 getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCase,
-                                getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCase)
+                                getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCase,
+                                expToRaiseNextLevel: expToRaiseNextLevel)
     }
 }

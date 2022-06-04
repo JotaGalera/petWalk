@@ -12,7 +12,7 @@ class PetDataViewModel: ObservableObject {
     @Published var currentSteps: Int = 0
     @Published var animationDailySteps: Int = 0
     @Published var previousAnimationProgress: Double = 0
-    @Published var levelUpExp: Int = 1000
+    @Published var expToRaiseNextLevel: Int
     
     private var trackingManager: TrackingManager
     private var saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase
@@ -22,7 +22,8 @@ class PetDataViewModel: ObservableObject {
     private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase
     private var getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase
     
-    init(trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, getStepsUseCase: GetStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase) {
+    init(trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, getStepsUseCase: GetStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase,
+        expToRaiseNextLevel: Int) {
         self.trackingManager = trackingManager
         self.saveAccumulatedDailyStepsUseCase = saveAccumulatedDailyStepsUseCase
         self.saveTotalStepsUseCase = saveTotalStepsUseCase
@@ -30,6 +31,7 @@ class PetDataViewModel: ObservableObject {
         self.getStepsUseCase = getStepsUseCase
         self.getAccumulatedDailyStepsUseCase = getAccumulatedDailyStepsUseCase
         self.getPreviousAnimationProgressUseCase = getPreviousAnimationProgressUseCase
+        self.expToRaiseNextLevel = expToRaiseNextLevel
     }
     
     func getSteps() async {

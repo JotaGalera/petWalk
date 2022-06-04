@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct PetView: View {
-    private let petMock = Swordman(name: "Beldrick", level: Level(), stats: Stats())
-    private let contentViewConfigurator = PetViewConfigurator()
+    private let petViewConfigurator = PetViewConfigurator()
     
     private let deviceSize = WKInterfaceDevice.current().screenBounds
     
-    @ObservedObject var contentViewModel: PetViewModel
+    @ObservedObject var petViewModel: PetViewModel
     
     init() {
-        self.contentViewModel = contentViewConfigurator.configure()
+        self.petViewModel = petViewConfigurator.configure()
     }
     
     var body: some View {
@@ -24,30 +23,43 @@ struct PetView: View {
             VStack(alignment: .center) {
                 Spacer(minLength: 10)
                 
-                petAnimationScene(pet: petMock)
+                petAnimationScene(pet: petViewModel.pet)
                     .padding()
                 
-                StatusBarMenu()
+                StatusBarMenu(strengthValue: petViewModel.pet.getStrength(),
+                              lifeValue: petViewModel.pet.getLife(),
+                              expToRaiseNextLevel: petViewModel.pet.getExpToRaiseNextLevel())
             }
         }
         .frame(width: deviceSize.width,
                 height: deviceSize.height)
         .task {
-            await contentViewModel.requestPermissions()
+            await petViewModel.requestPermissions()
         }
     }
 }
 
 struct StatusBarMenu: View {
+    private let swordImageName = "Sword"
+    private let hearthImageName = "Heart"
+    private let swordAccessibilityIdentifer = "strength"
+    private let lifeAccessibilityIdentifer = "life"
+    
+    let strengthValue: Int
+    let lifeValue: Int
+    let expToRaiseNextLevel: Int
+    
     var body: some View {
         HStack(spacing: 8) {
-            ItemBarMenu(imageName: "Sword",
-                        valueText: "10",
-                        accessibilityIdentifer: "strength")
+            ItemBarMenu(imageName: swordImageName,
+                        valueText: String(strengthValue),
+                        accessibilityIdentifer: swordAccessibilityIdentifer,
+                        expToRaiseNextLevel: expToRaiseNextLevel)
             .padding(.leading)
-            ItemBarMenu(imageName: "Heart",
-                        valueText: "10",
-                        accessibilityIdentifer: "life")
+            ItemBarMenu(imageName: hearthImageName,
+                        valueText: String(lifeValue),
+                        accessibilityIdentifer: lifeAccessibilityIdentifer,
+                        expToRaiseNextLevel: expToRaiseNextLevel)
             .padding(.trailing)
         }
     }
@@ -56,13 +68,16 @@ struct StatusBarMenu: View {
 struct ItemBarMenu: View {
     let width: CGFloat = 25
     let height: CGFloat = 25
-    var imageName: String
-    var valueText: String
-    var accessibilityIdentifer: String
+    
+    let imageName: String
+    let valueText: String
+    let accessibilityIdentifer: String
+    
+    let expToRaiseNextLevel: Int
     
     var body: some View {
         HStack {
-            NavigationLink(destination: PetDataView()) {
+            NavigationLink(destination: PetDataView(expToRaiseNextLevel: expToRaiseNextLevel)) {
                 Image(imageName)
                     .resizable()
                     .frame(width: width,
@@ -70,7 +85,7 @@ struct ItemBarMenu: View {
                            alignment: .center)
                     .accessibilityIdentifier(accessibilityIdentifer)
                 
-                Text("10")
+                Text(valueText)
             }
         }
     }

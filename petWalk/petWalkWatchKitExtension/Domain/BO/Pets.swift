@@ -14,9 +14,12 @@ protocol Pets {
     var level: Level { get }
     
     mutating func levelUp()
+    func getStrength() -> Int
+    func getLife() -> Int
+    func getExpToRaiseNextLevel() -> Int
 }
 
-struct Swordman: Pets {
+struct Swordman: Pets, Equatable {
     var name: String
     var images: [String] = ["run1",
                             "run2",
@@ -40,48 +43,17 @@ struct Swordman: Pets {
         
         stats.increaseStats(level.currentLevel)
     }
-}
-
-struct Level {
-    var currentLevel: Int = 1
-    var expToLevelUp: Int = 100
-    private let expBaseToLevelUp = 100
     
-    mutating func levelUp() {
-        calculateNextExpToLevelUp()
-        currentLevel += 1
+    func getStrength() -> Int {
+        return stats.strength
     }
     
-    // In order to calculate the next experience to level up use:
-    // (100 * n) + (100 * n-1) + (100 * n-2) + ...
-    // i.e: to reach level 3: (100 * 3) + (100 * 2) + (100 * 1) = 600
-    mutating func calculateNextExpToLevelUp() {
-        expToLevelUp = 0
-        for i in 0...(currentLevel + 1) {
-            expToLevelUp += expBaseToLevelUp * i
-        }
+    func getLife() -> Int {
+        return stats.life
+    }
+    
+    func getExpToRaiseNextLevel() -> Int {
+        return level.expToLevelUp
     }
 }
 
-struct Stats {
-    var power: Int
-    var life: Int
-    
-    init(power: Int = 10, life: Int = 10) {
-        self.power = power
-        self.life = life
-    }
-    
-    mutating func increaseStats(_ newLevel: Int) {
-        increasePower(newLevel)
-        increaseLife(newLevel)
-    }
-    
-    mutating private func increasePower(_ newLevel: Int) {
-        power += newLevel % 2 == 0 ? 1 : 2
-    }
-    
-    mutating private func increaseLife(_ newLevel: Int) {
-        life += newLevel % 2 == 0 ? 2 : 1
-    }
-}

@@ -15,8 +15,8 @@ struct PetDataView: View {
     
     @State var pendingFetch: Bool = false
     
-    init() {
-        petDataViewModel = petDataViewConfigurator.configure()
+    init(expToRaiseNextLevel: Int) {
+        petDataViewModel = petDataViewConfigurator.configure(expToRaiseNextLevel: expToRaiseNextLevel)
     }
     
     var body: some View {
@@ -24,12 +24,12 @@ struct PetDataView: View {
             VStack {
                 Text("Exp: \(petDataViewModel.currentSteps)")
                     .accessibilityIdentifier("Exp")
-                Text("Next Lvl: \(petDataViewModel.levelUpExp - petDataViewModel.currentSteps)")
+                Text("Next Lvl: \(petDataViewModel.expToRaiseNextLevel - petDataViewModel.currentSteps)")
                     .accessibilityIdentifier("NextLevel")
             }
             if pendingFetch {
                 Animation(newExp: petDataViewModel.animationDailySteps,
-                          levelUpExp: petDataViewModel.levelUpExp,
+                          levelUpExp: petDataViewModel.expToRaiseNextLevel,
                           previousExpAnimated: petDataViewModel.previousAnimationProgress)
             }
         }
@@ -92,6 +92,6 @@ struct Animation: View {
 
 struct PetDataView_Previews: PreviewProvider {
     static var previews: some View {
-        PetDataView()
+        PetDataView(expToRaiseNextLevel: 100)
     }
 }

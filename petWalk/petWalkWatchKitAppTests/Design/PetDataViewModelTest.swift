@@ -17,6 +17,7 @@ class PetDataViewModelTest: XCTestCase {
     private var getStepsUseCaseMock: GetStepsUseCaseMock!
     private var getAccumulatedDailyStepsUseCaseMock: GetAccumulatedDailyStepsUseCaseMock!
     private var getPreviousAnimationProgressUseCaseMock: GetPreviousAnimationProgressUseCaseMock!
+    private var expToRaiseNextLevel: Int!
     
     @MainActor override func setUpWithError() throws {
         try super.setUpWithError()
@@ -28,6 +29,7 @@ class PetDataViewModelTest: XCTestCase {
         getStepsUseCaseMock = GetStepsUseCaseMock()
         getAccumulatedDailyStepsUseCaseMock = GetAccumulatedDailyStepsUseCaseMock()
         getPreviousAnimationProgressUseCaseMock = GetPreviousAnimationProgressUseCaseMock()
+        expToRaiseNextLevel = 100
         
         sut = PetDataViewModel(trackingManager: trackingManagerMock,
                                saveAccumulatedDailyStepsUseCase: saveAccumulateDailyStepsUseCaseMock,
@@ -35,7 +37,8 @@ class PetDataViewModelTest: XCTestCase {
                                savePreviousAnimationProgressUseCase: savePreviousAnimationProgressUseCaseMock,
                                getStepsUseCase: getStepsUseCaseMock,
                                getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCaseMock,
-                               getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCaseMock)
+                               getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCaseMock,
+                               expToRaiseNextLevel: expToRaiseNextLevel)
     }
     
     func testThatStepsAreNotRequested_When_TrackingDailyStepsIsNotGranted() async throws {

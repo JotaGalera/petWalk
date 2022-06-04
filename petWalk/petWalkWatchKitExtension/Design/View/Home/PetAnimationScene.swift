@@ -9,11 +9,13 @@ import SwiftUI
 
 struct petAnimationScene: View {
     @State private var count = 0
+    @State var timer: Timer? = nil
+    
     private let width: CGFloat = 70
     private let height: CGFloat = 70
+    
     var pet: Pets
-    @State var timer: Timer? = nil
-
+    
     var body: some View {
         VStack {
             Text(pet.name)
