@@ -14,6 +14,8 @@
 		350246A927FA166A0060E489 /* PetDataViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350246A827FA166A0060E489 /* PetDataViewModelTest.swift */; };
 		35094B3127E3E33A0035D7B7 /* PetDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */; };
 		35094B3327E3E4920035D7B7 /* PetDataViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3227E3E4920035D7B7 /* PetDataViewConfigurator.swift */; };
+		350BECF728529C6A0014F795 /* SecureQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350BECF628529C6A0014F795 /* SecureQuestionView.swift */; };
+		3526B2272852944D00943ED9 /* SetupPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526B2262852944D00943ED9 /* SetupPetView.swift */; };
 		35338BD727CD6E58007ECF47 /* SaveTotalStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35338BD627CD6E58007ECF47 /* SaveTotalStepsUseCase.swift */; };
 		35338BD927CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35338BD827CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift */; };
 		353B60EB28390C3A00A1C4B4 /* GetPreviousAnimationProgressUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B60EA28390C3A00A1C4B4 /* GetPreviousAnimationProgressUseCase.swift */; };
@@ -161,6 +163,8 @@
 		350246A827FA166A0060E489 /* PetDataViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModelTest.swift; sourceTree = "<group>"; };
 		35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModel.swift; sourceTree = "<group>"; };
 		35094B3227E3E4920035D7B7 /* PetDataViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewConfigurator.swift; sourceTree = "<group>"; };
+		350BECF628529C6A0014F795 /* SecureQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionView.swift; sourceTree = "<group>"; };
+		3526B2262852944D00943ED9 /* SetupPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetView.swift; sourceTree = "<group>"; };
 		35338BD627CD6E58007ECF47 /* SaveTotalStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTotalStepsUseCase.swift; sourceTree = "<group>"; };
 		35338BD827CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccumulatedDailyStepsUseCase.swift; sourceTree = "<group>"; };
 		353A6CF927B5C60F0076FB92 /* Pods_petWalk_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_petWalk_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,11 +339,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3526B2252852941B00943ED9 /* SetupPet */ = {
+			isa = PBXGroup;
+			children = (
+				3526B2262852944D00943ED9 /* SetupPetView.swift */,
+				350BECF628529C6A0014F795 /* SecureQuestionView.swift */,
+			);
+			path = SetupPet;
+			sourceTree = "<group>";
+		};
 		353B60E5283903C200A1C4B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */,
 				3543501327832D910024FB5A /* PetView.swift */,
+				35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -656,6 +669,7 @@
 		35969394278B4DD800B68BEF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3526B2252852941B00943ED9 /* SetupPet */,
 				353B60E5283903C200A1C4B4 /* Home */,
 				353B60E6283903CF00A1C4B4 /* PetInfo */,
 			);
@@ -1270,6 +1284,7 @@
 				355EA4D427B0661200461F2F /* GetStepsUseCase.swift in Sources */,
 				355EA4C827B053CA00461F2F /* UserDefaultsDataSource.swift in Sources */,
 				35FE1DBC2789C7060087ECCA /* PetAnimationScene.swift in Sources */,
+				3526B2272852944D00943ED9 /* SetupPetView.swift in Sources */,
 				355EA4CA27B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift in Sources */,
 				35AB46FF278A185000401FB7 /* Pets.swift in Sources */,
 				35CEDF0B27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift in Sources */,
@@ -1281,6 +1296,7 @@
 				35094B3127E3E33A0035D7B7 /* PetDataViewModel.swift in Sources */,
 				35338BD927CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift in Sources */,
 				35F8ACC4284B607F00847F73 /* GetPetDataUseCase.swift in Sources */,
+				350BECF728529C6A0014F795 /* SecureQuestionView.swift in Sources */,
 				357A5E0F27B5D0AB0020B71C /* AutoMockable.swift in Sources */,
 				3543501827832D910024FB5A /* ComplicationController.swift in Sources */,
 			);
