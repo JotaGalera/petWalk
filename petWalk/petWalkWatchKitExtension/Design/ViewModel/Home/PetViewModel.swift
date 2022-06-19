@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  PetViewModel.swift
 //  petWalk WatchKit Extension
 //
 //  Created by Galera, Javier on 9/1/22.

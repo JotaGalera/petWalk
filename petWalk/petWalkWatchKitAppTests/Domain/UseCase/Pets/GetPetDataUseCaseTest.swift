@@ -1,5 +1,5 @@
 //
-//  GetPetDataUseCaseTests.swift
+//  GetPetDataUseCaseTest.swift
 //  petWalkWatchKitAppTests
 //
 //  Created by Galera, Javier on 4/6/22.
@@ -8,7 +8,7 @@
 @testable import petWalkWatchKitExtension
 import XCTest
 
-class GetPetDataUseCaseTests: XCTestCase {
+class GetPetDataUseCaseTest: XCTestCase {
     private var sut: GetPetDataUseCase!
     
     override func setUpWithError() throws {

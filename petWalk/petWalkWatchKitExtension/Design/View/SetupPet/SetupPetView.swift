@@ -34,7 +34,7 @@ struct SetupPetView: View {
                 .padding()
                 .sheet(isPresented: $isSecureQuestionShowed,
                        content: {
-                    SecureQuestionView(hasPetName: $hasPetName)
+                    SecureQuestionView(hasPetName: $hasPetName, petName: $petName)
                 })
             }
         }

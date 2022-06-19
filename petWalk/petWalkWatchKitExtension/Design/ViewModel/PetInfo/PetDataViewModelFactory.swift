@@ -1,5 +1,5 @@
 //
-//  PetDataViewConfigurator.swift
+//  PetDataViewModelFactory.swift
 //  petWalkWatchKitExtension
 //
 //  Created by Galera, Javier on 17/3/22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-class PetDataViewConfigurator {
-    @MainActor func configure(expToRaiseNextLevel: Int) -> PetDataViewModel {
+class PetDataViewModelFactory {
+    @MainActor func make(expToRaiseNextLevel: Int) -> PetDataViewModel {
         let healthStoreDataSource = HealthStoreDataSourceImplementation()
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)
         

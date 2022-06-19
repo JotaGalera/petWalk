@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct PetView: View {
-    private let petViewConfigurator = PetViewConfigurator()
+    private let petViewModelFactory = PetViewModelFactory()
     
     private let deviceSize = WKInterfaceDevice.current().screenBounds
     
-    @ObservedObject var petViewModel: PetViewModel
+    @StateObject var petViewModel: PetViewModel
     
     init() {
-        self.petViewModel = petViewConfigurator.configure()
+        let petViewModel = petViewModelFactory.make()
+        _petViewModel = StateObject(wrappedValue: petViewModel)
     }
     
     var body: some View {

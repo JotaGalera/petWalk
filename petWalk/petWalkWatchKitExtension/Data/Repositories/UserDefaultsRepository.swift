@@ -13,6 +13,8 @@ protocol UserDefaultsRepository: AutoMockable {
     func getPreviousAnimationProgress() -> Double
     func savePreviousAnimationProgress(_ previousAnimationProgress: Double)
     
+    func savePetName(_ name: String)
+    
     func saveTrackingDailySteps(_ permission: Bool)
 }
 
@@ -53,6 +55,10 @@ class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
     
     func saveDateDailySteps(_ date: Date) {
         userDefaultDataSource.set(value: date, forKey: .dateDailySteps)
+    }
+    
+    func savePetName(_ name: String) {
+        userDefaultDataSource.set(value: name, forKey: .petName)
     }
     
     func savePreviousAnimationProgress(_ previousAnimationProgress: Double) {

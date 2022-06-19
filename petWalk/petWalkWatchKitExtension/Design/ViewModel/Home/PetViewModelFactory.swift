@@ -1,5 +1,5 @@
 //
-//  ContentViewConfigurator.swift
+//  PetViewModelFactory.swift
 //  petWalk WatchKit Extension
 //
 //  Created by Galera, Javier on 6/2/22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-class PetViewConfigurator {
-    @MainActor func configure() -> PetViewModel {
+class PetViewModelFactory {
+    @MainActor func make() -> PetViewModel {
         let healthStoreDataSource = HealthStoreDataSourceImplementation()
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)
         
