@@ -10,7 +10,6 @@ import SwiftUI
 struct SecureQuestionView: View {
     private let cancelButtonText = "Cancel"
     private let acceptButtonText = "Accept"
-    private let secureQuestionViewModelFactory = SecureQuestionViewModelFactory()
     
     @Environment(\.dismiss) var dismiss
     @StateObject var secureQuestionViewModel: SecureQuestionViewModel
@@ -18,9 +17,8 @@ struct SecureQuestionView: View {
     @Binding var hasPetName: Bool
     @Binding var petName: String
     
-    init(hasPetName: Binding<Bool>, petName: Binding<String>) {
-        let secureQuestionViewModel = secureQuestionViewModelFactory.make()
-        _secureQuestionViewModel = StateObject(wrappedValue: secureQuestionViewModel)
+    init(hasPetName: Binding<Bool>, petName: Binding<String>, viewModel: SecureQuestionViewModel) {
+        _secureQuestionViewModel = StateObject(wrappedValue: viewModel)
         _hasPetName = hasPetName
         _petName = petName
     }
@@ -58,6 +56,6 @@ struct SecureQuestionView: View {
 
 struct SecureQuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        SecureQuestionView(hasPetName: .constant(true), petName: .constant("Beldrick"))
+        SecureQuestionViewFactory().make(hasPetName: .constant(true), petName: .constant("Beldrick"))
     }
 }

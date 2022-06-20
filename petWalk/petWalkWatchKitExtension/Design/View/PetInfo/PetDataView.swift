@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct PetDataView: View {
-    private let petDataViewModelFactory = PetDataViewModelFactory()
     private let deviceSize = WKInterfaceDevice.current().screenBounds
     
     @StateObject var petDataViewModel: PetDataViewModel
     
     @State var pendingFetch: Bool = false
     
-    init(expToRaiseNextLevel: Int) {
-        let petDataViewModel = petDataViewModelFactory.make(expToRaiseNextLevel: expToRaiseNextLevel)
-        _petDataViewModel = StateObject(wrappedValue: petDataViewModel)
+    init(viewModel: PetDataViewModel) {
+        _petDataViewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -93,6 +91,6 @@ struct Animation: View {
 
 struct PetDataView_Previews: PreviewProvider {
     static var previews: some View {
-        PetDataView(expToRaiseNextLevel: 100)
+        PetDataViewFactory().make(expToRaiseNextLevel: 100)
     }
 }

@@ -7,7 +7,14 @@
 
 import Foundation
 
-class PetDataViewModelFactory {
+class PetDataViewFactory {
+    @MainActor func make(expToRaiseNextLevel: Int) -> PetDataView {
+        let viewModel = PetDataViewModelFactory().make(expToRaiseNextLevel: expToRaiseNextLevel)
+        return PetDataView(viewModel: viewModel)
+    }
+}
+
+private class PetDataViewModelFactory {
     @MainActor func make(expToRaiseNextLevel: Int) -> PetDataViewModel {
         let healthStoreDataSource = HealthStoreDataSourceImplementation()
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)

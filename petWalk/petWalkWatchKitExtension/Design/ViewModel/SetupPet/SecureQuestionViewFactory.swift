@@ -7,7 +7,14 @@
 
 import SwiftUI
 
-class SecureQuestionViewModelFactory {
+class SecureQuestionViewFactory {
+    @MainActor func make(hasPetName: Binding<Bool>, petName: Binding<String>) -> SecureQuestionView {
+        let viewModel = SecureQuestionViewModelFactory().make()
+        return SecureQuestionView(hasPetName: hasPetName, petName: petName, viewModel: viewModel)
+    }
+}
+
+private class SecureQuestionViewModelFactory {
     @MainActor func make() -> SecureQuestionViewModel {
         let dataSource = UserDefaultsDataSourceImplementation()
         let repository = UserDefaultsRepositoryImplementation(userDefaultDataSource: dataSource)

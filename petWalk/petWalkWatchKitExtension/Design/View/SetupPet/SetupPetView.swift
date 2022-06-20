@@ -15,7 +15,7 @@ struct SetupPetView: View {
     
     var body: some View {
         if hasPetName {
-            PetView()
+            PetViewFactory().make()
         } else {
             VStack {
                 Text("What is your pet name?")
@@ -34,7 +34,7 @@ struct SetupPetView: View {
                 .padding()
                 .sheet(isPresented: $isSecureQuestionShowed,
                        content: {
-                    SecureQuestionView(hasPetName: $hasPetName, petName: $petName)
+                    SecureQuestionViewFactory().make(hasPetName: $hasPetName, petName: $petName)
                 })
             }
         }

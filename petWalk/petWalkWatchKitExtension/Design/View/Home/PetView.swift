@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct PetView: View {
-    private let petViewModelFactory = PetViewModelFactory()
-    
     private let deviceSize = WKInterfaceDevice.current().screenBounds
     
     @StateObject var petViewModel: PetViewModel
     
-    init() {
-        let petViewModel = petViewModelFactory.make()
-        _petViewModel = StateObject(wrappedValue: petViewModel)
+    init(viewModel: PetViewModel) {
+        _petViewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -78,7 +75,7 @@ struct ItemBarMenu: View {
     
     var body: some View {
         HStack {
-            NavigationLink(destination: PetDataView(expToRaiseNextLevel: expToRaiseNextLevel)) {
+            NavigationLink(destination: PetDataViewFactory().make(expToRaiseNextLevel: expToRaiseNextLevel)) {
                 Image(imageName)
                     .resizable()
                     .frame(width: width,
@@ -92,8 +89,8 @@ struct ItemBarMenu: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct PetView_Previews: PreviewProvider {
     static var previews: some View {
-        PetView()
+        PetViewFactory().make()
     }
 }
