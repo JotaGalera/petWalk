@@ -12,9 +12,21 @@ protocol GetPetDataUseCase: AutoMockable {
 }
 
 class GetPetDataUseCaseImplementation: GetPetDataUseCase {
-    private let petMock = Swordman(name: "Beldrick", level: Level(), stats: Stats())
+    private let repository: UserDefaultsRepository
+    
+    init(repository: UserDefaultsRepository) {
+        self.repository = repository
+    }
     
     func execute() -> Pets {
-        return petMock
+        let petName = repository.getPetName()
+        let pet = buildPet(petName: petName)
+        return pet
+    }
+    
+    private func buildPet(petName: String) -> Pets {
+        let petLevel = Level()
+        let petStats = Stats()
+        return Swordman(name: petName, level: petLevel, stats: petStats)
     }
 }

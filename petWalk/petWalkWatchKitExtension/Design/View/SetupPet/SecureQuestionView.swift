@@ -13,13 +13,10 @@ struct SecureQuestionView: View {
     
     @Environment(\.dismiss) var dismiss
     @StateObject var secureQuestionViewModel: SecureQuestionViewModel
-    
-    @Binding var hasPetName: Bool
     @Binding var petName: String
     
-    init(hasPetName: Binding<Bool>, petName: Binding<String>, viewModel: SecureQuestionViewModel) {
+    init(petName: Binding<String>, viewModel: SecureQuestionViewModel) {
         _secureQuestionViewModel = StateObject(wrappedValue: viewModel)
-        _hasPetName = hasPetName
         _petName = petName
     }
     
@@ -40,7 +37,6 @@ struct SecureQuestionView: View {
                 
                 Button {
                     secureQuestionViewModel.savePetName(petName)
-                    hasPetName = true
                     dismiss()
                 } label: {
                     Text(acceptButtonText)
@@ -56,6 +52,6 @@ struct SecureQuestionView: View {
 
 struct SecureQuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        SecureQuestionViewFactory().make(hasPetName: .constant(true), petName: .constant("Beldrick"))
+        SecureQuestionViewFactory().make(petName: .constant("Beldrick"))
     }
 }

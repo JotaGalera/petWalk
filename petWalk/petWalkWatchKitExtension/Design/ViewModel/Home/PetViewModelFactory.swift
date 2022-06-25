@@ -26,7 +26,7 @@ private class PetViewModelFactory {
         
         let saveTrackingDailyStepsUseCase = SaveTrackingDailyStepsUseCaseImplementation(userDefaultRepository: userDefaultRepository)
         
-        let getPetDataUseCase = GetPetDataUseCaseImplementation()
+        let getPetDataUseCase = GetPetDataUseCaseImplementation(repository: userDefaultRepository)
         
         return PetViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCase,
                             saveTrackingDailyStepsUseCase: saveTrackingDailyStepsUseCase,

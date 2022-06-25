@@ -85,7 +85,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(dataSource.dateDailyStepsReturnValue, dateDailySteps)
     }
     
-    func testThatPreviousAnimationProgressIsObtained_When_getPreviousAnimationProgressIsCalled() {
+    func testThatPreviousAnimationProgressIsObtained_When_GetPreviousAnimationProgressIsCalled() {
         let previousAnimationProgressMock = sut.getPreviousAnimationProgress()
         
         XCTAssertEqual(1, dataSource.getCallsCount)
@@ -93,7 +93,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(40.0, previousAnimationProgressMock)
     }
     
-    func testThatPreviousAnimationProgressIsSaved_When_savePreviousAnimationProgressIsCalled() {
+    func testThatPreviousAnimationProgressIsSaved_When_SavePreviousAnimationProgressIsCalled() {
         let previousAnimationProgressMock = 50.0
         
         sut.savePreviousAnimationProgress(previousAnimationProgressMock)
@@ -103,7 +103,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(.previousAnimationProgress, dataSource.setParamForKeyReceived)
     }
     
-    func testThatPetNameIsSaved_When_() {
+    func testThatPetNameIsSaved_When_SavePetNameIsCalled() {
         let petNameMock = "nameMock"
         
         sut.savePetName(petNameMock)
@@ -111,5 +111,13 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(1, dataSource.setCallsCount)
         XCTAssertEqual(petNameMock, dataSource.setParamValueReceived as! String)
         XCTAssertEqual(.petName, dataSource.setParamForKeyReceived)
+    }
+    
+    func testThatPetNameIsObtained_When_() {
+        let petName = sut.getPetName()
+        
+        XCTAssertEqual(1, dataSource.getCallsCount)
+        XCTAssertEqual(.petName, dataSource.getParamForKeyReceived)
+        XCTAssertEqual("nameMock", petName)
     }
 }

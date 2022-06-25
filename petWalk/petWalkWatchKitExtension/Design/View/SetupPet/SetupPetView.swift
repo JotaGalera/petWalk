@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct SetupPetView: View {
+    private let continueButtonText = "Continue"
     @State var petName: String = ""
     @State var isSecureQuestionShowed: Bool = false
-    @State var hasPetName: Bool = false
-    let continueButtonText = "Continue"
+    
+    @StateObject var setupPetViewModel: SetupPetViewModel
+    
+    init(setupPetViewModel: SetupPetViewModel) {
+        _setupPetViewModel = StateObject(wrappedValue: setupPetViewModel)
+    }
     
     var body: some View {
-        if hasPetName {
+        if setupPetViewModel.hasPetName {
             PetViewFactory().make()
         } else {
             VStack {
@@ -34,8 +39,11 @@ struct SetupPetView: View {
                 .padding()
                 .sheet(isPresented: $isSecureQuestionShowed,
                        content: {
-                    SecureQuestionViewFactory().make(hasPetName: $hasPetName, petName: $petName)
+                    SecureQuestionViewFactory().make(petName: $petName)
                 })
+            }
+            .onAppear {
+                setupPetViewModel.checkPetHasName()
             }
         }
     }
@@ -43,7 +51,7 @@ struct SetupPetView: View {
 
 struct SetupPetView_Previews: PreviewProvider {
     static var previews: some View {
-        SetupPetView()
+        SetupViewFactory().make()
     }
 }
 

@@ -13,6 +13,7 @@ protocol UserDefaultsRepository: AutoMockable {
     func getPreviousAnimationProgress() -> Double
     func savePreviousAnimationProgress(_ previousAnimationProgress: Double)
     
+    func getPetName() -> String
     func savePetName(_ name: String)
     
     func saveTrackingDailySteps(_ permission: Bool)
@@ -39,6 +40,10 @@ class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
     
     func getPreviousAnimationProgress() -> Double {
         return userDefaultDataSource.get(forKey: .previousAnimationProgress) ?? 0
+    }
+    
+    func getPetName() -> String {
+        return userDefaultDataSource.get(forKey: .petName) ?? ""
     }
     
     func saveTrackingDailySteps(_ permission: Bool) {

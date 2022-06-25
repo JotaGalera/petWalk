@@ -13,7 +13,7 @@ struct petWalkApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                SetupPetView()
+                SetupViewFactory().make()
             }
         }
     }

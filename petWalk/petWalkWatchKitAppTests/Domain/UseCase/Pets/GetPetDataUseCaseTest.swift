@@ -10,13 +10,18 @@ import XCTest
 
 class GetPetDataUseCaseTest: XCTestCase {
     private var sut: GetPetDataUseCase!
+    private var repository: UserDefaultsRepositoryMock!
     
     override func setUpWithError() throws {
-        sut = GetPetDataUseCaseImplementation()
+        try super.setUpWithError()
+        
+        repository = UserDefaultsRepositoryMock()
+        sut = GetPetDataUseCaseImplementation(repository: repository)
     }
     
     func testThatAPetIsReturned_When_GetPetDataUseCaseIsCalled() {
         let petMock = Swordman(name: "Beldrick", level: Level(), stats: Stats())
+        repository.getPetNameReturnValue = "Beldrick"
         
         let pet = sut.execute()
         
