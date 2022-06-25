@@ -21,7 +21,7 @@ struct PetView: View {
             VStack(alignment: .center) {
                 Spacer(minLength: 10)
                 
-                petAnimationScene(pet: Swordman(name: "Beldrick", level: Level(), stats: Stats()))
+                petAnimationScene(pet: petViewModel.pet)
                     .padding()
                 
                 StatusBarMenu(strengthValue: petViewModel.pet.getStrength(),
