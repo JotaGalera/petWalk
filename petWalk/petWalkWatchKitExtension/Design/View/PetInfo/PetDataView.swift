@@ -27,9 +27,7 @@ struct PetDataView: View {
                     .accessibilityIdentifier("NextLevel")
             }
             if pendingFetch {
-                Animation(newExp: petDataViewModel.animationDailySteps,
-                          levelUpExp: petDataViewModel.expToRaiseNextLevel,
-                          previousExpAnimated: petDataViewModel.previousAnimationProgress)
+                Animation()
             }
         }
         .frame(width: deviceSize.width, height: deviceSize.height/1.6)
@@ -50,16 +48,17 @@ struct Animation: View {
     
     @State var progressUntilNextLevel = 0.0
     
-    @State var newExp: Int
-    @State var levelUpExp: Int
-    @State var previousExpAnimated: Double
+    @State var newExp: Int = 0
+    @State var levelUpExp: Int = 0
+    @State var previousExpAnimated: Double = 0
+    @State var shouldNewLevelAnimationBeDisplayed = false
     
     @EnvironmentObject var petDataViewModel: PetDataViewModel
     
     var body: some View {
         ZStack {
             Circle()
-                .trim(from: 0.0, to: 0.8)
+                .trim(from: 0.0, to: endCircleShape)
                 .rotation(Angle(degrees: 125))
                 .stroke(style: StrokeStyle(lineWidth: 12, lineCap: .round, lineJoin: .round))
                 .fill(.blue)
@@ -70,14 +69,26 @@ struct Animation: View {
                         .stroke(style: StrokeStyle(lineWidth: 9, lineCap: .round, lineJoin: .round))
                         .fill(Color.orange)
                 )
+            
+            if shouldNewLevelAnimationBeDisplayed {
+                LevelUpAnimationScene()
+            }
         }
         .animation(.spring(response: 2.0, dampingFraction: 1.0, blendDuration: 1.0), value: previousExpAnimated + progressUntilNextLevel)
         .onAppear {
-            if newExp > 0 {
-                let newPercentage = Double(newExp) / Double(levelUpExp)
-                
-                progressUntilNextLevel = newPercentage * endCircleShape
-                
+            newExp = petDataViewModel.animationDailySteps
+            levelUpExp = petDataViewModel.expToRaiseNextLevel
+            previousExpAnimated = petDataViewModel.previousAnimationProgress
+            shouldNewLevelAnimationBeDisplayed = petDataViewModel.hasPetRaisedANewLevel
+            
+            if newExp > 0 || shouldNewLevelAnimationBeDisplayed {
+                if newExp == 0 {
+                    progressUntilNextLevel = 0
+                } else {
+                    let newPercentage = Double(newExp) / Double(levelUpExp)
+                    
+                    progressUntilNextLevel = newPercentage * endCircleShape
+                }
                 petDataViewModel.savePreviousProgressAnimation(progressUntilNextLevel + previousExpAnimated)
             } else {
                 let oldPercentage = Double(petDataViewModel.currentSteps) / Double(levelUpExp)
@@ -91,6 +102,7 @@ struct Animation: View {
 
 struct PetDataView_Previews: PreviewProvider {
     static var previews: some View {
-        PetDataViewFactory().make(expToRaiseNextLevel: 100)
+        PetDataViewFactory().make(expToRaiseNextLevel: 100,
+                                  pet: Swordman(name: "Beldrick", level: Level(), stats: Stats()))
     }
 }

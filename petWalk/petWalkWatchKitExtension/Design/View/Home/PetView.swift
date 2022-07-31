@@ -12,6 +12,8 @@ struct PetView: View {
     
     @StateObject var petViewModel: PetViewModel
     
+    @State var destination: PetDataView?
+    
     init(viewModel: PetViewModel) {
         _petViewModel = StateObject(wrappedValue: viewModel)
     }
@@ -26,13 +28,19 @@ struct PetView: View {
                 
                 StatusBarMenu(strengthValue: petViewModel.pet.getStrength(),
                               lifeValue: petViewModel.pet.getLife(),
-                              expToRaiseNextLevel: petViewModel.pet.getExpToRaiseNextLevel())
+                              expToRaiseNextLevel: petViewModel.pet.getExpToRaiseNextLevel(),
+                              destination: destination)
             }
         }
         .frame(width: deviceSize.width,
                 height: deviceSize.height)
         .task {
             await petViewModel.requestPermissions()
+        }
+        .onAppear {
+            destination = PetDataViewFactory().make(expToRaiseNextLevel:
+                                                        petViewModel.pet.getExpToRaiseNextLevel(),
+                                                    pet: petViewModel.pet)
         }
     }
 }
@@ -46,18 +54,21 @@ struct StatusBarMenu: View {
     let strengthValue: Int
     let lifeValue: Int
     let expToRaiseNextLevel: Int
+    let destination: PetDataView?
     
     var body: some View {
         HStack(spacing: 8) {
             ItemBarMenu(imageName: swordImageName,
                         valueText: String(strengthValue),
                         accessibilityIdentifer: swordAccessibilityIdentifer,
-                        expToRaiseNextLevel: expToRaiseNextLevel)
+                        expToRaiseNextLevel: expToRaiseNextLevel,
+                        destination: destination)
             .padding(.leading)
             ItemBarMenu(imageName: hearthImageName,
                         valueText: String(lifeValue),
                         accessibilityIdentifer: lifeAccessibilityIdentifer,
-                        expToRaiseNextLevel: expToRaiseNextLevel)
+                        expToRaiseNextLevel: expToRaiseNextLevel,
+                        destination: destination)
             .padding(.trailing)
         }
     }
@@ -72,10 +83,11 @@ struct ItemBarMenu: View {
     let accessibilityIdentifer: String
     
     let expToRaiseNextLevel: Int
+    let destination: PetDataView?
     
     var body: some View {
         HStack {
-            NavigationLink(destination: PetDataViewFactory().make(expToRaiseNextLevel: expToRaiseNextLevel)) {
+            NavigationLink(destination: destination) {
                 Image(imageName)
                     .resizable()
                     .frame(width: width,

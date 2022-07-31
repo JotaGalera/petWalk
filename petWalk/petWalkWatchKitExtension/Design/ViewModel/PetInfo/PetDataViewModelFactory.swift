@@ -8,14 +8,14 @@
 import Foundation
 
 class PetDataViewFactory {
-    @MainActor func make(expToRaiseNextLevel: Int) -> PetDataView {
-        let viewModel = PetDataViewModelFactory().make(expToRaiseNextLevel: expToRaiseNextLevel)
+    @MainActor func make(expToRaiseNextLevel: Int, pet: Pets) -> PetDataView {
+        let viewModel = PetDataViewModelFactory().make(expToRaiseNextLevel: expToRaiseNextLevel, pet: pet)
         return PetDataView(viewModel: viewModel)
     }
 }
 
 private class PetDataViewModelFactory {
-    @MainActor func make(expToRaiseNextLevel: Int) -> PetDataViewModel {
+    @MainActor func make(expToRaiseNextLevel: Int, pet: Pets) -> PetDataViewModel {
         let healthStoreDataSource = HealthStoreDataSourceImplementation()
         let healthStoreRepository = HealthStoreRepositoryImplementation(dataSource: healthStoreDataSource)
         
@@ -29,7 +29,8 @@ private class PetDataViewModelFactory {
         let getAccumulatedDailyStepsUseCase = GetAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
         let getPreviousAnimationProgressUseCase = GetPreviousAnimationProgressUseCaseImplementation(repository: userDefaultRepository)
         
-        return PetDataViewModel(trackingManager: TrackingManagerImplementation.instance,
+        return PetDataViewModel(pet: pet,
+                                trackingManager: TrackingManagerImplementation.instance,
                                 saveAccumulatedDailyStepsUseCase: saveAccumulatedDailyStepsUseCase,
                                 saveTotalStepsUseCase: saveTotalStepsUseCase,
                                 savePreviousAnimationProgressUseCase: savePreviousAnimationProgressUseCase,

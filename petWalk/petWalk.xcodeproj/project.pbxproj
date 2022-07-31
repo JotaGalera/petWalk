@@ -15,6 +15,7 @@
 		35094B3127E3E33A0035D7B7 /* PetDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */; };
 		35094B3327E3E4920035D7B7 /* PetDataViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3227E3E4920035D7B7 /* PetDataViewModelFactory.swift */; };
 		350BECF728529C6A0014F795 /* SecureQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350BECF628529C6A0014F795 /* SecureQuestionView.swift */; };
+		3516B75D2896FE92001418EF /* LevelUpAnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B75C2896FE92001418EF /* LevelUpAnimationScene.swift */; };
 		3526B2272852944D00943ED9 /* SetupPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526B2262852944D00943ED9 /* SetupPetView.swift */; };
 		352C3344286717DB003629E6 /* SetupViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352C3343286717DB003629E6 /* SetupViewModelFactory.swift */; };
 		352C334628672531003629E6 /* SetupPetViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352C334528672531003629E6 /* SetupPetViewModelTest.swift */; };
@@ -172,6 +173,7 @@
 		35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModel.swift; sourceTree = "<group>"; };
 		35094B3227E3E4920035D7B7 /* PetDataViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModelFactory.swift; sourceTree = "<group>"; };
 		350BECF628529C6A0014F795 /* SecureQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionView.swift; sourceTree = "<group>"; };
+		3516B75C2896FE92001418EF /* LevelUpAnimationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpAnimationScene.swift; sourceTree = "<group>"; };
 		3526B2262852944D00943ED9 /* SetupPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetView.swift; sourceTree = "<group>"; };
 		352C3343286717DB003629E6 /* SetupViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModelFactory.swift; sourceTree = "<group>"; };
 		352C334528672531003629E6 /* SetupPetViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetViewModelTest.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				350127BA27C2606900AB2B1D /* PetDataView.swift */,
+				3516B75C2896FE92001418EF /* LevelUpAnimationScene.swift */,
 			);
 			path = PetInfo;
 			sourceTree = "<group>";
@@ -1329,6 +1332,7 @@
 				355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */,
 				353B60ED28390C5400A1C4B4 /* SavePreviousAnimationProgressUseCase.swift in Sources */,
 				358529B1284B6A0100EDE800 /* Level.swift in Sources */,
+				3516B75D2896FE92001418EF /* LevelUpAnimationScene.swift in Sources */,
 				359C7C7A285503DD0053FC79 /* SavePetNameUseCase.swift in Sources */,
 				35094B3127E3E33A0035D7B7 /* PetDataViewModel.swift in Sources */,
 				35338BD927CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift in Sources */,
