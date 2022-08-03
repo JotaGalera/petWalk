@@ -21,9 +21,11 @@ struct PetDataView: View {
     var body: some View {
         ZStack {
             VStack {
+                Text("Lvl: \(petDataViewModel.pet.level.currentLevel)")
+                    .accessibilityIdentifier("Lvl")
                 Text("Exp: \(petDataViewModel.currentSteps)")
                     .accessibilityIdentifier("Exp")
-                Text("Next Lvl: \(petDataViewModel.expToRaiseNextLevel - petDataViewModel.currentSteps)")
+                Text("Next Lvl: \(petDataViewModel.pet.getExpToRaiseNextLevel() - petDataViewModel.currentSteps)")
                     .accessibilityIdentifier("NextLevel")
             }
             if pendingFetch {
@@ -77,22 +79,16 @@ struct Animation: View {
         .animation(.spring(response: 2.0, dampingFraction: 1.0, blendDuration: 1.0), value: previousExpAnimated + progressUntilNextLevel)
         .onAppear {
             newExp = petDataViewModel.animationDailySteps
-            levelUpExp = petDataViewModel.expToRaiseNextLevel
+            levelUpExp = petDataViewModel.pet.getExpToRaiseNextLevel()
             previousExpAnimated = petDataViewModel.previousAnimationProgress
             shouldNewLevelAnimationBeDisplayed = petDataViewModel.hasPetRaisedANewLevel
             
-            if newExp > 0 || shouldNewLevelAnimationBeDisplayed {
-                if newExp == 0 {
-                    progressUntilNextLevel = 0
-                } else {
-                    let newPercentage = Double(newExp) / Double(levelUpExp)
-                    
-                    progressUntilNextLevel = newPercentage * endCircleShape
-                }
+            if newExp > 0  {
+                let newPercentage = Double(newExp) / Double(levelUpExp)
+                progressUntilNextLevel = newPercentage * endCircleShape
                 petDataViewModel.savePreviousProgressAnimation(progressUntilNextLevel + previousExpAnimated)
             } else {
                 let oldPercentage = Double(petDataViewModel.currentSteps) / Double(levelUpExp)
-                
                 progressUntilNextLevel = oldPercentage * endCircleShape
                 previousExpAnimated = 0
             }
@@ -102,7 +98,6 @@ struct Animation: View {
 
 struct PetDataView_Previews: PreviewProvider {
     static var previews: some View {
-        PetDataViewFactory().make(expToRaiseNextLevel: 100,
-                                  pet: Swordman(name: "Beldrick", level: Level(), stats: Stats()))
+        PetDataViewFactory().make(pet: Swordman(name: "Beldrick", level: Level(), stats: Stats()))
     }
 }

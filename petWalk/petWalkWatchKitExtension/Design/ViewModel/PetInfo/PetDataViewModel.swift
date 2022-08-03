@@ -12,10 +12,9 @@ class PetDataViewModel: ObservableObject {
     @Published var currentSteps: Int = 0
     @Published var animationDailySteps: Int = 0
     @Published var previousAnimationProgress: Double = 0
-    @Published var expToRaiseNextLevel: Int
     @Published var hasPetRaisedANewLevel: Bool = false
+    @Published var pet: Pets
     
-    private var pet: Pets
     private var trackingManager: TrackingManager
     private var saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase
     private var saveTotalStepsUseCase: SaveTotalStepsUseCase
@@ -24,8 +23,7 @@ class PetDataViewModel: ObservableObject {
     private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase
     private var getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase
     
-    init(pet: Pets, trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, getStepsUseCase: GetStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase,
-        expToRaiseNextLevel: Int) {
+    init(pet: Pets, trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, getStepsUseCase: GetStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase) {
         self.pet = pet
         self.trackingManager = trackingManager
         self.saveAccumulatedDailyStepsUseCase = saveAccumulatedDailyStepsUseCase
@@ -34,7 +32,6 @@ class PetDataViewModel: ObservableObject {
         self.getStepsUseCase = getStepsUseCase
         self.getAccumulatedDailyStepsUseCase = getAccumulatedDailyStepsUseCase
         self.getPreviousAnimationProgressUseCase = getPreviousAnimationProgressUseCase
-        self.expToRaiseNextLevel = expToRaiseNextLevel
     }
     
     func getSteps() async {
@@ -55,12 +52,13 @@ class PetDataViewModel: ObservableObject {
     }
     
     func feedingPet(_ steps: Int) {
-        if pet.level.expToLevelUp <= steps {
+        if  steps >= pet.level.expToLevelUp {
             let leftoverSteps = steps - pet.level.expToLevelUp
             pet.levelUp()
             hasPetRaisedANewLevel = true
             feedingPet(leftoverSteps)
         } else {
+            hasPetRaisedANewLevel = false
             calculateAnimationDailySteps(steps)
         }
     }

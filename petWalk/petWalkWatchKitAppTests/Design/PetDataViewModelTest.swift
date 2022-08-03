@@ -10,6 +10,7 @@ import XCTest
 
 class PetDataViewModelTest: XCTestCase {
     private var sut: PetDataViewModel!
+    private var petMock: Pets!
     private var trackingManagerMock: TrackingManagerMock!
     private var saveAccumulateDailyStepsUseCaseMock: SaveAccumulatedDailyStepsUseCaseMock!
     private var saveTotalStepsUseCaseMock : SaveTotalStepsUseCaseMock!
@@ -22,6 +23,7 @@ class PetDataViewModelTest: XCTestCase {
     @MainActor override func setUpWithError() throws {
         try super.setUpWithError()
         
+        petMock = Swordman(name: "petMock", level: Level(), stats: Stats())
         trackingManagerMock = TrackingManagerMock()
         saveAccumulateDailyStepsUseCaseMock = SaveAccumulatedDailyStepsUseCaseMock()
         saveTotalStepsUseCaseMock = SaveTotalStepsUseCaseMock()
@@ -29,16 +31,16 @@ class PetDataViewModelTest: XCTestCase {
         getStepsUseCaseMock = GetStepsUseCaseMock()
         getAccumulatedDailyStepsUseCaseMock = GetAccumulatedDailyStepsUseCaseMock()
         getPreviousAnimationProgressUseCaseMock = GetPreviousAnimationProgressUseCaseMock()
-        expToRaiseNextLevel = 100
         
-        sut = PetDataViewModel(trackingManager: trackingManagerMock,
+        
+        sut = PetDataViewModel(pet: petMock,
+            trackingManager: trackingManagerMock,
                                saveAccumulatedDailyStepsUseCase: saveAccumulateDailyStepsUseCaseMock,
                                saveTotalStepsUseCase: saveTotalStepsUseCaseMock,
                                savePreviousAnimationProgressUseCase: savePreviousAnimationProgressUseCaseMock,
                                getStepsUseCase: getStepsUseCaseMock,
                                getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCaseMock,
-                               getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCaseMock,
-                               expToRaiseNextLevel: expToRaiseNextLevel)
+                               getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCaseMock)
     }
     
     func testThatStepsAreNotRequested_When_TrackingDailyStepsIsNotGranted() async throws {
