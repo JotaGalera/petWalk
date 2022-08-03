@@ -15,4 +15,5 @@ enum UserDefaultsKeys: String {
     case previousAnimationProgress = "previousAnimationProgress"
     
     case petName = "petName"
+    case petLevel = "petLevel"
 }

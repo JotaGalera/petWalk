@@ -18,6 +18,7 @@ class UserDefaultDataSourceMock: UserDefaultsDataSource {
     var dateDailyStepsReturnValue = Date()
     var previousAnimationProgressReturnValue = 40.0
     var petNameReturnValue = "nameMock"
+    var petLevelReturnValue = 1
     var setCallsCount = 0
     var setParamValueReceived: Any!
     var setParamForKeyReceived: UserDefaultsKeys!
@@ -38,6 +39,8 @@ class UserDefaultDataSourceMock: UserDefaultsDataSource {
             getReturnValue = previousAnimationProgressReturnValue
         case .petName:
             getReturnValue = petNameReturnValue
+        case .petLevel:
+            getReturnValue = petLevelReturnValue
         }
         return getReturnValue as? T
     }

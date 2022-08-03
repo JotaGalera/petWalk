@@ -11,12 +11,11 @@ import XCTest
 class PetsTest: XCTestCase {
     var sut: Pets!
     var levelMock = Level()
-    var statsMock = Stats()
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        sut = Swordman(name: "test", level: levelMock, stats: statsMock)
+        sut = Swordman(name: "test", level: levelMock)
     }
     
     func testThatNewLevelAndNewStatsAreCalculatedProperly_When_PetLevelUp() {

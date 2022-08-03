@@ -64,6 +64,8 @@
 		35969392278B47A300B68BEF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35969391278B47A300B68BEF /* HealthKit.framework */; };
 		35969397278B4E2A00B68BEF /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35969396278B4E2A00B68BEF /* PetViewModel.swift */; };
 		3596E92C27BE9CB100B41828 /* HealthDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3596E92B27BE9CB100B41828 /* HealthDataSourceTest.swift */; };
+		35973956289B062E00E3D82C /* SavePetLevelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35973955289B062E00E3D82C /* SavePetLevelUseCase.swift */; };
+		35973958289B063C00E3D82C /* SavePetLevelUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35973957289B063C00E3D82C /* SavePetLevelUseCaseTest.swift */; };
 		359C7C782854FCF00053FC79 /* SecureQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C7C772854FCF00053FC79 /* SecureQuestionViewModel.swift */; };
 		359C7C7A285503DD0053FC79 /* SavePetNameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C7C79285503DD0053FC79 /* SavePetNameUseCase.swift */; };
 		35AB46FF278A185000401FB7 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB46FE278A185000401FB7 /* Pets.swift */; };
@@ -232,6 +234,8 @@
 		35969391278B47A300B68BEF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		35969396278B4E2A00B68BEF /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
 		3596E92B27BE9CB100B41828 /* HealthDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataSourceTest.swift; sourceTree = "<group>"; };
+		35973955289B062E00E3D82C /* SavePetLevelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetLevelUseCase.swift; sourceTree = "<group>"; };
+		35973957289B063C00E3D82C /* SavePetLevelUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetLevelUseCaseTest.swift; sourceTree = "<group>"; };
 		359C7C772854FCF00053FC79 /* SecureQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionViewModel.swift; sourceTree = "<group>"; };
 		359C7C79285503DD0053FC79 /* SavePetNameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetNameUseCase.swift; sourceTree = "<group>"; };
 		35AB46FE278A185000401FB7 /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
@@ -642,6 +646,7 @@
 			children = (
 				358529AE284B685100EDE800 /* GetPetDataUseCaseTest.swift */,
 				3545C206285FCCBD00362CC3 /* SavePetNameUseCaseTest.swift */,
+				35973957289B063C00E3D82C /* SavePetLevelUseCaseTest.swift */,
 			);
 			path = Pets;
 			sourceTree = "<group>";
@@ -839,6 +844,7 @@
 			children = (
 				35F8ACC3284B607F00847F73 /* GetPetDataUseCase.swift */,
 				359C7C79285503DD0053FC79 /* SavePetNameUseCase.swift */,
+				35973955289B062E00E3D82C /* SavePetLevelUseCase.swift */,
 			);
 			path = Pets;
 			sourceTree = "<group>";
@@ -1304,6 +1310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35094B3327E3E4920035D7B7 /* PetDataViewModelFactory.swift in Sources */,
+				35973956289B062E00E3D82C /* SavePetLevelUseCase.swift in Sources */,
 				3543501627832D910024FB5A /* petWalkApp.swift in Sources */,
 				3596938B278B42E600B68BEF /* HealthStoreDataSource.swift in Sources */,
 				359C7C782854FCF00053FC79 /* SecureQuestionViewModel.swift in Sources */,
@@ -1356,6 +1363,7 @@
 				35B5A3E12842B56F00C2722E /* PetsTest.swift in Sources */,
 				35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */,
 				3563C32127D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift in Sources */,
+				35973958289B063C00E3D82C /* SavePetLevelUseCaseTest.swift in Sources */,
 				35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */,
 				35D9AECE28414A37002C057A /* UserDefaultDataSourceMock.swift in Sources */,
 				3545C209285FCE1000362CC3 /* SecureQuestionViewModelTest.swift in Sources */,

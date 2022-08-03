@@ -19,7 +19,7 @@ class SetupPetViewModelTest: XCTestCase {
     }
     
     @MainActor func testThatHasPetNameIsTrue_When_PetHasName() {
-        getPetDataUseCaseMock.executeReturnValue = Swordman(name: "nameMock", level: Level(), stats: Stats())
+        getPetDataUseCaseMock.executeReturnValue = Swordman(name: "nameMock", level: Level())
         
         sut.checkPetHasName()
         
@@ -27,7 +27,7 @@ class SetupPetViewModelTest: XCTestCase {
     }
     
     @MainActor func testThatHasPetNameIsFalse_When_PetDoesNotHaveName() {
-        getPetDataUseCaseMock.executeReturnValue = Swordman(name: "", level: Level(), stats: Stats())
+        getPetDataUseCaseMock.executeReturnValue = Swordman(name: "", level: Level())
         
         sut.checkPetHasName()
         

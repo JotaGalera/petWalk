@@ -23,7 +23,7 @@ class PetDataViewModelTest: XCTestCase {
     @MainActor override func setUpWithError() throws {
         try super.setUpWithError()
         
-        petMock = Swordman(name: "petMock", level: Level(), stats: Stats())
+        petMock = Swordman(name: "petMock", level: Level())
         trackingManagerMock = TrackingManagerMock()
         saveAccumulateDailyStepsUseCaseMock = SaveAccumulatedDailyStepsUseCaseMock()
         saveTotalStepsUseCaseMock = SaveTotalStepsUseCaseMock()

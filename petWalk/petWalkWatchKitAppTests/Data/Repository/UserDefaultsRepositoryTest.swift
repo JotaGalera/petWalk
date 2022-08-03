@@ -61,7 +61,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(.dateDailySteps, dataSource.setParamForKeyReceived)
     }
     
-    func testThatAccumulatedDailyStepsAreRequested_When_GetAccumulatedDailyStepsIsCalled() {
+    func testThatAccumulatedDailyStepsAreRetrieved_When_GetAccumulatedDailyStepsIsCalled() {
         let accumulatedDailySteps = sut.getAccumulatedDailySteps()
         
         XCTAssertEqual(1, dataSource.getCallsCount)
@@ -69,7 +69,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(10, accumulatedDailySteps)
     }
     
-    func testThatTotalStepsAreRequested_When_GetTotalStepsIsCalled() {
+    func testThatTotalStepsAreRetrieved_When_GetTotalStepsIsCalled() {
         let totalSteps = sut.getTotalSteps()
         
         XCTAssertEqual(1, dataSource.getCallsCount)
@@ -77,7 +77,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(100, totalSteps)
     }
     
-    func testThatDateDailyStepsAreRequested_When_GetDateDailyStepsIsCalled() {
+    func testThatDateDailyStepsAreRetrieved_When_GetDateDailyStepsIsCalled() {
         let dateDailySteps = sut.getDateDailySteps()
         
         XCTAssertEqual(1, dataSource.getCallsCount)
@@ -85,7 +85,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(dataSource.dateDailyStepsReturnValue, dateDailySteps)
     }
     
-    func testThatPreviousAnimationProgressIsObtained_When_GetPreviousAnimationProgressIsCalled() {
+    func testThatPreviousAnimationProgressIsRetrieved_When_GetPreviousAnimationProgressIsCalled() {
         let previousAnimationProgressMock = sut.getPreviousAnimationProgress()
         
         XCTAssertEqual(1, dataSource.getCallsCount)
@@ -103,7 +103,7 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(.previousAnimationProgress, dataSource.setParamForKeyReceived)
     }
     
-    func testThatPetNameIsSaved_When_SavePetNameIsCalled() {
+    func testThatPetNameIsSavedOnMemory_When_SavePetNameIsCalled() {
         let petNameMock = "nameMock"
         
         sut.savePetName(petNameMock)
@@ -113,11 +113,29 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(.petName, dataSource.setParamForKeyReceived)
     }
     
-    func testThatPetNameIsObtained_When_() {
+    func testThatPetNameIsRetrieved_When_GetPetNameIsCalled() {
         let petName = sut.getPetName()
         
         XCTAssertEqual(1, dataSource.getCallsCount)
-        XCTAssertEqual(.petName, dataSource.getParamForKeyReceived)
         XCTAssertEqual("nameMock", petName)
+        XCTAssertEqual(.petName, dataSource.getParamForKeyReceived)
+    }
+    
+    func testThatPetLevelIsSavedOnMemory_When_SavePetLevelIsCalled() {
+        let petLevelMock = 2
+        
+        sut.savePetLevel(petLevelMock)
+        
+        XCTAssertEqual(1, dataSource.setCallsCount)
+        XCTAssertEqual(2, dataSource.setParamValueReceived as! Int)
+        XCTAssertEqual(.petLevel, dataSource.setParamForKeyReceived)
+    }
+    
+    func testThatPetLevelIsRetrieved_When_GetPetLevelIsCalled() {
+        let petLevel = sut.getPetLevel()
+        
+        XCTAssertEqual(1, petLevel)
+        XCTAssertEqual(1, dataSource.getCallsCount)
+        XCTAssertEqual(.petLevel, dataSource.getParamForKeyReceived)
     }
 }

@@ -7,12 +7,11 @@
 
 struct Stats: Equatable {
     let baseValue = 10
-    var strength: Int
-    var life: Int
+    var strength: Int = 10
+    var life: Int = 10
     
-    init(strength: Int = 10, life: Int = 10) {
-        self.strength = strength
-        self.life = life
+    init(currentLevel: Int) {
+        calculateStrengthAndLife(currentLevel)
     }
     
     mutating func calculateStrengthAndLife(_ currentLevel: Int) {

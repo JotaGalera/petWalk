@@ -32,10 +32,10 @@ struct Swordman: Pets, Equatable {
     var stats: Stats
     var level: Level
     
-    init(name: String, level: Level, stats: Stats) {
+    init(name: String, level: Level) {
         self.name = name
         self.level = level
-        self.stats = stats
+        self.stats = Stats(currentLevel: level.currentLevel)
     }
     
     mutating func levelUp() {

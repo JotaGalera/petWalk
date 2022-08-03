@@ -6,9 +6,14 @@
 //
 
 struct Level: Equatable {
-    var currentLevel: Int = 1
+    var currentLevel: Int
     var expToLevelUp: Int = 100
     private let expBaseToLevelUp = 100
+    
+    init(currentLevel: Int = 1) {
+        self.currentLevel = currentLevel
+        calculateNextExpToLevelUp()
+    }
     
     mutating func levelUp() {
         calculateNextExpToLevelUp()

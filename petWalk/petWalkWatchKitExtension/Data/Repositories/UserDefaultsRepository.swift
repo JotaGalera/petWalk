@@ -16,6 +16,9 @@ protocol UserDefaultsRepository: AutoMockable {
     func getPetName() -> String
     func savePetName(_ name: String)
     
+    func getPetLevel() -> Int
+    func savePetLevel(_ level: Int)
+    
     func saveTrackingDailySteps(_ permission: Bool)
 }
 
@@ -46,6 +49,10 @@ class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
         return userDefaultDataSource.get(forKey: .petName) ?? ""
     }
     
+    func getPetLevel() -> Int {
+        return userDefaultDataSource.get(forKey: .petLevel) ?? 1
+    }
+    
     func saveTrackingDailySteps(_ permission: Bool) {
         userDefaultDataSource.set(value: permission, forKey: .trackingDailyStepsPermission)
     }
@@ -68,5 +75,9 @@ class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
     
     func savePreviousAnimationProgress(_ previousAnimationProgress: Double) {
         userDefaultDataSource.set(value: previousAnimationProgress, forKey: .previousAnimationProgress)
+    }
+    
+    func savePetLevel(_ level: Int) {
+        userDefaultDataSource.set(value: level, forKey: .petLevel)
     }
 }
