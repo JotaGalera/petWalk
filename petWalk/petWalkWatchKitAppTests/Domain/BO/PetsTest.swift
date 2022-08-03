@@ -23,8 +23,14 @@ class PetsTest: XCTestCase {
         sut.levelUp()
         
         XCTAssertEqual(2, sut.level.currentLevel)
-        XCTAssertEqual(11, sut.stats.strength)
-        XCTAssertEqual(12, sut.stats.life)
+        XCTAssertEqual(13, sut.stats.strength)
+        XCTAssertEqual(13, sut.stats.life)
+        
+        sut.levelUp()
+        
+        XCTAssertEqual(3, sut.level.currentLevel)
+        XCTAssertEqual(15, sut.stats.strength)
+        XCTAssertEqual(14, sut.stats.life)
     }
     
     func testThatNextExpToLevelUpIsCalcuatedProperly_When_PetLevelUp() {

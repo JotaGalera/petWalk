@@ -41,7 +41,7 @@ struct Swordman: Pets, Equatable {
     mutating func levelUp() {
         level.levelUp()
         
-        stats.increaseStats(level.currentLevel)
+        stats.calculateStrengthAndLife(level.currentLevel)
     }
     
     func getStrength() -> Int {
