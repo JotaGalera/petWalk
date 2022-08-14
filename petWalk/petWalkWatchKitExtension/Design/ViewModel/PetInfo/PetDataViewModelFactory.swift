@@ -26,6 +26,7 @@ private class PetDataViewModelFactory {
         let saveAccumulatedDailyStepsUseCase = SaveAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
         let saveTotalStepsUseCase = SaveTotalStepsUseCaseImplementation(repository: userDefaultRepository)
         let savePreviousAnimationProgressUseCase = SavePreviousAnimationProgressUseCaseImplementation(repository: userDefaultRepository)
+        let savePetLevelUseCase = SavePetLevelUseCaseImplementation(repository: userDefaultRepository)
         let getAccumulatedDailyStepsUseCase = GetAccumulatedDailyStepsUseCaseImplementation(repository: userDefaultRepository)
         let getPreviousAnimationProgressUseCase = GetPreviousAnimationProgressUseCaseImplementation(repository: userDefaultRepository)
         
@@ -34,6 +35,7 @@ private class PetDataViewModelFactory {
                                 saveAccumulatedDailyStepsUseCase: saveAccumulatedDailyStepsUseCase,
                                 saveTotalStepsUseCase: saveTotalStepsUseCase,
                                 savePreviousAnimationProgressUseCase: savePreviousAnimationProgressUseCase,
+                                savePetLevelUseCase: savePetLevelUseCase,
                                 getStepsUseCase: getStepsUseCase,
                                 getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCase,
                                 getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCase)

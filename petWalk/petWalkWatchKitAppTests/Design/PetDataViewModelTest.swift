@@ -10,11 +10,12 @@ import XCTest
 
 class PetDataViewModelTest: XCTestCase {
     private var sut: PetDataViewModel!
-    private var petMock: Pets!
+    private var petMock: PetsMock!
     private var trackingManagerMock: TrackingManagerMock!
     private var saveAccumulateDailyStepsUseCaseMock: SaveAccumulatedDailyStepsUseCaseMock!
     private var saveTotalStepsUseCaseMock : SaveTotalStepsUseCaseMock!
     private var savePreviousAnimationProgressUseCaseMock: SavePreviousAnimationProgressUseCaseMock!
+    private var savePetLevelUseCaseMock: SavePetLevelUseCaseMock!
     private var getStepsUseCaseMock: GetStepsUseCaseMock!
     private var getAccumulatedDailyStepsUseCaseMock: GetAccumulatedDailyStepsUseCaseMock!
     private var getPreviousAnimationProgressUseCaseMock: GetPreviousAnimationProgressUseCaseMock!
@@ -23,11 +24,16 @@ class PetDataViewModelTest: XCTestCase {
     @MainActor override func setUpWithError() throws {
         try super.setUpWithError()
         
-        petMock = Swordman(name: "petMock", level: Level())
+        petMock = PetsMock()
+        petMock.level = Level()
+        petMock.stats = Stats(currentLevel: 1)
+        petMock.name = "PetMock"
+        
         trackingManagerMock = TrackingManagerMock()
         saveAccumulateDailyStepsUseCaseMock = SaveAccumulatedDailyStepsUseCaseMock()
         saveTotalStepsUseCaseMock = SaveTotalStepsUseCaseMock()
         savePreviousAnimationProgressUseCaseMock = SavePreviousAnimationProgressUseCaseMock()
+        savePetLevelUseCaseMock = SavePetLevelUseCaseMock()
         getStepsUseCaseMock = GetStepsUseCaseMock()
         getAccumulatedDailyStepsUseCaseMock = GetAccumulatedDailyStepsUseCaseMock()
         getPreviousAnimationProgressUseCaseMock = GetPreviousAnimationProgressUseCaseMock()
@@ -38,6 +44,7 @@ class PetDataViewModelTest: XCTestCase {
                                saveAccumulatedDailyStepsUseCase: saveAccumulateDailyStepsUseCaseMock,
                                saveTotalStepsUseCase: saveTotalStepsUseCaseMock,
                                savePreviousAnimationProgressUseCase: savePreviousAnimationProgressUseCaseMock,
+                               savePetLevelUseCase: savePetLevelUseCaseMock,
                                getStepsUseCase: getStepsUseCaseMock,
                                getAccumulatedDailyStepsUseCase: getAccumulatedDailyStepsUseCaseMock,
                                getPreviousAnimationProgressUseCase: getPreviousAnimationProgressUseCaseMock)
@@ -69,6 +76,85 @@ class PetDataViewModelTest: XCTestCase {
         await sut.getSteps()
         
         XCTAssertEqual(10, sut.currentSteps)
+    }
+    
+    func testThatAccumulatedDailyStepsAreSaved_When_GetStepsIsCalled() async throws {
+        let stepsMock = 10
+        trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
+        getStepsUseCaseMock.executeReturnValue = stepsMock
+        getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
+        
+        await sut.getSteps()
+        
+        XCTAssertEqual(1, saveAccumulateDailyStepsUseCaseMock.executeCallsCount)
+        XCTAssertEqual(stepsMock, saveAccumulateDailyStepsUseCaseMock.executeReceivedSteps)
+    }
+    
+    func testThatTotalStepsAreSaved_When_GetStepsIsCalled() async throws {
+        let stepsMock = 10
+        trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
+        getStepsUseCaseMock.executeReturnValue = stepsMock
+        getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
+        
+        await sut.getSteps()
+        
+        XCTAssertEqual(1, saveTotalStepsUseCaseMock.executeCallsCount)
+        XCTAssertEqual(stepsMock, saveTotalStepsUseCaseMock.executeReceivedSteps)
+    }
+    
+    @MainActor func testThatAnimationIsDisplayed_When_PetHasRaisedANewLevel() async throws {
+        let stepsMock = 1000
+        trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
+        getStepsUseCaseMock.executeReturnValue = stepsMock
+        getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
+        
+        await sut.getSteps()
+        
+        XCTAssertTrue(sut.hasPetRaisedANewLevel)
+    }
+    
+    @MainActor func testThatPetLevelUpIsCalled_When_PetHasRaisedNewLevel() async throws {
+        let stepsMock = 1000
+        trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
+        getStepsUseCaseMock.executeReturnValue = stepsMock
+        getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
+        
+        await sut.getSteps()
+        
+        XCTAssertTrue(petMock.levelUpCalled)
+    }
+    
+    @MainActor func testThatPetLevelIsSaved_When_PetHasRaisedANewLevel() async throws {
+        let stepsMock = 301
+        trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
+        getStepsUseCaseMock.executeReturnValue = stepsMock
+        getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
+        
+        await sut.getSteps()
+        
+        XCTAssertEqual(1, savePetLevelUseCaseMock.executeCallsCount)
+    }
+    
+    @MainActor func testThatPetLevelUpIsCalledAsManyTimesAsLevelsAreRaisedByPet() async throws {
+        let stepsMock = 1000
+        trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
+        getStepsUseCaseMock.executeReturnValue = stepsMock
+        getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
+        
+        await sut.getSteps()
+        
+        XCTAssertEqual(3, petMock.levelUpCallsCount)
+    }
+    
+    @MainActor func testThatAnimationIsNotDisplayed_When_PetHasNoRaisedANewLevel() async throws {
+        let stepsMock = 10
+        trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
+        getStepsUseCaseMock.executeReturnValue = stepsMock
+        getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
+        
+        await sut.getSteps()
+        
+        XCTAssertFalse(sut.hasPetRaisedANewLevel)
     }
     
     @MainActor func testThatAnimationDailyStepsAreCalculated_When_TrackingDailyStepsIsGranted() async throws {

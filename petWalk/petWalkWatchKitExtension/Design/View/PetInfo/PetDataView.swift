@@ -21,7 +21,7 @@ struct PetDataView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Lvl: \(petDataViewModel.pet.level.currentLevel)")
+                Text("Lvl: \(petDataViewModel.pet.getCurrentLevel())")
                     .accessibilityIdentifier("Lvl")
                 Text("Exp: \(petDataViewModel.currentSteps)")
                     .accessibilityIdentifier("Exp")
@@ -87,6 +87,7 @@ struct Animation: View {
                 let newPercentage = Double(newExp) / Double(levelUpExp)
                 progressUntilNextLevel = newPercentage * endCircleShape
                 petDataViewModel.savePreviousProgressAnimation(progressUntilNextLevel + previousExpAnimated)
+                petDataViewModel.hasPetRaisedANewLevel = false
             } else {
                 let oldPercentage = Double(petDataViewModel.currentSteps) / Double(levelUpExp)
                 progressUntilNextLevel = oldPercentage * endCircleShape

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Pets {
+protocol Pets: AutoMockable {
     var name: String { get }
     var images: [String] { get }
     var stats: Stats { get }
@@ -16,6 +16,7 @@ protocol Pets {
     mutating func levelUp()
     func getStrength() -> Int
     func getLife() -> Int
+    func getCurrentLevel() -> Int
     func getExpToRaiseNextLevel() -> Int
 }
 
@@ -50,6 +51,10 @@ struct Swordman: Pets, Equatable {
     
     func getLife() -> Int {
         return stats.life
+    }
+    
+    func getCurrentLevel() -> Int {
+        return level.currentLevel
     }
     
     func getExpToRaiseNextLevel() -> Int {

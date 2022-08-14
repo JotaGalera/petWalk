@@ -19,16 +19,18 @@ class PetDataViewModel: ObservableObject {
     private var saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase
     private var saveTotalStepsUseCase: SaveTotalStepsUseCase
     private var savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase
+    private var savePetLevelUseCase: SavePetLevelUseCase
     private var getStepsUseCase: GetStepsUseCase
     private var getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase
     private var getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase
     
-    init(pet: Pets, trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, getStepsUseCase: GetStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase) {
+    init(pet: Pets, trackingManager: TrackingManager, saveAccumulatedDailyStepsUseCase: SaveAccumulatedDailyStepsUseCase, saveTotalStepsUseCase: SaveTotalStepsUseCase, savePreviousAnimationProgressUseCase: SavePreviousAnimationProgressUseCase, savePetLevelUseCase: SavePetLevelUseCase, getStepsUseCase: GetStepsUseCase, getAccumulatedDailyStepsUseCase: GetAccumulatedDailyStepsUseCase, getPreviousAnimationProgressUseCase: GetPreviousAnimationProgressUseCase) {
         self.pet = pet
         self.trackingManager = trackingManager
         self.saveAccumulatedDailyStepsUseCase = saveAccumulatedDailyStepsUseCase
         self.saveTotalStepsUseCase = saveTotalStepsUseCase
         self.savePreviousAnimationProgressUseCase = savePreviousAnimationProgressUseCase
+        self.savePetLevelUseCase = savePetLevelUseCase
         self.getStepsUseCase = getStepsUseCase
         self.getAccumulatedDailyStepsUseCase = getAccumulatedDailyStepsUseCase
         self.getPreviousAnimationProgressUseCase = getPreviousAnimationProgressUseCase
@@ -51,14 +53,14 @@ class PetDataViewModel: ObservableObject {
         
     }
     
-    func feedingPet(_ steps: Int) {
-        if  steps >= pet.level.expToLevelUp {
-            let leftoverSteps = steps - pet.level.expToLevelUp
+    private func feedingPet(_ steps: Int) {
+        if  steps >= pet.getExpToRaiseNextLevel() {
+            let leftoverSteps = steps - pet.getExpToRaiseNextLevel()
             pet.levelUp()
+            savePetLevelUseCase.execute(pet.getCurrentLevel())
             hasPetRaisedANewLevel = true
             feedingPet(leftoverSteps)
         } else {
-            hasPetRaisedANewLevel = false
             calculateAnimationDailySteps(steps)
         }
     }
