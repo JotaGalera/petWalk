@@ -16,8 +16,8 @@ struct Level: Equatable {
     }
     
     mutating func levelUp() {
-        calculateNextExpToLevelUp()
         currentLevel += 1
+        calculateNextExpToLevelUp()
     }
     
     // In order to calculate the next experience to level up use:
@@ -25,7 +25,7 @@ struct Level: Equatable {
     // i.e: to reach level 3: (100 * 3) + (100 * 2) + (100 * 1) = 600
     mutating func calculateNextExpToLevelUp() {
         expToLevelUp = 0
-        for i in 0...(currentLevel + 1) {
+        for i in 0...currentLevel {
             expToLevelUp += expBaseToLevelUp * i
         }
     }
