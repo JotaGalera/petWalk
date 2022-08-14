@@ -55,11 +55,10 @@ class PetDataViewModel: ObservableObject {
     
     private func feedingPet(_ steps: Int) {
         if  steps >= pet.getExpToRaiseNextLevel() {
-            let leftoverSteps = steps - pet.getExpToRaiseNextLevel()
             pet.levelUp()
             savePetLevelUseCase.execute(pet.getCurrentLevel())
             hasPetRaisedANewLevel = true
-            feedingPet(leftoverSteps)
+            feedingPet(steps)
         } else {
             calculateAnimationDailySteps(steps)
         }

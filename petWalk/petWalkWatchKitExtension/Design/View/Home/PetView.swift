@@ -37,6 +37,7 @@ struct PetView: View {
             await petViewModel.requestPermissions()
         }
         .onAppear {
+            petViewModel.updatePetData()
             destination = PetDataViewFactory().make(pet: petViewModel.pet)
         }
     }

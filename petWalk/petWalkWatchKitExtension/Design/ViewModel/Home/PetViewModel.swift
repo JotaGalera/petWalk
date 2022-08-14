@@ -13,7 +13,7 @@ class PetViewModel: ObservableObject {
     private var saveTrackingDailyStepsUseCase: SaveTrackingDailyStepsUseCase
     private var getPetDataUseCase: GetPetDataUseCase
     
-    let pet: Pets
+    var pet: Pets
     
     init(requestDailyStepsPermissionUseCase: RequestDailyStepsPermissionUseCase, saveTrackingDailyStepsUseCase: SaveTrackingDailyStepsUseCase, getPetDataUseCase: GetPetDataUseCase) {
         self.requestDailyStepsPermissionUseCase = requestDailyStepsPermissionUseCase
@@ -33,5 +33,9 @@ class PetViewModel: ObservableObject {
         } catch {
             print (error)
         }
+    }
+    
+    func updatePetData() {
+        pet = getPetDataUseCase.execute()
     }
 }
