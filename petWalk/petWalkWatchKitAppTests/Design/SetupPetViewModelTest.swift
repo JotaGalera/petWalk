@@ -8,29 +8,29 @@
 import XCTest
 
 class SetupPetViewModelTest: XCTestCase {
-    private var sut: SetupPetViewModel!
+    private var sut: SetupPetNameViewModel!
     private var getPetDataUseCaseMock: GetPetDataUseCaseMock!
     
     @MainActor override func setUpWithError() throws {
         try super.setUpWithError()
         
         getPetDataUseCaseMock = GetPetDataUseCaseMock()
-        sut = SetupPetViewModel(getPetDataUseCase: getPetDataUseCaseMock)
+        sut = SetupPetNameViewModel(getPetDataUseCase: getPetDataUseCaseMock)
     }
     
     @MainActor func testThatHasPetNameIsTrue_When_PetHasName() {
         getPetDataUseCaseMock.executeReturnValue = Pet(name: "nameMock", level: Level())
         
-        sut.checkPetHasName()
+        sut.canContinueWithNextView()
         
-        XCTAssertTrue(sut.hasPetName)
+        XCTAssertTrue(sut.continueWithNextView)
     }
     
     @MainActor func testThatHasPetNameIsFalse_When_PetDoesNotHaveName() {
         getPetDataUseCaseMock.executeReturnValue = Pet(name: "", level: Level())
         
-        sut.checkPetHasName()
+        sut.canContinueWithNextView()
         
-        XCTAssertFalse(sut.hasPetName)
+        XCTAssertFalse(sut.continueWithNextView)
     }
 }

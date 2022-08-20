@@ -1,5 +1,5 @@
 //
-//  SetupPetView.swift
+//  SetupPetNameView.swift
 //  petWalkWatchKitExtension
 //
 //  Created by Galera, Javier on 9/6/22.
@@ -7,19 +7,18 @@
 
 import SwiftUI
 
-struct SetupPetView: View {
-    private let continueButtonText = "Continue"
+struct SetupPetNameView: View {
     @State var petName: String = ""
     @State var isSecureQuestionShowed: Bool = false
     
-    @StateObject var setupPetViewModel: SetupPetViewModel
+    @StateObject var setupPetNameViewModel: SetupPetNameViewModel
     
-    init(setupPetViewModel: SetupPetViewModel) {
-        _setupPetViewModel = StateObject(wrappedValue: setupPetViewModel)
+    init(setupPetNameViewModel: SetupPetNameViewModel) {
+        _setupPetNameViewModel = StateObject(wrappedValue: setupPetNameViewModel)
     }
     
     var body: some View {
-        if setupPetViewModel.hasPetName {
+        if setupPetNameViewModel.continueWithNextView {
             PetViewFactory().make()
         } else {
             VStack {
@@ -28,30 +27,25 @@ struct SetupPetView: View {
                 
                 TextField("Tap here ...", text: $petName)
                     .padding()
-                    
-                Button {
+                
+                ContinueButton {
                     isSecureQuestionShowed.toggle()
-                } label: {
-                    Text(continueButtonText)
-                        .foregroundColor(.blue)
                 }
-                .buttonStyle(.borderless)
-                .padding()
                 .sheet(isPresented: $isSecureQuestionShowed,
                        content: {
                     SecureQuestionViewFactory().make(petName: $petName)
                 })
             }
             .onAppear {
-                setupPetViewModel.checkPetHasName()
+                setupPetNameViewModel.canContinueWithNextView()
             }
         }
     }
 }
 
-struct SetupPetView_Previews: PreviewProvider {
+struct SetupPetNameView_Previews: PreviewProvider {
     static var previews: some View {
-        SetupViewFactory().make()
+        SetupPetNameViewFactory().make()
     }
 }
 

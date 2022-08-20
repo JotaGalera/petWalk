@@ -7,18 +7,18 @@
 
 import Foundation
 
-class SetupViewFactory {
-    @MainActor func make() -> SetupPetView {
-        let viewModel = SetupViewModelFactory().make()
-        return SetupPetView(setupPetViewModel: viewModel)
+class SetupPetNameViewFactory {
+    @MainActor func make() -> SetupPetNameView {
+        let viewModel = SetupPetNameViewModelFactory().make()
+        return SetupPetNameView(setupPetNameViewModel: viewModel)
     }
 }
 
-private class SetupViewModelFactory {
-    @MainActor func make() -> SetupPetViewModel {
+private class SetupPetNameViewModelFactory {
+    @MainActor func make() -> SetupPetNameViewModel {
         let dataSource = UserDefaultsDataSourceImplementation()
         let repository = UserDefaultsRepositoryImplementation(userDefaultDataSource: dataSource)
         let getPetDataUseCase = GetPetDataUseCaseImplementation(repository: repository)
-        return SetupPetViewModel(getPetDataUseCase: getPetDataUseCase)
+        return SetupPetNameViewModel(getPetDataUseCase: getPetDataUseCase)
     }
 }

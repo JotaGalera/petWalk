@@ -1,5 +1,5 @@
 //
-//  SetupPetViewModel.swift
+//  SetupPetNameViewModel.swift
 //  petWalkWatchKitExtension
 //
 //  Created by Galera, Javier on 21/6/22.
@@ -8,15 +8,15 @@
 import Foundation
 
 @MainActor
-class SetupPetViewModel: ObservableObject {
-    @Published var hasPetName: Bool = false
+class SetupPetNameViewModel: ObservableObject {
+    @Published var continueWithNextView: Bool = false
     var getPetDataUseCase: GetPetDataUseCase
     
     init(getPetDataUseCase: GetPetDataUseCase) {
         self.getPetDataUseCase = getPetDataUseCase
     }
     
-    func checkPetHasName() {
-        hasPetName = getPetDataUseCase.execute().name != ""
+    func canContinueWithNextView() {
+        continueWithNextView = getPetDataUseCase.execute().name != ""
     }
 }

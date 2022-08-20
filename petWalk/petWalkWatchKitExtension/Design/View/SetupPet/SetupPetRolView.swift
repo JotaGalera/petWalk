@@ -8,53 +8,49 @@
 import SwiftUI
 
 struct SetupPetRolView: View {
-    @State var rolIndex = 0
+    @State var continueButtonSelected: Bool = false
+    @StateObject var setupPetRolViewModel: SetupPetRolViewModel
     
-    var roles: [Rol] = [Swordman(), Ninja(), Wizard()]
-    
+    init(setupPetRolViewModel: SetupPetRolViewModel) {
+        _setupPetRolViewModel = StateObject(wrappedValue: setupPetRolViewModel)
+    }
     
     var body: some View {
-        VStack {
-            Text("Which is your pet rol?")
-                .padding([.top, .bottom])
-            
-            HStack {
-                ArrowButton(action: {
-                    rolIndex = (rolIndex + 2) % 3
-                }, imageName: "arrowtriangle.left.circle.fill")
+        if continueButtonSelected {
+            SetupPetNameViewFactory().make()
+        } else {
+            VStack {
+                Text("Which is your pet rol?")
+                    .padding([.top, .bottom])
                 
-                Spacer()
+                HStack {
+                    ArrowButton(action: {
+                        setupPetRolViewModel.showPreviousRol()
+                    }, imageName: "arrowtriangle.left.circle.fill")
+                    
+                    Spacer()
+                    
+                    PetAnimation(petImages: setupPetRolViewModel.showRolImages())
+                    
+                    Spacer()
+                    
+                    ArrowButton(action: {
+                        setupPetRolViewModel.showNextRol()
+                    }, imageName: "arrowtriangle.right.circle.fill")
+                }
                 
-                PetAnimation(petImages: roles[rolIndex].images)
-                
-                Spacer()
-                
-                ArrowButton(action: {
-                    rolIndex = (rolIndex + 1) % 3
-                }, imageName: "arrowtriangle.right.circle.fill")
+                ContinueButton {
+                    continueButtonSelected.toggle()
+                }
             }
         }
     }
 }
 
-struct ArrowButton: View {
-    var action: () -> Void
-    var imageName: String
-    
-    var body: some View {
-        Button {
-            action()
-        } label: {
-            Image(systemName: imageName)
-                .resizable()
-                .frame(width: 25, height: 25)
-        }
-        .buttonStyle(.borderless)
-    }
-}
+
 
 struct SetupPetRolView_Previews: PreviewProvider {
     static var previews: some View {
-        SetupPetRolView()
+        SetupPetRolView(setupPetRolViewModel: SetupPetRolViewModel())
     }
 }
