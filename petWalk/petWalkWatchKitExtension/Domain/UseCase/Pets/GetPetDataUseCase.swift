@@ -27,6 +27,6 @@ class GetPetDataUseCaseImplementation: GetPetDataUseCase {
     
     private func buildPet(petName: String, petLevel: Int) -> Pets {
         let level = Level(currentLevel: petLevel)
-        return Swordman(name: petName, level: level)
+        return Pet(name: petName, level: level)
     }
 }

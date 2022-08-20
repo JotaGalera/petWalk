@@ -55,6 +55,7 @@
 		3563C31F27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563C31E27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift */; };
 		3563C32127D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563C32027D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift */; };
 		357A5E0F27B5D0AB0020B71C /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357A5E0E27B5D0AB0020B71C /* AutoMockable.swift */; };
+		3584AA2728ABAAD90053B9CC /* Rol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3584AA2628ABAAD90053B9CC /* Rol.swift */; };
 		358529AF284B685100EDE800 /* GetPetDataUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358529AE284B685100EDE800 /* GetPetDataUseCaseTest.swift */; };
 		358529B1284B6A0100EDE800 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358529B0284B6A0100EDE800 /* Level.swift */; };
 		358529B3284B6A0900EDE800 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358529B2284B6A0900EDE800 /* Stats.swift */; };
@@ -70,6 +71,8 @@
 		359C7C7A285503DD0053FC79 /* SavePetNameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C7C79285503DD0053FC79 /* SavePetNameUseCase.swift */; };
 		35AB46FF278A185000401FB7 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB46FE278A185000401FB7 /* Pets.swift */; };
 		35B5A3E12842B56F00C2722E /* PetsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5A3E02842B56F00C2722E /* PetsTest.swift */; };
+		35BAF67D28ABA827007AF1D1 /* SetupPetRolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BAF67C28ABA827007AF1D1 /* SetupPetRolView.swift */; };
+		35BAF68028ABA840007AF1D1 /* PetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BAF67F28ABA840007AF1D1 /* PetAnimation.swift */; };
 		35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1B27BEC407000922BF /* GetDailyStepsUseCaseTest.swift */; };
 		35BF2E1E27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1D27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift */; };
 		35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */; };
@@ -223,6 +226,7 @@
 		3563C31E27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccumulatedDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
 		3563C32027D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTotalStepsUseCaseTest.swift; sourceTree = "<group>"; };
 		357A5E0E27B5D0AB0020B71C /* AutoMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.swift; sourceTree = "<group>"; };
+		3584AA2628ABAAD90053B9CC /* Rol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rol.swift; sourceTree = "<group>"; };
 		358529AE284B685100EDE800 /* GetPetDataUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPetDataUseCaseTest.swift; sourceTree = "<group>"; };
 		358529B0284B6A0100EDE800 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		358529B2284B6A0900EDE800 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 		359C7C79285503DD0053FC79 /* SavePetNameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetNameUseCase.swift; sourceTree = "<group>"; };
 		35AB46FE278A185000401FB7 /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
 		35B5A3E02842B56F00C2722E /* PetsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsTest.swift; sourceTree = "<group>"; };
+		35BAF67C28ABA827007AF1D1 /* SetupPetRolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupPetRolView.swift; sourceTree = "<group>"; };
+		35BAF67F28ABA840007AF1D1 /* PetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetAnimation.swift; sourceTree = "<group>"; };
 		35BF2E1B27BEC407000922BF /* GetDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
 		35BF2E1D27BEC634000922BF /* SaveDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
 		35BF2E1F27BEC72B000922BF /* UserDefaultsRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTest.swift; sourceTree = "<group>"; };
@@ -364,6 +370,7 @@
 		3526B2252852941B00943ED9 /* SetupPet */ = {
 			isa = PBXGroup;
 			children = (
+				35BAF67C28ABA827007AF1D1 /* SetupPetRolView.swift */,
 				3526B2262852944D00943ED9 /* SetupPetView.swift */,
 				350BECF628529C6A0014F795 /* SecureQuestionView.swift */,
 			);
@@ -694,6 +701,7 @@
 		35969394278B4DD800B68BEF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				35BAF67E28ABA840007AF1D1 /* ReusableViews */,
 				3526B2252852941B00943ED9 /* SetupPet */,
 				353B60E5283903C200A1C4B4 /* Home */,
 				353B60E6283903CF00A1C4B4 /* PetInfo */,
@@ -755,6 +763,7 @@
 			isa = PBXGroup;
 			children = (
 				35AB46FE278A185000401FB7 /* Pets.swift */,
+				3584AA2628ABAAD90053B9CC /* Rol.swift */,
 				358529B0284B6A0100EDE800 /* Level.swift */,
 				358529B2284B6A0900EDE800 /* Stats.swift */,
 			);
@@ -767,6 +776,14 @@
 				35B5A3E02842B56F00C2722E /* PetsTest.swift */,
 			);
 			path = BO;
+			sourceTree = "<group>";
+		};
+		35BAF67E28ABA840007AF1D1 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				35BAF67F28ABA840007AF1D1 /* PetAnimation.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		35BF2E2127BEC928000922BF /* Enum */ = {
@@ -1319,6 +1336,7 @@
 				35338BD727CD6E58007ECF47 /* SaveTotalStepsUseCase.swift in Sources */,
 				3543501427832D910024FB5A /* PetView.swift in Sources */,
 				353B60EB28390C3A00A1C4B4 /* GetPreviousAnimationProgressUseCase.swift in Sources */,
+				35BAF67D28ABA827007AF1D1 /* SetupPetRolView.swift in Sources */,
 				35BF2E2327BEC93D000922BF /* UserDefaultsKeys.swift in Sources */,
 				35969397278B4E2A00B68BEF /* PetViewModel.swift in Sources */,
 				358529B3284B6A0900EDE800 /* Stats.swift in Sources */,
@@ -1326,6 +1344,7 @@
 				3545C204285FA76500362CC3 /* SecureQuestionViewFactory.swift in Sources */,
 				350127BB27C2606A00AB2B1D /* PetDataView.swift in Sources */,
 				352C3344286717DB003629E6 /* SetupViewModelFactory.swift in Sources */,
+				35BAF68028ABA840007AF1D1 /* PetAnimation.swift in Sources */,
 				35D9AED128414B9D002C057A /* Date.swift in Sources */,
 				355EA4D427B0661200461F2F /* GetStepsUseCase.swift in Sources */,
 				355EA4C827B053CA00461F2F /* UserDefaultsDataSource.swift in Sources */,
@@ -1339,6 +1358,7 @@
 				355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */,
 				353B60ED28390C5400A1C4B4 /* SavePreviousAnimationProgressUseCase.swift in Sources */,
 				358529B1284B6A0100EDE800 /* Level.swift in Sources */,
+				3584AA2728ABAAD90053B9CC /* Rol.swift in Sources */,
 				3516B75D2896FE92001418EF /* LevelUpAnimationScene.swift in Sources */,
 				359C7C7A285503DD0053FC79 /* SavePetNameUseCase.swift in Sources */,
 				35094B3127E3E33A0035D7B7 /* PetDataViewModel.swift in Sources */,

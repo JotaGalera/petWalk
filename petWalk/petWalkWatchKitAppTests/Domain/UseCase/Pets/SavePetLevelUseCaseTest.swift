@@ -5,24 +5,24 @@
 //  Created by Galera, Javier on 3/8/22.
 //
 
-@testable import petWalkWatchKitExtension
 import XCTest
+@testable import petWalkWatchKitExtension
 
-class SavePetLevelUseCaseTest: XCTest {
+class SavePetLevelUseCaseTest: XCTestCase {
     var sut: SavePetLevelUseCase!
     var repository: UserDefaultsRepositoryMock!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        
         repository = UserDefaultsRepositoryMock()
+        
         sut = SavePetLevelUseCaseImplementation(repository: repository)
     }
     
     func testThatPetLevelIsSavedOnMemory_When_ExecuteIsCalled() {
-        let currentLevelMock = 2
+        let currentLevelMocked = 2
         
-        sut.execute(currentLevelMock)
+        sut.execute(currentLevelMocked)
         
         XCTAssertEqual(1, repository.savePetLevelCallsCount)
         XCTAssertEqual(2, repository.savePetLevelReceivedLevel)

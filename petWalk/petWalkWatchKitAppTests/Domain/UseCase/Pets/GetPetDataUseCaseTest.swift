@@ -20,13 +20,13 @@ class GetPetDataUseCaseTest: XCTestCase {
     }
     
     func testThatAPetIsReturned_When_GetPetDataUseCaseIsCalled() {
-        let petMock = Swordman(name: "Beldrick", level: Level())
+        let petMock = Pet(name: "Beldrick", level: Level())
         repository.getPetNameReturnValue = "Beldrick"
         repository.getPetLevelReturnValue = 1
         
         let pet = sut.execute()
         
-        XCTAssertEqual(petMock, pet as! Swordman)
+        XCTAssertEqual(petMock, pet as! Pet)
         XCTAssertEqual(1, repository.getPetNameCallsCount)
         XCTAssertEqual(1, repository.getPetLevelCallsCount)
     }

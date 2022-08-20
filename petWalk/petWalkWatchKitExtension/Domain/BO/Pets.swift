@@ -9,9 +9,9 @@ import Foundation
 
 protocol Pets: AutoMockable {
     var name: String { get }
-    var images: [String] { get }
     var stats: Stats { get }
     var level: Level { get }
+    var rol: Rol { get }
     
     mutating func levelUp()
     func getStrength() -> Int
@@ -20,16 +20,9 @@ protocol Pets: AutoMockable {
     func getExpToRaiseNextLevel() -> Int
 }
 
-struct Swordman: Pets, Equatable {
+struct Pet: Pets, Equatable {
     var name: String
-    var images: [String] = ["run1",
-                            "run2",
-                            "run3",
-                            "run4",
-                            "run5",
-                            "run6",
-                            "run7",
-                            "run8"]
+    var rol: Rol
     var stats: Stats
     var level: Level
     
@@ -37,6 +30,7 @@ struct Swordman: Pets, Equatable {
         self.name = name
         self.level = level
         self.stats = Stats(currentLevel: level.currentLevel)
+        self.rol = Swordman()
     }
     
     mutating func levelUp() {
@@ -59,6 +53,14 @@ struct Swordman: Pets, Equatable {
     
     func getExpToRaiseNextLevel() -> Int {
         return level.expToLevelUp
+    }
+    
+    static func == (lhs: Pet, rhs: Pet) -> Bool {
+        return lhs.name == rhs.name &&
+            lhs.stats == rhs.stats &&
+            lhs.level == rhs.level &&
+            lhs.rol.classname == rhs.rol.classname &&
+            lhs.rol.images == rhs.rol.images
     }
 }
 

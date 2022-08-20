@@ -15,7 +15,7 @@ class PetsTest: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        sut = Swordman(name: "test", level: levelMock)
+        sut = Pet(name: "test", level: levelMock)
     }
     
     func testThatNewLevelAndNewStatsAreCalculatedProperly_When_PetLevelUp() {

@@ -21,7 +21,7 @@ class PetViewModelTest: XCTestCase {
         saveTrackingDailyStepsUseCase = SaveTrackingDailyStepsUseCaseMock()
         getPetDataUseCase = GetPetDataUseCaseMock()
         
-        let petMock = Swordman(name: "nameMock", level: Level())
+        let petMock = Pet(name: "nameMock", level: Level())
         getPetDataUseCase.executeReturnValue = petMock
         
         sut = PetViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCaseMock,
@@ -39,8 +39,8 @@ class PetViewModelTest: XCTestCase {
     }
     
     @MainActor func testThatPetIsReturned_When_PetViewModelHasBeenInitialized() {
-        let petMock = Swordman(name: "nameMock", level: Level())
+        let petMock = Pet(name: "nameMock", level: Level())
         
-        XCTAssertEqual(petMock, sut.pet as! Swordman)
+        XCTAssertEqual(petMock, sut.pet as! Pet)
     }
 }
