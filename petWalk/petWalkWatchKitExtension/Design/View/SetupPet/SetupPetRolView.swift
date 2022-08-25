@@ -17,7 +17,7 @@ struct SetupPetRolView: View {
     
     var body: some View {
         if continueButtonSelected {
-            SetupPetNameViewFactory().make()
+            SetupPetNameViewFactory().make(isRolSelected: $continueButtonSelected)
         } else {
             VStack {
                 Text("Which is your pet rol?")
@@ -40,6 +40,7 @@ struct SetupPetRolView: View {
                 }
                 
                 ContinueButton {
+                    setupPetRolViewModel.savePetRol()
                     continueButtonSelected.toggle()
                 }
             }
@@ -51,6 +52,6 @@ struct SetupPetRolView: View {
 
 struct SetupPetRolView_Previews: PreviewProvider {
     static var previews: some View {
-        SetupPetRolView(setupPetRolViewModel: SetupPetRolViewModel())
+        SetupPetRolViewFactory().make()
     }
 }

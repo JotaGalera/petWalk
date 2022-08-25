@@ -19,6 +19,8 @@ protocol UserDefaultsRepository: AutoMockable {
     func getPetLevel() -> Int
     func savePetLevel(_ level: Int)
     
+    func savePetRol(_ rol: String)
+    
     func saveTrackingDailySteps(_ permission: Bool)
 }
 
@@ -79,5 +81,9 @@ class UserDefaultsRepositoryImplementation: UserDefaultsRepository {
     
     func savePetLevel(_ level: Int) {
         userDefaultDataSource.set(value: level, forKey: .petLevel)
+    }
+    
+    func savePetRol(_ rol: String) {
+        userDefaultDataSource.set(value: rol, forKey: .petRol)
     }
 }

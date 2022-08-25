@@ -8,9 +8,9 @@
 import SwiftUI
 
 class SecureQuestionViewFactory {
-    @MainActor func make(petName: Binding<String>) -> SecureQuestionView {
+    @MainActor func make(petName: Binding<String>, isRolSelected: Binding<Bool>) -> SecureQuestionView {
         let viewModel = SecureQuestionViewModelFactory().make()
-        return SecureQuestionView(petName: petName, viewModel: viewModel)
+        return SecureQuestionView(petName: petName, viewModel: viewModel, isRolSelected: isRolSelected)
     }
 }
 

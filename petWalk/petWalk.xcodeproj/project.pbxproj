@@ -45,6 +45,8 @@
 		3545C204285FA76500362CC3 /* SecureQuestionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C203285FA76500362CC3 /* SecureQuestionViewFactory.swift */; };
 		3545C207285FCCBD00362CC3 /* SavePetNameUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C206285FCCBD00362CC3 /* SavePetNameUseCaseTest.swift */; };
 		3545C209285FCE1000362CC3 /* SecureQuestionViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C208285FCE1000362CC3 /* SecureQuestionViewModelTest.swift */; };
+		355BD96C28B80F2000817F1D /* SavePetRolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BD96B28B80F2000817F1D /* SavePetRolUseCase.swift */; };
+		355BD96E28B80FCA00817F1D /* SavePetRolUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BD96D28B80FCA00817F1D /* SavePetRolUseCaseTest.swift */; };
 		355EA4C827B053CA00461F2F /* UserDefaultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4C727B053CA00461F2F /* UserDefaultsDataSource.swift */; };
 		355EA4CA27B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4C927B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift */; };
 		355EA4CF27B056DF00461F2F /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */; };
@@ -220,6 +222,8 @@
 		3545C203285FA76500362CC3 /* SecureQuestionViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionViewFactory.swift; sourceTree = "<group>"; };
 		3545C206285FCCBD00362CC3 /* SavePetNameUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetNameUseCaseTest.swift; sourceTree = "<group>"; };
 		3545C208285FCE1000362CC3 /* SecureQuestionViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionViewModelTest.swift; sourceTree = "<group>"; };
+		355BD96B28B80F2000817F1D /* SavePetRolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetRolUseCase.swift; sourceTree = "<group>"; };
+		355BD96D28B80FCA00817F1D /* SavePetRolUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetRolUseCaseTest.swift; sourceTree = "<group>"; };
 		355EA4C727B053CA00461F2F /* UserDefaultsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataSource.swift; sourceTree = "<group>"; };
 		355EA4C927B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAccumulatedDailyStepsUseCase.swift; sourceTree = "<group>"; };
 		355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
@@ -601,6 +605,42 @@
 			path = petWalkWatchKitAppUITests;
 			sourceTree = "<group>";
 		};
+		355BD96F28B8164100817F1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				355BD97028B8165E00817F1D /* SetupPet */,
+				355BD97128B8166400817F1D /* Home */,
+				355BD97228B8167100817F1D /* PetInfo */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		355BD97028B8165E00817F1D /* SetupPet */ = {
+			isa = PBXGroup;
+			children = (
+				352C334528672531003629E6 /* SetupPetViewModelTest.swift */,
+				3545C208285FCE1000362CC3 /* SecureQuestionViewModelTest.swift */,
+				35B903AE28B177F700B9BBAC /* SetupPetRolViewModelTest.swift */,
+			);
+			path = SetupPet;
+			sourceTree = "<group>";
+		};
+		355BD97128B8166400817F1D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				35BF2E2627BEE910000922BF /* PetViewModelTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		355BD97228B8167100817F1D /* PetInfo */ = {
+			isa = PBXGroup;
+			children = (
+				350246A827FA166A0060E489 /* PetDataViewModelTest.swift */,
+			);
+			path = PetInfo;
+			sourceTree = "<group>";
+		};
 		355EA4CB27B0569C00461F2F /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +702,7 @@
 				358529AE284B685100EDE800 /* GetPetDataUseCaseTest.swift */,
 				3545C206285FCCBD00362CC3 /* SavePetNameUseCaseTest.swift */,
 				35973957289B063C00E3D82C /* SavePetLevelUseCaseTest.swift */,
+				355BD96D28B80FCA00817F1D /* SavePetRolUseCaseTest.swift */,
 			);
 			path = Pets;
 			sourceTree = "<group>";
@@ -748,11 +789,7 @@
 		359A549D27B5A5E500C55BF6 /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				35BF2E2627BEE910000922BF /* PetViewModelTest.swift */,
-				350246A827FA166A0060E489 /* PetDataViewModelTest.swift */,
-				3545C208285FCE1000362CC3 /* SecureQuestionViewModelTest.swift */,
-				352C334528672531003629E6 /* SetupPetViewModelTest.swift */,
-				35B903AE28B177F700B9BBAC /* SetupPetRolViewModelTest.swift */,
+				355BD96F28B8164100817F1D /* ViewModel */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -898,6 +935,7 @@
 				35F8ACC3284B607F00847F73 /* GetPetDataUseCase.swift */,
 				359C7C79285503DD0053FC79 /* SavePetNameUseCase.swift */,
 				35973955289B062E00E3D82C /* SavePetLevelUseCase.swift */,
+				355BD96B28B80F2000817F1D /* SavePetRolUseCase.swift */,
 			);
 			path = Pets;
 			sourceTree = "<group>";
@@ -1392,6 +1430,7 @@
 				35CEDF0B27F99FED004DF2B5 /* SaveTrackingDailyStepsUseCase.swift in Sources */,
 				355EA4D227B0645A00461F2F /* HealthStorieRepository.swift in Sources */,
 				355EA4CF27B056DF00461F2F /* UserDefaultsRepository.swift in Sources */,
+				355BD96C28B80F2000817F1D /* SavePetRolUseCase.swift in Sources */,
 				355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */,
 				353B60ED28390C5400A1C4B4 /* SavePreviousAnimationProgressUseCase.swift in Sources */,
 				358529B1284B6A0100EDE800 /* Level.swift in Sources */,
@@ -1423,6 +1462,7 @@
 				35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */,
 				3563C32127D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift in Sources */,
 				35973958289B063C00E3D82C /* SavePetLevelUseCaseTest.swift in Sources */,
+				355BD96E28B80FCA00817F1D /* SavePetRolUseCaseTest.swift in Sources */,
 				35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */,
 				35D9AECE28414A37002C057A /* UserDefaultDataSourceMock.swift in Sources */,
 				3545C209285FCE1000362CC3 /* SecureQuestionViewModelTest.swift in Sources */,

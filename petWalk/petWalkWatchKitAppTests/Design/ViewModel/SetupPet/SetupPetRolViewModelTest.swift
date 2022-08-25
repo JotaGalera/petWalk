@@ -10,11 +10,13 @@ import XCTest
 
 class SetupPetRolViewModelTest: XCTestCase {
     var sut: SetupPetRolViewModel!
+    var savePetRolUseCaseMock: SavePetRolUseCaseMock!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        sut = SetupPetRolViewModel()
+        savePetRolUseCaseMock = SavePetRolUseCaseMock()
+        sut = SetupPetRolViewModel(savePetRolUseCase: savePetRolUseCaseMock)
     }
     
     func testThatRolIndexIsPointingToNextPosition_When_ShowNextRolIsCalled() {
@@ -58,5 +60,11 @@ class SetupPetRolViewModelTest: XCTestCase {
                         "NinjaRun6",
                         "NinjaRun7",
                         "NinjaRun8"], images)
+    }
+    
+    func testThatPetRolIsSaved_When_SavePetRolIsCalled() {
+        sut.savePetRol()
+        
+        XCTAssertEqual(1, savePetRolUseCaseMock.executeCallsCount)
     }
 }

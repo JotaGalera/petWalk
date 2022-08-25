@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 class SetupPetNameViewModel: ObservableObject {
     @Published var continueWithNextView: Bool = false
-    var getPetDataUseCase: GetPetDataUseCase
+    private let getPetDataUseCase: GetPetDataUseCase
     
     init(getPetDataUseCase: GetPetDataUseCase) {
         self.getPetDataUseCase = getPetDataUseCase

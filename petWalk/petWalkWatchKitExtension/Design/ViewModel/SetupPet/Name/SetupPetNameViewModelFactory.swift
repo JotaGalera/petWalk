@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SetupPetNameViewFactory {
-    @MainActor func make() -> SetupPetNameView {
+    @MainActor func make(isRolSelected: Binding<Bool>) -> SetupPetNameView {
         let viewModel = SetupPetNameViewModelFactory().make()
-        return SetupPetNameView(setupPetNameViewModel: viewModel)
+        return SetupPetNameView(setupPetNameViewModel: viewModel, isRolSelected: isRolSelected)
     }
 }
 

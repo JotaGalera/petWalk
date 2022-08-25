@@ -12,7 +12,7 @@ protocol SavePetNameUseCase: AutoMockable {
 }
 
 class SavePetNameUseCaseImplementation: SavePetNameUseCase {
-    var repository: UserDefaultsRepository
+    private let repository: UserDefaultsRepository
     
     init(repository: UserDefaultsRepository) {
         self.repository = repository

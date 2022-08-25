@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct SetupPetNameView: View {
+    @Binding var isRolSelected: Bool
+    
     @State var petName: String = ""
     @State var isSecureQuestionShowed: Bool = false
     
     @StateObject var setupPetNameViewModel: SetupPetNameViewModel
     
-    init(setupPetNameViewModel: SetupPetNameViewModel) {
+    init(setupPetNameViewModel: SetupPetNameViewModel, isRolSelected: Binding<Bool>) {
         _setupPetNameViewModel = StateObject(wrappedValue: setupPetNameViewModel)
+        _isRolSelected = isRolSelected
     }
     
     var body: some View {
@@ -33,7 +36,7 @@ struct SetupPetNameView: View {
                 }
                 .sheet(isPresented: $isSecureQuestionShowed,
                        content: {
-                    SecureQuestionViewFactory().make(petName: $petName)
+                    SecureQuestionViewFactory().make(petName: $petName, isRolSelected: $isRolSelected)
                 })
             }
             .onAppear {
@@ -45,7 +48,7 @@ struct SetupPetNameView: View {
 
 struct SetupPetNameView_Previews: PreviewProvider {
     static var previews: some View {
-        SetupPetNameViewFactory().make()
+        SetupPetNameViewFactory().make(isRolSelected: .constant(true))
     }
 }
 

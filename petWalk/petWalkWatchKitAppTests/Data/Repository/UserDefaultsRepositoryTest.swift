@@ -138,4 +138,14 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(1, dataSource.getCallsCount)
         XCTAssertEqual(.petLevel, dataSource.getParamForKeyReceived)
     }
+    
+    func testThatPetRolIsSavedOnMemory_When_SavePetRolIsCalled() {
+        let petRol = "rolMock"
+        
+        sut.savePetRol(petRol)
+        
+        XCTAssertEqual(1, dataSource.setCallsCount)
+        XCTAssertEqual(petRol, dataSource.setParamValueReceived as! String)
+        XCTAssertEqual(.petRol, dataSource.setParamForKeyReceived)
+    }
 }

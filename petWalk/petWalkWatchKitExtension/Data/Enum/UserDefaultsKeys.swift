@@ -16,4 +16,5 @@ enum UserDefaultsKeys: String {
     
     case petName = "petName"
     case petLevel = "petLevel"
+    case petRol = "petRol"
 }

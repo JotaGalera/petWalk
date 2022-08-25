@@ -14,10 +14,12 @@ struct SecureQuestionView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var secureQuestionViewModel: SecureQuestionViewModel
     @Binding var petName: String
+    @Binding var isRolSelected: Bool
     
-    init(petName: Binding<String>, viewModel: SecureQuestionViewModel) {
+    init(petName: Binding<String>, viewModel: SecureQuestionViewModel, isRolSelected: Binding<Bool>) {
         _secureQuestionViewModel = StateObject(wrappedValue: viewModel)
         _petName = petName
+        _isRolSelected = isRolSelected
     }
     
     var body: some View {
@@ -27,6 +29,7 @@ struct SecureQuestionView: View {
             
             HStack(spacing: 20) {
                 Button {
+                    isRolSelected = false
                     dismiss()
                 } label: {
                     Text(cancelButtonText)
@@ -52,6 +55,6 @@ struct SecureQuestionView: View {
 
 struct SecureQuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        SecureQuestionViewFactory().make(petName: .constant("Beldrick"))
+        SecureQuestionViewFactory().make(petName: .constant("Beldrick"), isRolSelected: .constant(true))
     }
 }

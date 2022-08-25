@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 class SecureQuestionViewModel: ObservableObject {
     @Published var hasPetName: Bool = false
-    var savePetNameUseCase: SavePetNameUseCase
+    private let savePetNameUseCase: SavePetNameUseCase
     
     init(savePetNameUseCase: SavePetNameUseCase) {
         self.savePetNameUseCase = savePetNameUseCase
