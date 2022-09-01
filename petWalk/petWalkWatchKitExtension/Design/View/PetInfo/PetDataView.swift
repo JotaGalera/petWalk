@@ -99,6 +99,6 @@ struct Animation: View {
 
 struct PetDataView_Previews: PreviewProvider {
     static var previews: some View {
-        PetDataViewFactory().make(pet: Pet(name: "Beldrick", level: Level(currentLevel: 1)))
+        PetDataViewFactory().make(pet: Pet(name: "Beldrick", rol: Swordman(), level: Level(currentLevel: 1)))
     }
 }

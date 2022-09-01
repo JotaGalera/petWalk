@@ -21,12 +21,14 @@ class GetPetDataUseCaseImplementation: GetPetDataUseCase {
     func execute() -> Pets {
         let petName = repository.getPetName()
         let petLevel = repository.getPetLevel()
-        let pet = buildPet(petName: petName, petLevel: petLevel)
+        let petRol = repository.getPetRol()
+        let pet = buildPet(petName: petName, petLevel: petLevel, petRol: petRol)
         return pet
     }
     
-    private func buildPet(petName: String, petLevel: Int) -> Pets {
+    private func buildPet(petName: String, petLevel: Int, petRol: String) -> Pets {
         let level = Level(currentLevel: petLevel)
-        return Pet(name: petName, level: level)
+        let rol = RolBuilder.build(petRol)
+        return Pet(name: petName, rol: rol, level: level)
     }
 }

@@ -15,12 +15,12 @@ struct petAnimationScene: View {
             Text(pet.name)
                 .bold()
                 .padding(.bottom)
-            PetAnimation(petImages: pet.rol.images)
+            PetAnimation(petImages: pet.getRolImages())
         }
     }
 }
 struct petAnimationScene_Previews: PreviewProvider {
     static var previews: some View {
-        petAnimationScene(pet: Pet(name: "Beldrick", level: Level()))
+        petAnimationScene(pet: Pet(name: "Beldrick", rol: Swordman(), level: Level()))
     }
 }

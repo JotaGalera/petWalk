@@ -11,26 +11,27 @@ protocol Pets: AutoMockable {
     var name: String { get }
     var stats: Stats { get }
     var level: Level { get }
-    var rol: Rol { get }
+    var rol: Rol? { get }
     
     mutating func levelUp()
     func getStrength() -> Int
     func getLife() -> Int
     func getCurrentLevel() -> Int
     func getExpToRaiseNextLevel() -> Int
+    func getRolImages() -> [String]
 }
 
 struct Pet: Pets, Equatable {
     var name: String
-    var rol: Rol
+    var rol: Rol?
     var stats: Stats
     var level: Level
     
-    init(name: String, level: Level) {
+    init(name: String, rol: Rol?, level: Level) {
         self.name = name
+        self.rol = rol
         self.level = level
         self.stats = Stats(currentLevel: level.currentLevel)
-        self.rol = Swordman()
     }
     
     mutating func levelUp() {
@@ -55,12 +56,17 @@ struct Pet: Pets, Equatable {
         return level.expToLevelUp
     }
     
+    func getRolImages() -> [String] {
+        guard let images = rol?.images else { return [] }
+        return images
+    }
+    
     static func == (lhs: Pet, rhs: Pet) -> Bool {
         return lhs.name == rhs.name &&
             lhs.stats == rhs.stats &&
             lhs.level == rhs.level &&
-            lhs.rol.classname == rhs.rol.classname &&
-            lhs.rol.images == rhs.rol.images
+            lhs.rol?.classname == rhs.rol?.classname &&
+            lhs.rol?.images == rhs.rol?.images
     }
 }
 
