@@ -11,12 +11,18 @@ import Foundation
 class SecureQuestionViewModel: ObservableObject {
     @Published var hasPetName: Bool = false
     private let savePetNameUseCase: SavePetNameUseCase
+    private let savePetRolUseCase: SavePetRolUseCase
     
-    init(savePetNameUseCase: SavePetNameUseCase) {
+    init(savePetNameUseCase: SavePetNameUseCase, savePetRolUseCase: SavePetRolUseCase) {
         self.savePetNameUseCase = savePetNameUseCase
+        self.savePetRolUseCase = savePetRolUseCase
     }
     
     func savePetName(_ name: String) {
         savePetNameUseCase.execute(name)
+    }
+    
+    func removeRolPetName() {
+        savePetRolUseCase.execute("")
     }
 }

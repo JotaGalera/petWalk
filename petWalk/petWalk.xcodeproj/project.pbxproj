@@ -797,8 +797,8 @@
 		359C7C762854FCDD0053FC79 /* SetupPet */ = {
 			isa = PBXGroup;
 			children = (
-				35B903B328B17E0700B9BBAC /* Name */,
 				35B903B228B17E0300B9BBAC /* Rol */,
+				35B903B328B17E0700B9BBAC /* Name */,
 			);
 			path = SetupPet;
 			sourceTree = "<group>";

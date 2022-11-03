@@ -19,6 +19,7 @@ private class SetupPetRolViewModelFactory {
         let dataSource = UserDefaultsDataSourceImplementation()
         let repository = UserDefaultsRepositoryImplementation(userDefaultDataSource: dataSource)
         let savePetRolUseCase = SavePetRolUseCaseImplementation(repository: repository)
-        return SetupPetRolViewModel(savePetRolUseCase: savePetRolUseCase)
+        let getPetDataUseCase = GetPetDataUseCaseImplementation(repository: repository)
+        return SetupPetRolViewModel(savePetRolUseCase: savePetRolUseCase, getPetDataUseCase: getPetDataUseCase)
     }
 }

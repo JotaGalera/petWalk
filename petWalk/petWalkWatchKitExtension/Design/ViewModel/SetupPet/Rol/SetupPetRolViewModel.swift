@@ -9,11 +9,14 @@ import Foundation
 
 class SetupPetRolViewModel: ObservableObject {
     @Published var rolIndex = 0
+    @Published var continueWithNextView: Bool = false
     private var roles: [Rol] = [Swordman(), Ninja(), Wizard()]
     private let savePetRolUseCase: SavePetRolUseCase
+    private let getPetDataUseCase: GetPetDataUseCase
     
-    init(savePetRolUseCase: SavePetRolUseCase) {
+    init(savePetRolUseCase: SavePetRolUseCase, getPetDataUseCase: GetPetDataUseCase) {
         self.savePetRolUseCase = savePetRolUseCase
+        self.getPetDataUseCase = getPetDataUseCase
     }
     
     func showNextRol() {
@@ -31,5 +34,9 @@ class SetupPetRolViewModel: ObservableObject {
     func savePetRol() {
         let rol = roles[rolIndex].classname
         savePetRolUseCase.execute(rol)
+    }
+    
+    func canContinueWithNextView() -> Bool {
+        return getPetDataUseCase.execute().rol != nil
     }
 }

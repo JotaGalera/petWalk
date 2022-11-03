@@ -44,6 +44,9 @@ struct SetupPetRolView: View {
                     continueButtonSelected.toggle()
                 }
             }
+            .onAppear {
+                continueButtonSelected = setupPetRolViewModel.canContinueWithNextView()
+            }
         }
     }
 }

@@ -19,7 +19,8 @@ private class SecureQuestionViewModelFactory {
         let dataSource = UserDefaultsDataSourceImplementation()
         let repository = UserDefaultsRepositoryImplementation(userDefaultDataSource: dataSource)
         let savePetNameUseCase = SavePetNameUseCaseImplementation(repository: repository)
+        let savePetRolUseCase = SavePetRolUseCaseImplementation(repository: repository)
         
-        return SecureQuestionViewModel(savePetNameUseCase: savePetNameUseCase)
+        return SecureQuestionViewModel(savePetNameUseCase: savePetNameUseCase, savePetRolUseCase: savePetRolUseCase)
     }
 }
