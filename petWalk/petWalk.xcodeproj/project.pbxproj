@@ -29,6 +29,10 @@
 		353EA5F229145A1F0072D7CF /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F129145A1F0072D7CF /* AutoMockable.swift */; };
 		353EA5F429145A4E0072D7CF /* useCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F329145A4E0072D7CF /* useCase.swift */; };
 		353EA5F629145A690072D7CF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F529145A690072D7CF /* Data.swift */; };
+		353EA5F829145C5E0072D7CF /* SetupPetRolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */; };
+		353EA5FD29145DA30072D7CF /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5FC29145DA30072D7CF /* CustomButtons.swift */; };
+		353EA5FF29145DCD0072D7CF /* SetupPetRolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5FE29145DCD0072D7CF /* SetupPetRolViewModel.swift */; };
+		353EA6012914605D0072D7CF /* PetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA6002914605D0072D7CF /* PetAnimation.swift */; };
 		35434FE327832D8E0024FB5A /* petWalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35434FE227832D8E0024FB5A /* petWalkApp.swift */; };
 		35434FE527832D8E0024FB5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35434FE427832D8E0024FB5A /* ContentView.swift */; };
 		35434FE727832D8F0024FB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35434FE627832D8F0024FB5A /* Assets.xcassets */; };
@@ -204,6 +208,10 @@
 		353EA5F129145A1F0072D7CF /* AutoMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.swift; sourceTree = "<group>"; };
 		353EA5F329145A4E0072D7CF /* useCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = useCase.swift; sourceTree = "<group>"; };
 		353EA5F529145A690072D7CF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetRolView.swift; sourceTree = "<group>"; };
+		353EA5FC29145DA30072D7CF /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		353EA5FE29145DCD0072D7CF /* SetupPetRolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetRolViewModel.swift; sourceTree = "<group>"; };
+		353EA6002914605D0072D7CF /* PetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetAnimation.swift; sourceTree = "<group>"; };
 		35434FDF27832D8E0024FB5A /* petWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35434FE227832D8E0024FB5A /* petWalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petWalkApp.swift; sourceTree = "<group>"; };
 		35434FE427832D8E0024FB5A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -491,12 +499,14 @@
 			path = Steps;
 			sourceTree = "<group>";
 		};
-		353EA5E92914562A0072D7CF /* Presentation */ = {
+		353EA5E92914562A0072D7CF /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				353EA5FA29145C880072D7CF /* ViewModel */,
+				353EA5F929145C7F0072D7CF /* View */,
 				35434FE427832D8E0024FB5A /* ContentView.swift */,
 			);
-			path = Presentation;
+			path = Design;
 			sourceTree = "<group>";
 		};
 		353EA5EA2914563E0072D7CF /* Domain */ = {
@@ -529,6 +539,32 @@
 				353EA5F129145A1F0072D7CF /* AutoMockable.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		353EA5F929145C7F0072D7CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				353EA5FB29145D7A0072D7CF /* ReusableViews */,
+				353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		353EA5FA29145C880072D7CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				353EA5FE29145DCD0072D7CF /* SetupPetRolViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		353EA5FB29145D7A0072D7CF /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				353EA6002914605D0072D7CF /* PetAnimation.swift */,
+				353EA5FC29145DA30072D7CF /* CustomButtons.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		35434FD627832D8E0024FB5A = {
@@ -568,7 +604,7 @@
 				353EA5F029145A080072D7CF /* Utils */,
 				353EA5EB291456490072D7CF /* Data */,
 				353EA5EA2914563E0072D7CF /* Domain */,
-				353EA5E92914562A0072D7CF /* Presentation */,
+				353EA5E92914562A0072D7CF /* Design */,
 				3596938C278B473400B68BEF /* petWalk.entitlements */,
 				35434FE227832D8E0024FB5A /* petWalkApp.swift */,
 				35434FE627832D8F0024FB5A /* Assets.xcassets */,
@@ -1444,10 +1480,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353EA5FF29145DCD0072D7CF /* SetupPetRolViewModel.swift in Sources */,
 				35434FE527832D8E0024FB5A /* ContentView.swift in Sources */,
 				353EA5F629145A690072D7CF /* Data.swift in Sources */,
+				353EA5FD29145DA30072D7CF /* CustomButtons.swift in Sources */,
+				353EA6012914605D0072D7CF /* PetAnimation.swift in Sources */,
 				353EA5F429145A4E0072D7CF /* useCase.swift in Sources */,
 				353EA5F229145A1F0072D7CF /* AutoMockable.swift in Sources */,
+				353EA5F829145C5E0072D7CF /* SetupPetRolView.swift in Sources */,
 				35434FE327832D8E0024FB5A /* petWalkApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
