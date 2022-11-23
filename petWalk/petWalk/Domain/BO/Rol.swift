@@ -1,8 +1,8 @@
 //
 //  Rol.swift
-//  petWalkWatchKitExtension
+//  petWalk
 //
-//  Created by Galera, Javier on 15/8/22.
+//  Created by Galera, Javier on 23/11/22.
 //
 
 fileprivate enum Roles: String {
@@ -11,29 +11,14 @@ fileprivate enum Roles: String {
     case wizard = "Wizard"
 }
 
-struct RolBuilder {
-    static func build(_ rolName: String) -> Rol? {
-        switch rolName {
-        case Roles.swordman.rawValue:
-            return Swordman()
-        case Roles.ninja.rawValue:
-            return Ninja()
-        case Roles.wizard.rawValue:
-            return Wizard()
-        default:
-            return nil
-        }
-    }
-}
-
 protocol Rol: AutoMockable {
     var classname: String { get }
     var images: [String] { get }
 }
 
 struct Swordman: Rol {
-    var classname: String = Roles.swordman.rawValue
-    var images = ["run1",
+    let classname = Roles.swordman.rawValue
+    let images = ["run1",
                   "run2",
                   "run3",
                   "run4",
@@ -44,8 +29,8 @@ struct Swordman: Rol {
 }
 
 struct Ninja: Rol {
-    var classname: String = Roles.ninja.rawValue
-    var images: [String] = ["NinjaRun1",
+    let classname = Roles.ninja.rawValue
+    let images: [String] = ["NinjaRun1",
                             "NinjaRun2",
                             "NinjaRun3",
                             "NinjaRun4",
@@ -56,8 +41,8 @@ struct Ninja: Rol {
 }
 
 struct Wizard: Rol {
-    var classname: String = Roles.wizard.rawValue
-    var images: [String] = ["WizardRun1",
+    let classname = Roles.wizard.rawValue
+    let images: [String] = ["WizardRun1",
                             "WizardRun2",
                             "WizardRun3",
                             "WizardRun4",

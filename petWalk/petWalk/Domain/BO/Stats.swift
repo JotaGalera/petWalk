@@ -1,14 +1,14 @@
 //
 //  Stats.swift
-//  petWalkWatchKitExtension
+//  petWalk
 //
-//  Created by Galera, Javier on 4/6/22.
+//  Created by Galera, Javier on 23/11/22.
 //
 
 struct Stats: Equatable {
     let baseValue = 10
-    var strength: Int = 10
-    var life: Int = 10
+    var strength = 10
+    var life = 10
     
     init(currentLevel: Int) {
         calculateStrengthAndLife(currentLevel)
