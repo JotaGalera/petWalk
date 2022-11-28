@@ -27,8 +27,6 @@
 		353B60F628390F6C00A1C4B4 /* GetPreviousAnimationProgressUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B60F528390F6C00A1C4B4 /* GetPreviousAnimationProgressUseCaseTest.swift */; };
 		353EA5EF291459BF0072D7CF /* AutoMockableiOS.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5EE291459BF0072D7CF /* AutoMockableiOS.generated.swift */; };
 		353EA5F229145A1F0072D7CF /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F129145A1F0072D7CF /* AutoMockable.swift */; };
-		353EA5F429145A4E0072D7CF /* useCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F329145A4E0072D7CF /* useCase.swift */; };
-		353EA5F629145A690072D7CF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F529145A690072D7CF /* Data.swift */; };
 		353EA5F829145C5E0072D7CF /* SetupPetRolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */; };
 		353EA5FD29145DA30072D7CF /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5FC29145DA30072D7CF /* CustomButtons.swift */; };
 		353EA5FF29145DCD0072D7CF /* SetupPetRolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5FE29145DCD0072D7CF /* SetupPetRolViewModel.swift */; };
@@ -69,6 +67,17 @@
 		358529AF284B685100EDE800 /* GetPetDataUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358529AE284B685100EDE800 /* GetPetDataUseCaseTest.swift */; };
 		358529B1284B6A0100EDE800 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358529B0284B6A0100EDE800 /* Level.swift */; };
 		358529B3284B6A0900EDE800 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358529B2284B6A0900EDE800 /* Stats.swift */; };
+		35871A772935391200DA0119 /* GetPetDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A762935391200DA0119 /* GetPetDataUseCase.swift */; };
+		35871A7C2935394A00DA0119 /* SetupPetRolViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A7B2935394A00DA0119 /* SetupPetRolViewModelTests.swift */; };
+		35871A7E2935395D00DA0119 /* GetPetDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A7D2935395D00DA0119 /* GetPetDataUseCaseTests.swift */; };
+		35871A8029353B3800DA0119 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A7F29353B3800DA0119 /* UserDefaultsRepository.swift */; };
+		35871A862935409D00DA0119 /* UserDefaultsRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A852935409D00DA0119 /* UserDefaultsRepositoryImplementation.swift */; };
+		35871A88293540AC00DA0119 /* UserDefaultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A87293540AC00DA0119 /* UserDefaultsDataSource.swift */; };
+		35871A8A293540DA00DA0119 /* HealthStorieRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A89293540DA00DA0119 /* HealthStorieRepositoryImplementation.swift */; };
+		35871A8C293540E400DA0119 /* UserDefaultsRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A8B293540E400DA0119 /* UserDefaultsRepositoryImplementation.swift */; };
+		35871A8F293542FB00DA0119 /* UserDefaultsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A8E293542FB00DA0119 /* UserDefaultsRepositoryTests.swift */; };
+		35871A922935438000DA0119 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A912935438000DA0119 /* UserDefaultsKeys.swift */; };
+		35871A952935449800DA0119 /* UserDefaultDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35871A942935449800DA0119 /* UserDefaultDataSourceMock.swift */; };
 		3592B0392862753700655476 /* SetupPetNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3592B0382862753700655476 /* SetupPetNameViewModel.swift */; };
 		3596938B278B42E600B68BEF /* HealthStoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3596938A278B42E600B68BEF /* HealthStoreDataSource.swift */; };
 		3596938F278B473400B68BEF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3596938E278B473400B68BEF /* HealthKit.framework */; };
@@ -210,8 +219,6 @@
 		353B60F528390F6C00A1C4B4 /* GetPreviousAnimationProgressUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPreviousAnimationProgressUseCaseTest.swift; sourceTree = "<group>"; };
 		353EA5EE291459BF0072D7CF /* AutoMockableiOS.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockableiOS.generated.swift; sourceTree = "<group>"; };
 		353EA5F129145A1F0072D7CF /* AutoMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.swift; sourceTree = "<group>"; };
-		353EA5F329145A4E0072D7CF /* useCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = useCase.swift; sourceTree = "<group>"; };
-		353EA5F529145A690072D7CF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetRolView.swift; sourceTree = "<group>"; };
 		353EA5FC29145DA30072D7CF /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		353EA5FE29145DCD0072D7CF /* SetupPetRolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetRolViewModel.swift; sourceTree = "<group>"; };
@@ -258,6 +265,17 @@
 		358529AE284B685100EDE800 /* GetPetDataUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPetDataUseCaseTest.swift; sourceTree = "<group>"; };
 		358529B0284B6A0100EDE800 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		358529B2284B6A0900EDE800 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		35871A762935391200DA0119 /* GetPetDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPetDataUseCase.swift; sourceTree = "<group>"; };
+		35871A7B2935394A00DA0119 /* SetupPetRolViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetRolViewModelTests.swift; sourceTree = "<group>"; };
+		35871A7D2935395D00DA0119 /* GetPetDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPetDataUseCaseTests.swift; sourceTree = "<group>"; };
+		35871A7F29353B3800DA0119 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
+		35871A852935409D00DA0119 /* UserDefaultsRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryImplementation.swift; sourceTree = "<group>"; };
+		35871A87293540AC00DA0119 /* UserDefaultsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataSource.swift; sourceTree = "<group>"; };
+		35871A89293540DA00DA0119 /* HealthStorieRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStorieRepositoryImplementation.swift; sourceTree = "<group>"; };
+		35871A8B293540E400DA0119 /* UserDefaultsRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryImplementation.swift; sourceTree = "<group>"; };
+		35871A8E293542FB00DA0119 /* UserDefaultsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepositoryTests.swift; sourceTree = "<group>"; };
+		35871A912935438000DA0119 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		35871A942935449800DA0119 /* UserDefaultDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultDataSourceMock.swift; sourceTree = "<group>"; };
 		3592B0382862753700655476 /* SetupPetNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetNameViewModel.swift; sourceTree = "<group>"; };
 		3596938A278B42E600B68BEF /* HealthStoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreDataSource.swift; sourceTree = "<group>"; };
 		3596938C278B473400B68BEF /* petWalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = petWalk.entitlements; sourceTree = "<group>"; };
@@ -521,7 +539,8 @@
 			isa = PBXGroup;
 			children = (
 				35FA0130292EAE5B007CFB97 /* BO */,
-				353EA5F329145A4E0072D7CF /* useCase.swift */,
+				35871A822935402700DA0119 /* Repository */,
+				35871A752935390500DA0119 /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -529,7 +548,9 @@
 		353EA5EB291456490072D7CF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				353EA5F529145A690072D7CF /* Data.swift */,
+				35871A902935436900DA0119 /* Enum */,
+				35871A812935401F00DA0119 /* DataSource */,
+				35871A832935402F00DA0119 /* Repository */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -633,6 +654,10 @@
 		35434FF227832D8F0024FB5A /* petWalkTests */ = {
 			isa = PBXGroup;
 			children = (
+				35871A932935448C00DA0119 /* ManualMock */,
+				35871A7A2935392800DA0119 /* Data */,
+				35871A792935392400DA0119 /* Domain */,
+				35871A782935391A00DA0119 /* Design */,
 				353EA5ED291459BF0072D7CF /* Autogenerated */,
 				35434FF327832D8F0024FB5A /* petWalkTests.swift */,
 			);
@@ -751,8 +776,8 @@
 		355EA4CC27B056AC00461F2F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */,
-				355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */,
+				35871A89293540DA00DA0119 /* HealthStorieRepositoryImplementation.swift */,
+				35871A8B293540E400DA0119 /* UserDefaultsRepositoryImplementation.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -813,6 +838,95 @@
 				358529AD284B683600EDE800 /* Pets */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		35871A752935390500DA0119 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				35871A762935391200DA0119 /* GetPetDataUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		35871A782935391A00DA0119 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				35871A7B2935394A00DA0119 /* SetupPetRolViewModelTests.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		35871A792935392400DA0119 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				35871A7D2935395D00DA0119 /* GetPetDataUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		35871A7A2935392800DA0119 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				35871A8D293542D500DA0119 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		35871A812935401F00DA0119 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				35871A87293540AC00DA0119 /* UserDefaultsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		35871A822935402700DA0119 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				35871A7F29353B3800DA0119 /* UserDefaultsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		35871A832935402F00DA0119 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				35871A852935409D00DA0119 /* UserDefaultsRepositoryImplementation.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		35871A842935408400DA0119 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */,
+				355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		35871A8D293542D500DA0119 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				35871A8E293542FB00DA0119 /* UserDefaultsRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		35871A902935436900DA0119 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				35871A912935438000DA0119 /* UserDefaultsKeys.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		35871A932935448C00DA0119 /* ManualMock */ = {
+			isa = PBXGroup;
+			children = (
+				35871A942935449800DA0119 /* UserDefaultDataSourceMock.swift */,
+			);
+			path = ManualMock;
 			sourceTree = "<group>";
 		};
 		3596938D278B473400B68BEF /* Frameworks */ = {
@@ -977,6 +1091,7 @@
 		35C9A55F279313BA00B56C71 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				35871A842935408400DA0119 /* Repository */,
 				355EA4D027B05F8C00461F2F /* UseCase */,
 				35AB4700278A18DA00401FB7 /* BO */,
 			);
@@ -1502,15 +1617,18 @@
 			files = (
 				353EA5FF29145DCD0072D7CF /* SetupPetRolViewModel.swift in Sources */,
 				35FA0138292EB414007CFB97 /* Stats.swift in Sources */,
+				35871A88293540AC00DA0119 /* UserDefaultsDataSource.swift in Sources */,
 				35434FE527832D8E0024FB5A /* ContentView.swift in Sources */,
-				353EA5F629145A690072D7CF /* Data.swift in Sources */,
+				35871A922935438000DA0119 /* UserDefaultsKeys.swift in Sources */,
 				35FA0132292EAE75007CFB97 /* Pet.swift in Sources */,
 				353EA5FD29145DA30072D7CF /* CustomButtons.swift in Sources */,
 				353EA6012914605D0072D7CF /* PetAnimation.swift in Sources */,
+				35871A862935409D00DA0119 /* UserDefaultsRepositoryImplementation.swift in Sources */,
 				35FA0136292EB40E007CFB97 /* Level.swift in Sources */,
+				35871A772935391200DA0119 /* GetPetDataUseCase.swift in Sources */,
 				35FA0134292EAF41007CFB97 /* Rol.swift in Sources */,
-				353EA5F429145A4E0072D7CF /* useCase.swift in Sources */,
 				353EA5F229145A1F0072D7CF /* AutoMockable.swift in Sources */,
+				35871A8029353B3800DA0119 /* UserDefaultsRepository.swift in Sources */,
 				353EA5F829145C5E0072D7CF /* SetupPetRolView.swift in Sources */,
 				35434FE327832D8E0024FB5A /* petWalkApp.swift in Sources */,
 			);
@@ -1520,7 +1638,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35871A7C2935394A00DA0119 /* SetupPetRolViewModelTests.swift in Sources */,
 				35434FF427832D8F0024FB5A /* petWalkTests.swift in Sources */,
+				35871A7E2935395D00DA0119 /* GetPetDataUseCaseTests.swift in Sources */,
+				35871A952935449800DA0119 /* UserDefaultDataSourceMock.swift in Sources */,
+				35871A8F293542FB00DA0119 /* UserDefaultsRepositoryTests.swift in Sources */,
 				353EA5EF291459BF0072D7CF /* AutoMockableiOS.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1553,6 +1675,7 @@
 				35BF2E2327BEC93D000922BF /* UserDefaultsKeys.swift in Sources */,
 				35969397278B4E2A00B68BEF /* PetViewModel.swift in Sources */,
 				358529B3284B6A0900EDE800 /* Stats.swift in Sources */,
+				35871A8A293540DA00DA0119 /* HealthStorieRepositoryImplementation.swift in Sources */,
 				3592B0392862753700655476 /* SetupPetNameViewModel.swift in Sources */,
 				3545C204285FA76500362CC3 /* SecureQuestionViewFactory.swift in Sources */,
 				350127BB27C2606A00AB2B1D /* PetDataView.swift in Sources */,
@@ -1571,6 +1694,7 @@
 				355BD96C28B80F2000817F1D /* SavePetRolUseCase.swift in Sources */,
 				355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */,
 				353B60ED28390C5400A1C4B4 /* SavePreviousAnimationProgressUseCase.swift in Sources */,
+				35871A8C293540E400DA0119 /* UserDefaultsRepositoryImplementation.swift in Sources */,
 				358529B1284B6A0100EDE800 /* Level.swift in Sources */,
 				35B903B128B17DAE00B9BBAC /* SetupPetRolViewFactory.swift in Sources */,
 				35B903AB28B1757400B9BBAC /* CustomButtons.swift in Sources */,

@@ -1,0 +1,57 @@
+//
+//  UserDefaultDataSourceMock.swift
+//  petWalkTests
+//
+//  Created by Galera, Javier on 28/11/22.
+//
+
+import Foundation
+@testable import petWalk
+
+class UserDefaultDataSourceMock: UserDefaultsDataSource {
+    var getCallsCount = 0
+    var getParamForKeyReceived: UserDefaultsKeys!
+    var getReturnValue: Any!
+    var trackingDailyStepsPermissionReturnValue = true
+    var accumulatedDailyStepsReturnValue = 10
+    var totalStepsReturnValue = 100
+    var dateDailyStepsReturnValue = Date()
+    var previousAnimationProgressReturnValue = 40.0
+    var petNameReturnValue = "nameMock"
+    var petLevelReturnValue = 1
+    var petRolReturnValue = "rolMock"
+    var setCallsCount = 0
+    var setParamValueReceived: Any!
+    var setParamForKeyReceived: UserDefaultsKeys!
+    
+    func get<T>(forKey: UserDefaultsKeys) -> T? {
+        getCallsCount += 1
+        getParamForKeyReceived = forKey
+        switch forKey {
+        case .trackingDailyStepsPermission:
+            getReturnValue = trackingDailyStepsPermissionReturnValue
+        case .accumulatedDailySteps:
+            getReturnValue = accumulatedDailyStepsReturnValue
+        case .totalSteps:
+            getReturnValue = totalStepsReturnValue
+        case .dateDailySteps:
+            getReturnValue = dateDailyStepsReturnValue
+        case .previousAnimationProgress:
+            getReturnValue = previousAnimationProgressReturnValue
+        case .petName:
+            getReturnValue = petNameReturnValue
+        case .petLevel:
+            getReturnValue = petLevelReturnValue
+        case .petRol:
+            getReturnValue = petRolReturnValue
+        }
+        return getReturnValue as? T
+    }
+    
+    func set<T>(value: T, forKey: UserDefaultsKeys) {
+        setCallsCount += 1
+        setParamValueReceived = value
+        setParamForKeyReceived = forKey
+    }
+}
+

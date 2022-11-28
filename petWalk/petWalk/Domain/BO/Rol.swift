@@ -16,6 +16,21 @@ protocol Rol: AutoMockable {
     var images: [String] { get }
 }
 
+struct RolFactory {
+    static func make(_ rolName: String) -> Rol? {
+        switch rolName {
+        case Roles.swordman.rawValue:
+            return Swordman()
+        case Roles.ninja.rawValue:
+            return Ninja()
+        case Roles.wizard.rawValue:
+            return Wizard()
+        default:
+            return nil
+        }
+    }
+}
+
 struct Swordman: Rol {
     let classname = Roles.swordman.rawValue
     let images = ["run1",

@@ -27,7 +27,7 @@ struct Pet: Pets {
     var level: Level
     var rol: Rol
     
-    init(name: String, level: Level, rol: Rol) {
+    init(name: String, rol: Rol, level: Level) {
         self.name = name
         self.level = level
         self.rol = rol

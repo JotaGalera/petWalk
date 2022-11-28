@@ -148,4 +148,12 @@ class UserDefaultsRepositoryTest: XCTestCase {
         XCTAssertEqual(petRol, dataSource.setParamValueReceived as! String)
         XCTAssertEqual(.petRol, dataSource.setParamForKeyReceived)
     }
+    
+    func testThatPetRollIsRetrieved_When_GetPetRolIsCalled() {
+        let petRol = sut.getPetRol()
+        
+        XCTAssertEqual("rolMock", petRol)
+        XCTAssertEqual(1, dataSource.getCallsCount)
+        XCTAssertEqual(.petRol, dataSource.getParamForKeyReceived)
+    }
 }
