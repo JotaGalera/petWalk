@@ -28,7 +28,7 @@ class GetPetDataUseCaseImplementation: GetPetDataUseCase {
     
     private func buildPet(petName: String, petLevel: Int, petRol: String) -> Pets {
         let level = Level(currentLevel: petLevel)
-        let rol = RolBuilder.build(petRol)
+        let rol = RolFactory.make(petRol)
         return Pet(name: petName, rol: rol, level: level)
     }
 }

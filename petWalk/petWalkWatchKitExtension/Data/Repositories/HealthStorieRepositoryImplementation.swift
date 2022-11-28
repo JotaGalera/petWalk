@@ -1,10 +1,11 @@
-import Foundation
+//
+//  HealthStorieRepositoryImplementation.swift
+//  petWalkWatchKitExtension
+//
+//  Created by Galera, Javier on 28/11/22.
+//
 import Combine
-
-protocol HealthStoreRepository: AutoMockable {
-    func requestAuthorization() async throws -> Bool
-    func getSteps(date: Date) async throws -> Int
-}
+import Foundation
 
 class HealthStoreRepositoryImplementation: HealthStoreRepository {
     private var dataSource: HealthStoreDataSource

@@ -11,8 +11,8 @@ fileprivate enum Roles: String {
     case wizard = "Wizard"
 }
 
-struct RolBuilder {
-    static func build(_ rolName: String) -> Rol? {
+struct RolFactory {
+    static func make(_ rolName: String) -> Rol? {
         switch rolName {
         case Roles.swordman.rawValue:
             return Swordman()
