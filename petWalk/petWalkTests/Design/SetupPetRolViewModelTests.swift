@@ -9,9 +9,15 @@ import XCTest
 
 class SetupPetRolViewModelTests: XCTestCase {
     private var sut: SetupPetRolViewModel!
+    private var getPetDataUseCaseMock: GetPetDataUseCaseMock!
+    private var setPetRolUseCaseMock: SetPetRolUseCaseMock!
     
     override func setUpWithError() throws {
-        sut = SetupPetRolViewModel()
+        try super.setUpWithError()
+        
+        getPetDataUseCaseMock = GetPetDataUseCaseMock()
+        setPetRolUseCaseMock = SetPetRolUseCaseMock()
+        sut = SetupPetRolViewModel(getPetDataUseCase: getPetDataUseCaseMock, setPetRolUseCase: setPetRolUseCaseMock)
     }
 
     func testThatIndexIsNextOne_When_ShowNextRolIsCalled() throws {

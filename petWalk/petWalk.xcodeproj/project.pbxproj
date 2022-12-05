@@ -48,6 +48,8 @@
 		3543501D27832D920024FB5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3543501C27832D920024FB5A /* Preview Assets.xcassets */; };
 		3543503227832D920024FB5A /* PetViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543503127832D920024FB5A /* PetViewUITests.swift */; };
 		3543503427832D920024FB5A /* PetDataViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543503327832D920024FB5A /* PetDataViewUITests.swift */; };
+		35456E3729393299002D2C91 /* SetupPetNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35456E3629393299002D2C91 /* SetupPetNameView.swift */; };
+		35456E39293932E0002D2C91 /* SetupPetNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35456E38293932E0002D2C91 /* SetupPetNameViewModel.swift */; };
 		3545C204285FA76500362CC3 /* SecureQuestionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C203285FA76500362CC3 /* SecureQuestionViewFactory.swift */; };
 		3545C207285FCCBD00362CC3 /* SavePetNameUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C206285FCCBD00362CC3 /* SavePetNameUseCaseTest.swift */; };
 		3545C209285FCE1000362CC3 /* SecureQuestionViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545C208285FCE1000362CC3 /* SecureQuestionViewModelTest.swift */; };
@@ -88,6 +90,11 @@
 		35973958289B063C00E3D82C /* SavePetLevelUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35973957289B063C00E3D82C /* SavePetLevelUseCaseTest.swift */; };
 		359C7C782854FCF00053FC79 /* SecureQuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C7C772854FCF00053FC79 /* SecureQuestionViewModel.swift */; };
 		359C7C7A285503DD0053FC79 /* SavePetNameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359C7C79285503DD0053FC79 /* SavePetNameUseCase.swift */; };
+		35A01850293E6047001A4B2F /* SetPetRolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0184F293E6047001A4B2F /* SetPetRolUseCase.swift */; };
+		35A01852293E6055001A4B2F /* SetPetNameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A01851293E6055001A4B2F /* SetPetNameUseCase.swift */; };
+		35A01858293E6745001A4B2F /* SetupPetNameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A01857293E6745001A4B2F /* SetupPetNameViewModelTests.swift */; };
+		35A0185A293E6AA3001A4B2F /* SetPetRolUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A01859293E6AA3001A4B2F /* SetPetRolUseCaseTests.swift */; };
+		35A0185C293E6AB2001A4B2F /* SetPetNameUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0185B293E6AB2001A4B2F /* SetPetNameUseCaseTests.swift */; };
 		35AB46FF278A185000401FB7 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AB46FE278A185000401FB7 /* Pet.swift */; };
 		35B5A3E12842B56F00C2722E /* PetsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5A3E02842B56F00C2722E /* PetsTest.swift */; };
 		35B903AB28B1757400B9BBAC /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B903AA28B1757400B9BBAC /* CustomButtons.swift */; };
@@ -246,6 +253,8 @@
 		3543502D27832D920024FB5A /* petWalkWatchKitAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = petWalkWatchKitAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3543503127832D920024FB5A /* PetViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewUITests.swift; sourceTree = "<group>"; };
 		3543503327832D920024FB5A /* PetDataViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewUITests.swift; sourceTree = "<group>"; };
+		35456E3629393299002D2C91 /* SetupPetNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetNameView.swift; sourceTree = "<group>"; };
+		35456E38293932E0002D2C91 /* SetupPetNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetNameViewModel.swift; sourceTree = "<group>"; };
 		3545C203285FA76500362CC3 /* SecureQuestionViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionViewFactory.swift; sourceTree = "<group>"; };
 		3545C206285FCCBD00362CC3 /* SavePetNameUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetNameUseCaseTest.swift; sourceTree = "<group>"; };
 		3545C208285FCE1000362CC3 /* SecureQuestionViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionViewModelTest.swift; sourceTree = "<group>"; };
@@ -288,6 +297,11 @@
 		35973957289B063C00E3D82C /* SavePetLevelUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetLevelUseCaseTest.swift; sourceTree = "<group>"; };
 		359C7C772854FCF00053FC79 /* SecureQuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionViewModel.swift; sourceTree = "<group>"; };
 		359C7C79285503DD0053FC79 /* SavePetNameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePetNameUseCase.swift; sourceTree = "<group>"; };
+		35A0184F293E6047001A4B2F /* SetPetRolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPetRolUseCase.swift; sourceTree = "<group>"; };
+		35A01851293E6055001A4B2F /* SetPetNameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPetNameUseCase.swift; sourceTree = "<group>"; };
+		35A01857293E6745001A4B2F /* SetupPetNameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetNameViewModelTests.swift; sourceTree = "<group>"; };
+		35A01859293E6AA3001A4B2F /* SetPetRolUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPetRolUseCaseTests.swift; sourceTree = "<group>"; };
+		35A0185B293E6AB2001A4B2F /* SetPetNameUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPetNameUseCaseTests.swift; sourceTree = "<group>"; };
 		35AB46FE278A185000401FB7 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		35B5A3E02842B56F00C2722E /* PetsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsTest.swift; sourceTree = "<group>"; };
 		35B903AA28B1757400B9BBAC /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
@@ -574,8 +588,8 @@
 		353EA5F929145C7F0072D7CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				35456E3329392F46002D2C91 /* SetupPet */,
 				353EA5FB29145D7A0072D7CF /* ReusableViews */,
-				353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -583,7 +597,7 @@
 		353EA5FA29145C880072D7CF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				353EA5FE29145DCD0072D7CF /* SetupPetRolViewModel.swift */,
+				35A0184E293E5FEE001A4B2F /* SetupPet */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -727,6 +741,15 @@
 			path = petWalkWatchKitAppUITests;
 			sourceTree = "<group>";
 		};
+		35456E3329392F46002D2C91 /* SetupPet */ = {
+			isa = PBXGroup;
+			children = (
+				353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */,
+				35456E3629393299002D2C91 /* SetupPetNameView.swift */,
+			);
+			path = SetupPet;
+			sourceTree = "<group>";
+		};
 		355BD96F28B8164100817F1D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,6 +867,8 @@
 			isa = PBXGroup;
 			children = (
 				35871A762935391200DA0119 /* GetPetDataUseCase.swift */,
+				35A0184F293E6047001A4B2F /* SetPetRolUseCase.swift */,
+				35A01851293E6055001A4B2F /* SetPetNameUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -852,6 +877,7 @@
 			isa = PBXGroup;
 			children = (
 				35871A7B2935394A00DA0119 /* SetupPetRolViewModelTests.swift */,
+				35A01857293E6745001A4B2F /* SetupPetNameViewModelTests.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -860,6 +886,8 @@
 			isa = PBXGroup;
 			children = (
 				35871A7D2935395D00DA0119 /* GetPetDataUseCaseTests.swift */,
+				35A01859293E6AA3001A4B2F /* SetPetRolUseCaseTests.swift */,
+				35A0185B293E6AB2001A4B2F /* SetPetNameUseCaseTests.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -1012,6 +1040,31 @@
 				35B903B328B17E0700B9BBAC /* Name */,
 			);
 			path = SetupPet;
+			sourceTree = "<group>";
+		};
+		35A0184E293E5FEE001A4B2F /* SetupPet */ = {
+			isa = PBXGroup;
+			children = (
+				35A01853293E63CE001A4B2F /* Rol */,
+				35A01856293E63E6001A4B2F /* Name */,
+			);
+			path = SetupPet;
+			sourceTree = "<group>";
+		};
+		35A01853293E63CE001A4B2F /* Rol */ = {
+			isa = PBXGroup;
+			children = (
+				353EA5FE29145DCD0072D7CF /* SetupPetRolViewModel.swift */,
+			);
+			path = Rol;
+			sourceTree = "<group>";
+		};
+		35A01856293E63E6001A4B2F /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				35456E38293932E0002D2C91 /* SetupPetNameViewModel.swift */,
+			);
+			path = Name;
 			sourceTree = "<group>";
 		};
 		35AB4700278A18DA00401FB7 /* BO */ = {
@@ -1619,9 +1672,11 @@
 				35FA0138292EB414007CFB97 /* Stats.swift in Sources */,
 				35871A88293540AC00DA0119 /* UserDefaultsDataSource.swift in Sources */,
 				35434FE527832D8E0024FB5A /* ContentView.swift in Sources */,
+				35A01850293E6047001A4B2F /* SetPetRolUseCase.swift in Sources */,
 				35871A922935438000DA0119 /* UserDefaultsKeys.swift in Sources */,
 				35FA0132292EAE75007CFB97 /* Pet.swift in Sources */,
 				353EA5FD29145DA30072D7CF /* CustomButtons.swift in Sources */,
+				35456E39293932E0002D2C91 /* SetupPetNameViewModel.swift in Sources */,
 				353EA6012914605D0072D7CF /* PetAnimation.swift in Sources */,
 				35871A862935409D00DA0119 /* UserDefaultsRepositoryImplementation.swift in Sources */,
 				35FA0136292EB40E007CFB97 /* Level.swift in Sources */,
@@ -1630,7 +1685,9 @@
 				353EA5F229145A1F0072D7CF /* AutoMockable.swift in Sources */,
 				35871A8029353B3800DA0119 /* UserDefaultsRepository.swift in Sources */,
 				353EA5F829145C5E0072D7CF /* SetupPetRolView.swift in Sources */,
+				35A01852293E6055001A4B2F /* SetPetNameUseCase.swift in Sources */,
 				35434FE327832D8E0024FB5A /* petWalkApp.swift in Sources */,
+				35456E3729393299002D2C91 /* SetupPetNameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1639,8 +1696,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				35871A7C2935394A00DA0119 /* SetupPetRolViewModelTests.swift in Sources */,
+				35A01858293E6745001A4B2F /* SetupPetNameViewModelTests.swift in Sources */,
+				35A0185C293E6AB2001A4B2F /* SetPetNameUseCaseTests.swift in Sources */,
 				35434FF427832D8F0024FB5A /* petWalkTests.swift in Sources */,
 				35871A7E2935395D00DA0119 /* GetPetDataUseCaseTests.swift in Sources */,
+				35A0185A293E6AA3001A4B2F /* SetPetRolUseCaseTests.swift in Sources */,
 				35871A952935449800DA0119 /* UserDefaultDataSourceMock.swift in Sources */,
 				35871A8F293542FB00DA0119 /* UserDefaultsRepositoryTests.swift in Sources */,
 				353EA5EF291459BF0072D7CF /* AutoMockableiOS.generated.swift in Sources */,

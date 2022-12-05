@@ -17,6 +17,14 @@ class UserDefaultsRepositoryTests: XCTestCase {
         sut = UserDefaultsRepositoryImplementation(userDefaultsDataSource: userDefaultsDataSourceMock)
     }
 
+    func testThatPetNameIsSaved_When_SetPetNameIsCalled() {
+        sut.setPetName(name: "NameMock")
+        
+        XCTAssertEqual(1, userDefaultsDataSourceMock.setCallsCount)
+        XCTAssertEqual("NameMock", userDefaultsDataSourceMock.setParamValueReceived as! String)
+        XCTAssertEqual(.petName, userDefaultsDataSourceMock.setParamForKeyReceived)
+    }
+    
     func testThatPetNameIsRetrieved_When_GetPetNameIsCalled() {
         let petName = sut.getPetName()
         
@@ -33,6 +41,14 @@ class UserDefaultsRepositoryTests: XCTestCase {
         XCTAssertEqual(.petLevel, userDefaultsDataSourceMock.getParamForKeyReceived)
     }
 
+    func testThatPetRolIsSaved_When_SetPetRolIsCalled() {
+        sut.setPetRol(rol: "RolMock")
+        
+        XCTAssertEqual(1, userDefaultsDataSourceMock.setCallsCount)
+        XCTAssertEqual("RolMock", userDefaultsDataSourceMock.setParamValueReceived as! String)
+        XCTAssertEqual(.petRol, userDefaultsDataSourceMock.setParamForKeyReceived)
+    }
+    
     func testThatPetRollIsRetrieved_When_GetPetRolIsCalled() {
         let petRol = sut.getPetRol()
         
