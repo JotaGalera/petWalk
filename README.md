@@ -20,4 +20,4 @@ Wizard frames: https://luizmelo.itch.io/evil-wizard-2
 
 # Third-Party:
 
-__Sourcery__(Pod): https://github.com/krzysztofzablocki/Sourcery 
+[__Sourcery__(via Pod)](https://github.com/krzysztofzablocki/Sourcery) 
