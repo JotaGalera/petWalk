@@ -1,5 +1,5 @@
 //
-//  petAnimationScene.swift
+//  petAnimationView.swift
 //  petWalk WatchKit Extension
 //
 //  Created by Galera, Javier on 8/1/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct petAnimationScene: View {
+struct petAnimationView: View {
     var pet: Pets
     
     var body: some View {
@@ -21,6 +21,6 @@ struct petAnimationScene: View {
 }
 struct petAnimationScene_Previews: PreviewProvider {
     static var previews: some View {
-        petAnimationScene(pet: Pet(name: "Beldrick", rol: Swordman(), level: Level()))
+        petAnimationView(pet: Pet(name: "Beldrick", rol: Swordman(), level: Level()))
     }
 }

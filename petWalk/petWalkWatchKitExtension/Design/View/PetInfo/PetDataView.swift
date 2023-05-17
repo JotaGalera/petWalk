@@ -73,7 +73,7 @@ struct Animation: View {
                 )
             
             if shouldNewLevelAnimationBeDisplayed {
-                LevelUpAnimationScene()
+                LevelUpAnimationView()
             }
         }
         .animation(.spring(response: 2.0, dampingFraction: 1.0, blendDuration: 1.0), value: previousExpAnimated + progressUntilNextLevel)

@@ -7,6 +7,34 @@
 
 import SwiftUI
 
+struct LevelUpAnimationView: View {
+    @State var isShow = false
+    
+    var body: some View {
+        ZStack {
+            if isShow {
+                Text("Level Up!")
+                        .foregroundColor(.black)
+                        
+                Star(corners: 5, smoothness: 0.55)
+                            .fill(.red)
+                            .zIndex(-1)
+            }
+        }
+        .onAppear {
+            withAnimation(.easeInOut(duration: 2)) {
+                isShow.toggle()
+
+            }
+        }
+        .onTapGesture {
+            withAnimation(.easeInOut(duration: 2)) {
+                isShow = false
+            }
+        }
+    }
+}
+
 struct Star: Shape {
     let corners: Int
     let smoothness: Double
@@ -58,36 +86,8 @@ struct Star: Shape {
     }
 }
 
-struct LevelUpAnimationScene: View {
-    @State var isShow = false
-    
-    var body: some View {
-        ZStack {
-            if isShow {
-                Text("Level Up!")
-                        .foregroundColor(.black)
-                        
-                Star(corners: 5, smoothness: 0.55)
-                            .fill(.red)
-                            .zIndex(-1)
-            }
-        }
-        .onAppear {
-            withAnimation(.easeInOut(duration: 2)) {
-                isShow.toggle()
-
-            }
-        }
-        .onTapGesture {
-            withAnimation(.easeInOut(duration: 2)) {
-                isShow = false
-            }
-        }
-    }
-}
-
 struct LevelUpAnimationScene_Previews: PreviewProvider {
     static var previews: some View {
-        LevelUpAnimationScene()
+        LevelUpAnimationView()
     }
 }
