@@ -13,11 +13,11 @@
 		350246A727F9AC0A0060E489 /* SaveTrackingDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350246A627F9AC0A0060E489 /* SaveTrackingDailyStepsUseCaseTest.swift */; };
 		350246A927FA166A0060E489 /* PetDataViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350246A827FA166A0060E489 /* PetDataViewModelTest.swift */; };
 		35094B3127E3E33A0035D7B7 /* PetDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */; };
-		35094B3327E3E4920035D7B7 /* PetDataViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3227E3E4920035D7B7 /* PetDataViewModelFactory.swift */; };
+		35094B3327E3E4920035D7B7 /* PetDataViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35094B3227E3E4920035D7B7 /* PetDataViewFactory.swift */; };
 		350BECF728529C6A0014F795 /* SecureQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350BECF628529C6A0014F795 /* SecureQuestionView.swift */; };
-		3516B75D2896FE92001418EF /* LevelUpAnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B75C2896FE92001418EF /* LevelUpAnimationScene.swift */; };
+		3516B75D2896FE92001418EF /* LevelUpAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B75C2896FE92001418EF /* LevelUpAnimationView.swift */; };
 		3526B2272852944D00943ED9 /* SetupPetNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3526B2262852944D00943ED9 /* SetupPetNameView.swift */; };
-		352C3344286717DB003629E6 /* SetupPetNameViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352C3343286717DB003629E6 /* SetupPetNameViewModelFactory.swift */; };
+		352C3344286717DB003629E6 /* SetupPetNameViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352C3343286717DB003629E6 /* SetupPetNameViewFactory.swift */; };
 		352C334628672531003629E6 /* SetupPetViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352C334528672531003629E6 /* SetupPetViewModelTest.swift */; };
 		35338BD727CD6E58007ECF47 /* SaveTotalStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35338BD627CD6E58007ECF47 /* SaveTotalStepsUseCase.swift */; };
 		35338BD927CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35338BD827CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift */; };
@@ -60,7 +60,7 @@
 		355EA4CF27B056DF00461F2F /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */; };
 		355EA4D227B0645A00461F2F /* HealthStorieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */; };
 		355EA4D427B0661200461F2F /* GetStepsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D327B0661200461F2F /* GetStepsUseCase.swift */; };
-		355EA4D627B0673200461F2F /* PetViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D527B0673200461F2F /* PetViewModelFactory.swift */; };
+		355EA4D627B0673200461F2F /* PetViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D527B0673200461F2F /* PetViewFactory.swift */; };
 		355EA4D827B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355EA4D727B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift */; };
 		3563C31F27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563C31E27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift */; };
 		3563C32127D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3563C32027D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift */; };
@@ -123,8 +123,12 @@
 		35FA0134292EAF41007CFB97 /* Rol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA0133292EAF41007CFB97 /* Rol.swift */; };
 		35FA0136292EB40E007CFB97 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA0135292EB40E007CFB97 /* Level.swift */; };
 		35FA0138292EB414007CFB97 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA0137292EB414007CFB97 /* Stats.swift */; };
-		35FE1DBC2789C7060087ECCA /* PetAnimationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */; };
+		35FE1DBC2789C7060087ECCA /* PetAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE1DBB2789C7060087ECCA /* PetAnimationView.swift */; };
 		39BFF41008262A61E8233909 /* Pods_petWalkWatchKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA772F744C45AB11080B7E6 /* Pods_petWalkWatchKitExtension.framework */; };
+		89F083032A1E869800574161 /* ReusableViews in Resources */ = {isa = PBXBuildFile; fileRef = 89F082FF2A1E869800574161 /* ReusableViews */; };
+		89F083042A1E869800574161 /* Home in Resources */ = {isa = PBXBuildFile; fileRef = 89F083002A1E869800574161 /* Home */; };
+		89F083052A1E869800574161 /* SetupPet in Resources */ = {isa = PBXBuildFile; fileRef = 89F083012A1E869800574161 /* SetupPet */; };
+		89F083062A1E869800574161 /* PetInfo in Resources */ = {isa = PBXBuildFile; fileRef = 89F083022A1E869800574161 /* PetInfo */; };
 		9CAD7BA56EDFF236377A3126 /* Pods_petWalkWatchKitAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DF1698C71C3437A95C32F3 /* Pods_petWalkWatchKitAppTests.framework */; };
 		B8FD17DD0D9CF4A8571CEDCA /* Pods_petWalkWatchKitAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F87C289068B4FAAF0028B7 /* Pods_petWalkWatchKitAppUITests.framework */; };
 		CD98E4EBE9F8F579E47D4900 /* Pods_petWalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F6B8B69770B55CB8E925A4 /* Pods_petWalk.framework */; };
@@ -210,11 +214,11 @@
 		350246A627F9AC0A0060E489 /* SaveTrackingDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTrackingDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
 		350246A827FA166A0060E489 /* PetDataViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModelTest.swift; sourceTree = "<group>"; };
 		35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModel.swift; sourceTree = "<group>"; };
-		35094B3227E3E4920035D7B7 /* PetDataViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewModelFactory.swift; sourceTree = "<group>"; };
+		35094B3227E3E4920035D7B7 /* PetDataViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDataViewFactory.swift; sourceTree = "<group>"; };
 		350BECF628529C6A0014F795 /* SecureQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureQuestionView.swift; sourceTree = "<group>"; };
-		3516B75C2896FE92001418EF /* LevelUpAnimationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpAnimationScene.swift; sourceTree = "<group>"; };
+		3516B75C2896FE92001418EF /* LevelUpAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpAnimationView.swift; sourceTree = "<group>"; };
 		3526B2262852944D00943ED9 /* SetupPetNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetNameView.swift; sourceTree = "<group>"; };
-		352C3343286717DB003629E6 /* SetupPetNameViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetNameViewModelFactory.swift; sourceTree = "<group>"; };
+		352C3343286717DB003629E6 /* SetupPetNameViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetNameViewFactory.swift; sourceTree = "<group>"; };
 		352C334528672531003629E6 /* SetupPetViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetViewModelTest.swift; sourceTree = "<group>"; };
 		35338BD627CD6E58007ECF47 /* SaveTotalStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTotalStepsUseCase.swift; sourceTree = "<group>"; };
 		35338BD827CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccumulatedDailyStepsUseCase.swift; sourceTree = "<group>"; };
@@ -265,7 +269,7 @@
 		355EA4CE27B056DF00461F2F /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
 		355EA4D127B0645A00461F2F /* HealthStorieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStorieRepository.swift; sourceTree = "<group>"; };
 		355EA4D327B0661200461F2F /* GetStepsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStepsUseCase.swift; sourceTree = "<group>"; };
-		355EA4D527B0673200461F2F /* PetViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModelFactory.swift; sourceTree = "<group>"; };
+		355EA4D527B0673200461F2F /* PetViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewFactory.swift; sourceTree = "<group>"; };
 		355EA4D727B069E200461F2F /* RequestDailyStepsPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDailyStepsPermissionUseCase.swift; sourceTree = "<group>"; };
 		3563C31E27D0188A00DF8E08 /* GetAccumulatedDailyStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccumulatedDailyStepsUseCaseTest.swift; sourceTree = "<group>"; };
 		3563C32027D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTotalStepsUseCaseTest.swift; sourceTree = "<group>"; };
@@ -330,7 +334,7 @@
 		35FA0133292EAF41007CFB97 /* Rol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rol.swift; sourceTree = "<group>"; };
 		35FA0135292EB40E007CFB97 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		35FA0137292EB414007CFB97 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
-		35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAnimationScene.swift; sourceTree = "<group>"; };
+		35FE1DBB2789C7060087ECCA /* PetAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAnimationView.swift; sourceTree = "<group>"; };
 		37F87C289068B4FAAF0028B7 /* Pods_petWalkWatchKitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkWatchKitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C74907A1EFDA6A539FD7175 /* Pods-petWalkWatchKitAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkWatchKitAppTests.debug.xcconfig"; path = "Target Support Files/Pods-petWalkWatchKitAppTests/Pods-petWalkWatchKitAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E8216F4C4042A5D1D20E015 /* Pods_petWalkWatchKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkWatchKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,6 +346,12 @@
 		7B1429B34F67F980EE1D35C0 /* Pods-petWalkWatchKitExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkWatchKitExtension.debug.xcconfig"; path = "Target Support Files/Pods-petWalkWatchKitExtension/Pods-petWalkWatchKitExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		85B8510F7141697352690E7B /* Pods-petWalkWatchKitAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkWatchKitAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-petWalkWatchKitAppUITests/Pods-petWalkWatchKitAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		87DE13B055A0DF53CC3B0EA0 /* Pods_petWalkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89F082FF2A1E869800574161 /* ReusableViews */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReusableViews; sourceTree = "<group>"; };
+		89F083002A1E869800574161 /* Home */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Home; sourceTree = "<group>"; };
+		89F083012A1E869800574161 /* SetupPet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SetupPet; sourceTree = "<group>"; };
+		89F083022A1E869800574161 /* PetInfo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PetInfo; sourceTree = "<group>"; };
+		89F083082A1E870F00574161 /* PetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetView.swift; sourceTree = "<group>"; };
+		89F083092A1E870F00574161 /* PetAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetAnimationView.swift; sourceTree = "<group>"; };
 		9AA39CB7CABAB7EFE4048036 /* Pods_petWalk_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F6B8B69770B55CB8E925A4 /* Pods_petWalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A732039BB8903FFD0828672A /* Pods_petWalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -449,7 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				3543501327832D910024FB5A /* PetView.swift */,
-				35FE1DBB2789C7060087ECCA /* PetAnimationScene.swift */,
+				35FE1DBB2789C7060087ECCA /* PetAnimationView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -458,7 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				350127BA27C2606900AB2B1D /* PetDataView.swift */,
-				3516B75C2896FE92001418EF /* LevelUpAnimationScene.swift */,
+				3516B75C2896FE92001418EF /* LevelUpAnimationView.swift */,
 			);
 			path = PetInfo;
 			sourceTree = "<group>";
@@ -495,7 +505,6 @@
 		353B60EE28390EF300A1C4B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				355EA4D527B0673200461F2F /* PetViewModelFactory.swift */,
 				35969396278B4E2A00B68BEF /* PetViewModel.swift */,
 			);
 			path = Home;
@@ -504,7 +513,6 @@
 		353B60EF28390EFD00A1C4B4 /* PetInfo */ = {
 			isa = PBXGroup;
 			children = (
-				35094B3227E3E4920035D7B7 /* PetDataViewModelFactory.swift */,
 				35094B3027E3E33A0035D7B7 /* PetDataViewModel.swift */,
 			);
 			path = PetInfo;
@@ -690,6 +698,7 @@
 		3543500727832D900024FB5A /* petWalkWatchKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				89F082FE2A1E866500574161 /* Views */,
 				3543500827832D910024FB5A /* Assets.xcassets */,
 			);
 			path = petWalkWatchKitApp;
@@ -978,6 +987,7 @@
 		35969393278B4DA000B68BEF /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				89CAE4942A1555EA0063E23E /* ViewFactories */,
 				35969395278B4DE300B68BEF /* ViewModel */,
 				35969394278B4DD800B68BEF /* View */,
 				3543501527832D910024FB5A /* petWalkApp.swift */,
@@ -1036,8 +1046,9 @@
 		359C7C762854FCDD0053FC79 /* SetupPet */ = {
 			isa = PBXGroup;
 			children = (
-				35B903B228B17E0300B9BBAC /* Rol */,
-				35B903B328B17E0700B9BBAC /* Name */,
+				3545C203285FA76500362CC3 /* SecureQuestionViewFactory.swift */,
+				35B903AC28B177B700B9BBAC /* SetupPetRolViewModel.swift */,
+				3592B0382862753700655476 /* SetupPetNameViewModel.swift */,
 			);
 			path = SetupPet;
 			sourceTree = "<group>";
@@ -1084,34 +1095,6 @@
 				35B5A3E02842B56F00C2722E /* PetsTest.swift */,
 			);
 			path = BO;
-			sourceTree = "<group>";
-		};
-		35B903B228B17E0300B9BBAC /* Rol */ = {
-			isa = PBXGroup;
-			children = (
-				35B903B028B17DAE00B9BBAC /* SetupPetRolViewFactory.swift */,
-				35B903AC28B177B700B9BBAC /* SetupPetRolViewModel.swift */,
-			);
-			path = Rol;
-			sourceTree = "<group>";
-		};
-		35B903B328B17E0700B9BBAC /* Name */ = {
-			isa = PBXGroup;
-			children = (
-				35B903B428B17F2B00B9BBAC /* SecureQuestion */,
-				3592B0382862753700655476 /* SetupPetNameViewModel.swift */,
-				352C3343286717DB003629E6 /* SetupPetNameViewModelFactory.swift */,
-			);
-			path = Name;
-			sourceTree = "<group>";
-		};
-		35B903B428B17F2B00B9BBAC /* SecureQuestion */ = {
-			isa = PBXGroup;
-			children = (
-				3545C203285FA76500362CC3 /* SecureQuestionViewFactory.swift */,
-				359C7C772854FCF00053FC79 /* SecureQuestionViewModel.swift */,
-			);
-			path = SecureQuestion;
 			sourceTree = "<group>";
 		};
 		35BAF67E28ABA840007AF1D1 /* ReusableViews */ = {
@@ -1216,6 +1199,63 @@
 			path = BO;
 			sourceTree = "<group>";
 		};
+		89CAE4942A1555EA0063E23E /* ViewFactories */ = {
+			isa = PBXGroup;
+			children = (
+				89CAE4952A1555F70063E23E /* SetupPet */,
+				89CAE4962A1556700063E23E /* Home */,
+				89CAE4972A1556750063E23E /* PetInfo */,
+			);
+			path = ViewFactories;
+			sourceTree = "<group>";
+		};
+		89CAE4952A1555F70063E23E /* SetupPet */ = {
+			isa = PBXGroup;
+			children = (
+				359C7C772854FCF00053FC79 /* SecureQuestionViewModel.swift */,
+				35B903B028B17DAE00B9BBAC /* SetupPetRolViewFactory.swift */,
+				352C3343286717DB003629E6 /* SetupPetNameViewFactory.swift */,
+			);
+			path = SetupPet;
+			sourceTree = "<group>";
+		};
+		89CAE4962A1556700063E23E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				355EA4D527B0673200461F2F /* PetViewFactory.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		89CAE4972A1556750063E23E /* PetInfo */ = {
+			isa = PBXGroup;
+			children = (
+				35094B3227E3E4920035D7B7 /* PetDataViewFactory.swift */,
+			);
+			path = PetInfo;
+			sourceTree = "<group>";
+		};
+		89F082FE2A1E866500574161 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				89F083072A1E86C300574161 /* New Group */,
+				89F083002A1E869800574161 /* Home */,
+				89F083022A1E869800574161 /* PetInfo */,
+				89F082FF2A1E869800574161 /* ReusableViews */,
+				89F083012A1E869800574161 /* SetupPet */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		89F083072A1E86C300574161 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				89F083092A1E870F00574161 /* PetAnimationView.swift */,
+				89F083082A1E870F00574161 /* PetView.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1243,8 +1283,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3543504227832D920024FB5A /* Build configuration list for PBXNativeTarget "petWalkTests" */;
 			buildPhases = (
-				353EA5EC291457D70072D7CF /* ShellScript */,
 				73D0A76350EDD339A252E2E1 /* [CP] Check Pods Manifest.lock */,
+				353EA5EC291457D70072D7CF /* ShellScript */,
 				35434FEB27832D8F0024FB5A /* Sources */,
 				35434FEC27832D8F0024FB5A /* Frameworks */,
 				35434FED27832D8F0024FB5A /* Resources */,
@@ -1319,8 +1359,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3543504827832D920024FB5A /* Build configuration list for PBXNativeTarget "petWalkWatchKitAppTests" */;
 			buildPhases = (
-				359A549E27B5AD0D00C55BF6 /* ShellScript */,
 				D7D14272C4314CE9DB0A7A61 /* [CP] Check Pods Manifest.lock */,
+				359A549E27B5AD0D00C55BF6 /* ShellScript */,
 				3543501F27832D920024FB5A /* Sources */,
 				3543502027832D920024FB5A /* Frameworks */,
 				3543502127832D920024FB5A /* Resources */,
@@ -1377,6 +1417,7 @@
 					};
 					3543500227832D900024FB5A = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1430;
 					};
 					3543500D27832D910024FB5A = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -1443,7 +1484,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F083032A1E869800574161 /* ReusableViews in Resources */,
 				3543500927832D910024FB5A /* Assets.xcassets in Resources */,
+				89F083052A1E869800574161 /* SetupPet in Resources */,
+				89F083062A1E869800574161 /* PetInfo in Resources */,
+				89F083042A1E869800574161 /* Home in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1720,13 +1765,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35094B3327E3E4920035D7B7 /* PetDataViewModelFactory.swift in Sources */,
+				35094B3327E3E4920035D7B7 /* PetDataViewFactory.swift in Sources */,
 				35973956289B062E00E3D82C /* SavePetLevelUseCase.swift in Sources */,
 				35B903AD28B177B700B9BBAC /* SetupPetRolViewModel.swift in Sources */,
 				3543501627832D910024FB5A /* petWalkApp.swift in Sources */,
 				3596938B278B42E600B68BEF /* HealthStoreDataSource.swift in Sources */,
 				359C7C782854FCF00053FC79 /* SecureQuestionViewModel.swift in Sources */,
-				355EA4D627B0673200461F2F /* PetViewModelFactory.swift in Sources */,
+				355EA4D627B0673200461F2F /* PetViewFactory.swift in Sources */,
 				35CEDF0927F99C54004DF2B5 /* TrackingManager.swift in Sources */,
 				35338BD727CD6E58007ECF47 /* SaveTotalStepsUseCase.swift in Sources */,
 				3543501427832D910024FB5A /* PetView.swift in Sources */,
@@ -1739,12 +1784,12 @@
 				3592B0392862753700655476 /* SetupPetNameViewModel.swift in Sources */,
 				3545C204285FA76500362CC3 /* SecureQuestionViewFactory.swift in Sources */,
 				350127BB27C2606A00AB2B1D /* PetDataView.swift in Sources */,
-				352C3344286717DB003629E6 /* SetupPetNameViewModelFactory.swift in Sources */,
+				352C3344286717DB003629E6 /* SetupPetNameViewFactory.swift in Sources */,
 				35BAF68028ABA840007AF1D1 /* PetAnimation.swift in Sources */,
 				35D9AED128414B9D002C057A /* Date.swift in Sources */,
 				355EA4D427B0661200461F2F /* GetStepsUseCase.swift in Sources */,
 				355EA4C827B053CA00461F2F /* UserDefaultsDataSource.swift in Sources */,
-				35FE1DBC2789C7060087ECCA /* PetAnimationScene.swift in Sources */,
+				35FE1DBC2789C7060087ECCA /* PetAnimationView.swift in Sources */,
 				3526B2272852944D00943ED9 /* SetupPetNameView.swift in Sources */,
 				355EA4CA27B0564300461F2F /* SaveAccumulatedDailyStepsUseCase.swift in Sources */,
 				35AB46FF278A185000401FB7 /* Pet.swift in Sources */,
@@ -1759,7 +1804,7 @@
 				35B903B128B17DAE00B9BBAC /* SetupPetRolViewFactory.swift in Sources */,
 				35B903AB28B1757400B9BBAC /* CustomButtons.swift in Sources */,
 				3584AA2728ABAAD90053B9CC /* Rol.swift in Sources */,
-				3516B75D2896FE92001418EF /* LevelUpAnimationScene.swift in Sources */,
+				3516B75D2896FE92001418EF /* LevelUpAnimationView.swift in Sources */,
 				359C7C7A285503DD0053FC79 /* SavePetNameUseCase.swift in Sources */,
 				35094B3127E3E33A0035D7B7 /* PetDataViewModel.swift in Sources */,
 				35338BD927CD7397007ECF47 /* GetAccumulatedDailyStepsUseCase.swift in Sources */,
@@ -2039,12 +2084,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K88A5H84VS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = petWalk_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "petWalk WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.JavierGalera.petWalk;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2053,10 +2098,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JavierGalera.petWalk.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = petWalkWatchKitApp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.3;
@@ -2070,12 +2116,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K88A5H84VS;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = petWalk_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "petWalk WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.JavierGalera.petWalk;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2084,7 +2130,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.JavierGalera.petWalk.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = petWalkWatchKitApp;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
