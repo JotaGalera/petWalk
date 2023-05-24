@@ -33,14 +33,14 @@ protocol Rol: AutoMockable {
 
 struct Swordman: Rol {
     var classname: String = Roles.swordman.rawValue
-    var images = ["run1",
-                  "run2",
-                  "run3",
-                  "run4",
-                  "run5",
-                  "run6",
-                  "run7",
-                  "run8"]
+    var images = ["SordmanRun1",
+                  "SordmanRun2",
+                  "SordmanRun3",
+                  "SordmanRun4",
+                  "SordmanRun5",
+                  "SordmanRun6",
+                  "SordmanRun7",
+                  "SordmanRun8"]
 }
 
 struct Ninja: Rol {
