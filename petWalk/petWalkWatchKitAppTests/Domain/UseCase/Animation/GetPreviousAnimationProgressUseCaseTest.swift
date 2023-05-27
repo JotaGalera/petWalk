@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class GetPreviousAnimationProgressUseCaseTest: XCTestCase{
     var sut: GetPreviousAnimationProgressUseCaseImplementation!

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TrackingManager: AutoMockable {
+public protocol TrackingManager: AutoMockable {
     func isTrackingDailyStepsEnabled() -> Bool
 }
 

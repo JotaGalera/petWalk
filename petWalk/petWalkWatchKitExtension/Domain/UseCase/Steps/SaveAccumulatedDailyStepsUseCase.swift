@@ -1,6 +1,6 @@
 import Foundation
 
-protocol SaveAccumulatedDailyStepsUseCase: AutoMockable {
+public protocol SaveAccumulatedDailyStepsUseCase: AutoMockable {
     func execute(_ steps: Int)
 }
 

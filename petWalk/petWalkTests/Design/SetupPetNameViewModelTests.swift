@@ -20,7 +20,7 @@ class SetupPetNameViewModelTests: XCTestCase {
     }
     
     func testThatNextViewIsDisplayed_When_PetHasName() {
-        getPetDataUseCaseMock.executeReturnValue = Pet(name: "mockName", rol: RolMock(), level: Level())
+        getPetDataUseCaseMock.executeReturnValue = Pet(name: "mockName", rol: Swordman(), level: Level())
         
         let displayNextView = sut.canContinueWithNextView()
         
@@ -29,7 +29,7 @@ class SetupPetNameViewModelTests: XCTestCase {
     }
     
     func testThatNextViewIsNotDisplayed_When_PetHasNotName() {
-        getPetDataUseCaseMock.executeReturnValue = Pet(name: "", rol: RolMock(), level: Level())
+        getPetDataUseCaseMock.executeReturnValue = Pet(name: "", rol: Swordman(), level: Level())
         
         let displayNextView = sut.canContinueWithNextView()
         

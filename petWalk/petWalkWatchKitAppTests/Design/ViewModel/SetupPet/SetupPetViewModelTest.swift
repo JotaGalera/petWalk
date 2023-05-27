@@ -4,7 +4,7 @@
 //
 //  Created by Galera, Javier on 25/6/22.
 //
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 import XCTest
 
 class SetupPetViewModelTest: XCTestCase {
@@ -19,7 +19,7 @@ class SetupPetViewModelTest: XCTestCase {
     }
     
     @MainActor func testThatHasPetNameIsTrue_When_PetHasName() {
-        getPetDataUseCaseMock.executeReturnValue = Pet(name: "nameMock", level: Level())
+        getPetDataUseCaseMock.executeReturnValue = Pet(name: "nameMock", rol: Swordman(), level: Level())
         
         sut.canContinueWithNextView()
         
@@ -27,7 +27,7 @@ class SetupPetViewModelTest: XCTestCase {
     }
     
     @MainActor func testThatHasPetNameIsFalse_When_PetDoesNotHaveName() {
-        getPetDataUseCaseMock.executeReturnValue = Pet(name: "", level: Level())
+        getPetDataUseCaseMock.executeReturnValue = Pet(name: "", rol: Swordman(), level: Level())
         
         sut.canContinueWithNextView()
         

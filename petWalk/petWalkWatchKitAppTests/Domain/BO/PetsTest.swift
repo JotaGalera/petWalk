@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class PetsTest: XCTestCase {
     var sut: Pets!
@@ -15,7 +15,7 @@ class PetsTest: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         
-        sut = Pet(name: "test", level: levelMock)
+        sut = Pet(name: "test", rol: nil, level: levelMock)
     }
     
     func testThatNewLevelAndNewStatsAreCalculatedProperly_When_PetLevelUp() {

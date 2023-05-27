@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SaveTrackingDailyStepsUseCase: AutoMockable {
+public protocol SaveTrackingDailyStepsUseCase: AutoMockable {
     func execute(_ permission: Bool)
 }
 

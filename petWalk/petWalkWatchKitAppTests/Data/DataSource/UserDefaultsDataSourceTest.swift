@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class UserDefaultsDataSourceTest: XCTestCase {
     private var sut: UserDefaultsDataSource!

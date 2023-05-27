@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SavePetNameUseCase: AutoMockable {
+public protocol SavePetNameUseCase: AutoMockable {
     func execute(_ name: String)
 }
 

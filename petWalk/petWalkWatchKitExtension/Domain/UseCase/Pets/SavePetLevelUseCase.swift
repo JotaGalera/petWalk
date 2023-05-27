@@ -5,7 +5,7 @@
 //  Created by Galera, Javier on 3/8/22.
 //
 
-protocol SavePetLevelUseCase: AutoMockable {
+public protocol SavePetLevelUseCase: AutoMockable {
     func execute(_ level: Int)
 }
 

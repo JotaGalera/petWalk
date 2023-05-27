@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class UserDefaultDataSourceMock: UserDefaultsDataSource {
     var getCallsCount = 0

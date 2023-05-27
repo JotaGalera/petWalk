@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol GetAccumulatedDailyStepsUseCase: AutoMockable {
+public protocol GetAccumulatedDailyStepsUseCase: AutoMockable {
     func execute() -> Int
 }
 

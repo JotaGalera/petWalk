@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class PetDataViewModelTest: XCTestCase {
     private var sut: PetDataViewModel!
@@ -109,7 +109,7 @@ class PetDataViewModelTest: XCTestCase {
         trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
         getStepsUseCaseMock.executeReturnValue = stepsMock
         getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
-        sut.pet = Pet(name: "Beldrick", level: Level())
+        sut.pet = Pet(name: "Beldrick", rol: Swordman(), level: Level())
         
         await sut.getSteps()
         
@@ -133,7 +133,7 @@ class PetDataViewModelTest: XCTestCase {
         trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
         getStepsUseCaseMock.executeReturnValue = stepsMock
         getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
-        sut.pet = Pet(name: "Beldrick", level: Level())
+        sut.pet = Pet(name: "Beldrick", rol: Swordman(), level: Level())
         
         await sut.getSteps()
         
@@ -157,7 +157,7 @@ class PetDataViewModelTest: XCTestCase {
         trackingManagerMock.isTrackingDailyStepsEnabledReturnValue = true
         getStepsUseCaseMock.executeReturnValue = stepsMock
         getAccumulatedDailyStepsUseCaseMock.executeReturnValue = 0
-        sut.pet = Pet(name: "Beldrick", level: Level())
+        sut.pet = Pet(name: "Beldrick", rol: Swordman(), level: Level())
         
         await sut.getSteps()
         

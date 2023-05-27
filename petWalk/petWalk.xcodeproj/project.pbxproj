@@ -21,7 +21,6 @@
 		353B60ED28390C5400A1C4B4 /* SavePreviousAnimationProgressUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B60EC28390C5400A1C4B4 /* SavePreviousAnimationProgressUseCase.swift */; };
 		353B60F428390F6000A1C4B4 /* SavePreviousAnimationProgressUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B60F328390F6000A1C4B4 /* SavePreviousAnimationProgressUseCaseTest.swift */; };
 		353B60F628390F6C00A1C4B4 /* GetPreviousAnimationProgressUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353B60F528390F6C00A1C4B4 /* GetPreviousAnimationProgressUseCaseTest.swift */; };
-		353EA5EF291459BF0072D7CF /* AutoMockableiOS.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5EE291459BF0072D7CF /* AutoMockableiOS.generated.swift */; };
 		353EA5F229145A1F0072D7CF /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F129145A1F0072D7CF /* AutoMockable.swift */; };
 		353EA5F829145C5E0072D7CF /* SetupPetRolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */; };
 		353EA5FD29145DA30072D7CF /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EA5FC29145DA30072D7CF /* CustomButtons.swift */; };
@@ -105,7 +104,6 @@
 		35CEDF0D27F9A7BF004DF2B5 /* TrackingManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEDF0C27F9A7BF004DF2B5 /* TrackingManagerTest.swift */; };
 		35D9AECE28414A37002C057A /* UserDefaultDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D9AECD28414A37002C057A /* UserDefaultDataSourceMock.swift */; };
 		35D9AED128414B9D002C057A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D9AED028414B9D002C057A /* Date.swift */; };
-		35E999CF27B8358700221C81 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E999CE27B8358700221C81 /* AutoMockable.generated.swift */; };
 		35F83B9527BEBB420082EFA6 /* HealthStorieRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */; };
 		35F83B9727BEBFB90082EFA6 /* UtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */; };
 		35F83B9B27BEC1850082EFA6 /* RequestDailyStepsPermissionUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F83B9A27BEC1850082EFA6 /* RequestDailyStepsPermissionUseCaseTest.swift */; };
@@ -115,6 +113,7 @@
 		35FA0136292EB40E007CFB97 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA0135292EB40E007CFB97 /* Level.swift */; };
 		35FA0138292EB414007CFB97 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FA0137292EB414007CFB97 /* Stats.swift */; };
 		39BFF41008262A61E8233909 /* Pods_petWalkWatchKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA772F744C45AB11080B7E6 /* Pods_petWalkWatchKitExtension.framework */; };
+		89883DD42A2280D300F077CF /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89883DD32A2280D300F077CF /* AutoMockable.generated.swift */; };
 		89C084EA2A1E8A7400C55757 /* LevelUpAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C084E82A1E8A7400C55757 /* LevelUpAnimationView.swift */; };
 		89C084EB2A1E8A7400C55757 /* PetDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C084E92A1E8A7400C55757 /* PetDataView.swift */; };
 		89C084EE2A1E8A7E00C55757 /* PetAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C084EC2A1E8A7E00C55757 /* PetAnimationView.swift */; };
@@ -124,6 +123,7 @@
 		89C084F52A1E8A8600C55757 /* SetupPetNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C084F22A1E8A8600C55757 /* SetupPetNameView.swift */; };
 		89C084F82A1E8A8D00C55757 /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C084F62A1E8A8D00C55757 /* CustomButtons.swift */; };
 		89C084F92A1E8A8D00C55757 /* PetAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C084F72A1E8A8D00C55757 /* PetAnimation.swift */; };
+		89CB8F072A22782D007C98D5 /* AutoMockableWatchOS.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB8F062A22782D007C98D5 /* AutoMockableWatchOS.generated.swift */; };
 		9CAD7BA56EDFF236377A3126 /* Pods_petWalkWatchKitAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DF1698C71C3437A95C32F3 /* Pods_petWalkWatchKitAppTests.framework */; };
 		B8FD17DD0D9CF4A8571CEDCA /* Pods_petWalkWatchKitAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F87C289068B4FAAF0028B7 /* Pods_petWalkWatchKitAppUITests.framework */; };
 		CD98E4EBE9F8F579E47D4900 /* Pods_petWalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F6B8B69770B55CB8E925A4 /* Pods_petWalk.framework */; };
@@ -201,7 +201,6 @@
 		353B60EC28390C5400A1C4B4 /* SavePreviousAnimationProgressUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePreviousAnimationProgressUseCase.swift; sourceTree = "<group>"; };
 		353B60F328390F6000A1C4B4 /* SavePreviousAnimationProgressUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePreviousAnimationProgressUseCaseTest.swift; sourceTree = "<group>"; };
 		353B60F528390F6C00A1C4B4 /* GetPreviousAnimationProgressUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPreviousAnimationProgressUseCaseTest.swift; sourceTree = "<group>"; };
-		353EA5EE291459BF0072D7CF /* AutoMockableiOS.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockableiOS.generated.swift; sourceTree = "<group>"; };
 		353EA5F129145A1F0072D7CF /* AutoMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.swift; sourceTree = "<group>"; };
 		353EA5F729145C5E0072D7CF /* SetupPetRolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPetRolView.swift; sourceTree = "<group>"; };
 		353EA5FC29145DA30072D7CF /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
@@ -293,7 +292,6 @@
 		35CEDF0C27F9A7BF004DF2B5 /* TrackingManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingManagerTest.swift; sourceTree = "<group>"; };
 		35D9AECD28414A37002C057A /* UserDefaultDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultDataSourceMock.swift; sourceTree = "<group>"; };
 		35D9AED028414B9D002C057A /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		35E999CE27B8358700221C81 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		35F83B9427BEBB420082EFA6 /* HealthStorieRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStorieRepositoryTest.swift; sourceTree = "<group>"; };
 		35F83B9627BEBFB90082EFA6 /* UtilsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTest.swift; sourceTree = "<group>"; };
 		35F83B9A27BEC1850082EFA6 /* RequestDailyStepsPermissionUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDailyStepsPermissionUseCaseTest.swift; sourceTree = "<group>"; };
@@ -313,6 +311,7 @@
 		7B1429B34F67F980EE1D35C0 /* Pods-petWalkWatchKitExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkWatchKitExtension.debug.xcconfig"; path = "Target Support Files/Pods-petWalkWatchKitExtension/Pods-petWalkWatchKitExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		85B8510F7141697352690E7B /* Pods-petWalkWatchKitAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petWalkWatchKitAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-petWalkWatchKitAppUITests/Pods-petWalkWatchKitAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		87DE13B055A0DF53CC3B0EA0 /* Pods_petWalkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89883DD32A2280D300F077CF /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		89C084E82A1E8A7400C55757 /* LevelUpAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelUpAnimationView.swift; sourceTree = "<group>"; };
 		89C084E92A1E8A7400C55757 /* PetDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDataView.swift; sourceTree = "<group>"; };
 		89C084EC2A1E8A7E00C55757 /* PetAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetAnimationView.swift; sourceTree = "<group>"; };
@@ -322,6 +321,7 @@
 		89C084F22A1E8A8600C55757 /* SetupPetNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupPetNameView.swift; sourceTree = "<group>"; };
 		89C084F62A1E8A8D00C55757 /* CustomButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		89C084F72A1E8A8D00C55757 /* PetAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetAnimation.swift; sourceTree = "<group>"; };
+		89CB8F062A22782D007C98D5 /* AutoMockableWatchOS.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockableWatchOS.generated.swift; sourceTree = "<group>"; };
 		9AA39CB7CABAB7EFE4048036 /* Pods_petWalk_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F6B8B69770B55CB8E925A4 /* Pods_petWalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A732039BB8903FFD0828672A /* Pods_petWalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_petWalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -515,7 +515,7 @@
 		353EA5ED291459BF0072D7CF /* Autogenerated */ = {
 			isa = PBXGroup;
 			children = (
-				353EA5EE291459BF0072D7CF /* AutoMockableiOS.generated.swift */,
+				89883DD32A2280D300F077CF /* AutoMockable.generated.swift */,
 			);
 			path = Autogenerated;
 			sourceTree = "<group>";
@@ -762,7 +762,7 @@
 		357A5E0927B5CEE60020B71C /* Autogenerated */ = {
 			isa = PBXGroup;
 			children = (
-				35E999CE27B8358700221C81 /* AutoMockable.generated.swift */,
+				89CB8F062A22782D007C98D5 /* AutoMockableWatchOS.generated.swift */,
 			);
 			path = Autogenerated;
 			sourceTree = "<group>";
@@ -1440,7 +1440,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Pods/Sourcery/bin/sourcery --sources ./petWalk  --templates ./Pods/Sourcery/Templates/AutoMockableiOS.stencil --output ./petWalkTests/Autogenerated\n";
+			shellScript = "Pods/Sourcery/bin/sourcery --sources ./petWalk  --templates ./Pods/Sourcery/Templates/AutoMockable.stencil --output ./petWalkTests/Autogenerated\n";
 		};
 		359A549E27B5AD0D00C55BF6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1648,6 +1648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35871A7C2935394A00DA0119 /* SetupPetRolViewModelTests.swift in Sources */,
+				89883DD42A2280D300F077CF /* AutoMockable.generated.swift in Sources */,
 				35A01858293E6745001A4B2F /* SetupPetNameViewModelTests.swift in Sources */,
 				35A0185C293E6AB2001A4B2F /* SetPetNameUseCaseTests.swift in Sources */,
 				35434FF427832D8F0024FB5A /* petWalkTests.swift in Sources */,
@@ -1655,7 +1656,6 @@
 				35A0185A293E6AA3001A4B2F /* SetPetRolUseCaseTests.swift in Sources */,
 				35871A952935449800DA0119 /* UserDefaultDataSourceMock.swift in Sources */,
 				35871A8F293542FB00DA0119 /* UserDefaultsRepositoryTests.swift in Sources */,
-				353EA5EF291459BF0072D7CF /* AutoMockableiOS.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1736,6 +1736,7 @@
 				35BF2E1C27BEC407000922BF /* GetDailyStepsUseCaseTest.swift in Sources */,
 				3563C32127D018A000DF8E08 /* SaveTotalStepsUseCaseTest.swift in Sources */,
 				35973958289B063C00E3D82C /* SavePetLevelUseCaseTest.swift in Sources */,
+				89CB8F072A22782D007C98D5 /* AutoMockableWatchOS.generated.swift in Sources */,
 				355BD96E28B80FCA00817F1D /* SavePetRolUseCaseTest.swift in Sources */,
 				35BF2E2027BEC72B000922BF /* UserDefaultsRepositoryTest.swift in Sources */,
 				35D9AECE28414A37002C057A /* UserDefaultDataSourceMock.swift in Sources */,
@@ -1750,7 +1751,6 @@
 				352C334628672531003629E6 /* SetupPetViewModelTest.swift in Sources */,
 				35BF2E2727BEE910000922BF /* PetViewModelTest.swift in Sources */,
 				35F83B9727BEBFB90082EFA6 /* UtilsTest.swift in Sources */,
-				35E999CF27B8358700221C81 /* AutoMockable.generated.swift in Sources */,
 				35F83B9527BEBB420082EFA6 /* HealthStorieRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

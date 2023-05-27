@@ -9,7 +9,7 @@ import Foundation
 import HealthKit
 import Combine
 
-protocol HealthStoreDataSource: AutoMockable {
+public protocol HealthStoreDataSource: AutoMockable {
     func requestAuthorization() async throws -> Bool
     func getSteps(date: Date) async throws -> Int
 }

@@ -7,7 +7,7 @@
 
 import XCTest
 import HealthKit
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class HealthDataSourceTest: XCTestCase {
     var sut: HealthStoreDataSource!

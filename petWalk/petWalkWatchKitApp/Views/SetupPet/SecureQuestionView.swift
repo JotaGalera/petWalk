@@ -30,7 +30,7 @@ struct SecureQuestionView: View {
             HStack(spacing: 20) {
                 Button {
                     isRolSelected = false
-                    secureQuestionViewModel.removeRolPetName()
+                    secureQuestionViewModel.removePetRol()
                     dismiss()
                 } label: {
                     Text(cancelButtonText)

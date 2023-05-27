@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol GetPetDataUseCase: AutoMockable {
+public protocol GetPetDataUseCase: AutoMockable {
     func execute() -> Pets
 }
 

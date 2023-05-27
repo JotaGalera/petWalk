@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SaveTotalStepsUseCase: AutoMockable {
+public protocol SaveTotalStepsUseCase: AutoMockable {
     func execute(_ steps: Int)
 }
 

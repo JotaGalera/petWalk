@@ -5,7 +5,7 @@
 //  Created by Galera, Javier on 4/6/22.
 //
 
-struct Level: Equatable {
+public struct Level: Equatable {
     var currentLevel: Int
     var expToLevelUp: Int = 100
     private let expBaseToLevelUp = 100

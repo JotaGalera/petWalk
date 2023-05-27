@@ -5,7 +5,7 @@
 //  Created by Galera, Javier on 4/6/22.
 //
 
-struct Stats: Equatable {
+public struct Stats: Equatable {
     let baseValue = 10
     var strength: Int = 10
     var life: Int = 10

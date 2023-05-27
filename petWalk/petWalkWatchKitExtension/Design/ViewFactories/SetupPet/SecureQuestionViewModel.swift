@@ -22,7 +22,7 @@ class SecureQuestionViewModel: ObservableObject {
         savePetNameUseCase.execute(name)
     }
     
-    func removeRolPetName() {
+    func removePetRol() {
         savePetRolUseCase.execute("")
     }
 }

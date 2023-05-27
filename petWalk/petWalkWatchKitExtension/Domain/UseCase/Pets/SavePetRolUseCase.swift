@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SavePetRolUseCase: AutoMockable {
+public protocol SavePetRolUseCase: AutoMockable {
     func execute(_ rol: String)
 }
 

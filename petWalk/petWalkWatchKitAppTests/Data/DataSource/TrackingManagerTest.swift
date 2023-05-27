@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class TrackingManagerTest: XCTestCase {
     private var sut: TrackingManager!

@@ -6,17 +6,19 @@
 //
 
 import XCTest
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class SetupPetRolViewModelTest: XCTestCase {
     var sut: SetupPetRolViewModel!
     var savePetRolUseCaseMock: SavePetRolUseCaseMock!
+    var getPetDataUseCaseMock: GetPetDataUseCaseMock!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         
         savePetRolUseCaseMock = SavePetRolUseCaseMock()
-        sut = SetupPetRolViewModel(savePetRolUseCase: savePetRolUseCaseMock)
+        getPetDataUseCaseMock = GetPetDataUseCaseMock()
+        sut = SetupPetRolViewModel(savePetRolUseCase: savePetRolUseCaseMock, getPetDataUseCase: getPetDataUseCaseMock)
     }
     
     func testThatRolIndexIsPointingToNextPosition_When_ShowNextRolIsCalled() {
@@ -66,5 +68,27 @@ class SetupPetRolViewModelTest: XCTestCase {
         sut.savePetRol()
         
         XCTAssertEqual(1, savePetRolUseCaseMock.executeCallsCount)
+    }
+    
+    func testThatItCanContinueToNextView_When_PetHasARol() {
+        let petMock = PetsMock()
+        petMock.rol = Swordman()
+        getPetDataUseCaseMock.executeReturnValue = petMock
+        
+        let result = sut.canContinueWithNextView()
+        
+        XCTAssertTrue(result)
+        XCTAssertEqual(1, getPetDataUseCaseMock.executeCallsCount)
+    }
+    
+    func testThatItCannotContinueToNextView_When_PetHasARol() {
+        let petMock = PetsMock()
+        petMock.rol = nil
+        getPetDataUseCaseMock.executeReturnValue = petMock
+        
+        let result = sut.canContinueWithNextView()
+        
+        XCTAssertFalse(result)
+        XCTAssertEqual(1, getPetDataUseCaseMock.executeCallsCount)
     }
 }

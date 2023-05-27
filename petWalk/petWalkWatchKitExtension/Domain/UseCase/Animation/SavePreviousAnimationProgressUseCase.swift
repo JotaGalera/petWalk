@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SavePreviousAnimationProgressUseCase: AutoMockable {
+public protocol SavePreviousAnimationProgressUseCase: AutoMockable {
     func execute(_ previousAnimationProgress: Double)
 }
 

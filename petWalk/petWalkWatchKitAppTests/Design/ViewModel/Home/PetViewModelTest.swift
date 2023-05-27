@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import petWalkWatchKitExtension
+@testable import petWalkWatchKitApp
 
 class PetViewModelTest: XCTestCase {
     private var sut: PetViewModel!
@@ -21,7 +21,7 @@ class PetViewModelTest: XCTestCase {
         saveTrackingDailyStepsUseCase = SaveTrackingDailyStepsUseCaseMock()
         getPetDataUseCase = GetPetDataUseCaseMock()
         
-        let petMock = Pet(name: "nameMock", level: Level())
+        let petMock = Pet(name: "nameMock", rol: Swordman(), level: Level())
         getPetDataUseCase.executeReturnValue = petMock
         
         sut = PetViewModel(requestDailyStepsPermissionUseCase: requestDailyStepsPermissionUseCaseMock,
@@ -39,7 +39,7 @@ class PetViewModelTest: XCTestCase {
     }
     
     @MainActor func testThatPetIsReturned_When_PetViewModelHasBeenInitialized() {
-        let petMock = Pet(name: "nameMock", level: Level())
+        let petMock = Pet(name: "nameMock", rol: Swordman(), level: Level())
         
         XCTAssertEqual(petMock, sut.pet as! Pet)
     }

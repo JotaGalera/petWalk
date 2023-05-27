@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Pets: AutoMockable {
+public protocol Pets: AutoMockable {
     var name: String { get }
     var stats: Stats { get }
     var level: Level { get }

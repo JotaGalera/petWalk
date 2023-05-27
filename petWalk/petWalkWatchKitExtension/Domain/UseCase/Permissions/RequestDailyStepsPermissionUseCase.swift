@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RequestDailyStepsPermissionUseCase: AutoMockable {
+public protocol RequestDailyStepsPermissionUseCase: AutoMockable {
     func execute() async throws -> Bool
 }
 

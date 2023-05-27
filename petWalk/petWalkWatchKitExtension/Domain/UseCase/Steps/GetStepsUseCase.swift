@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol GetStepsUseCase: AutoMockable {
+public protocol GetStepsUseCase: AutoMockable {
     func execute() async throws -> Int
 }
 

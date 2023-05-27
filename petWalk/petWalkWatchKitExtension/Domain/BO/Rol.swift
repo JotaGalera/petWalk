@@ -26,7 +26,7 @@ struct RolFactory {
     }
 }
 
-protocol Rol: AutoMockable {
+public protocol Rol: AutoMockable {
     var classname: String { get }
     var images: [String] { get }
 }
