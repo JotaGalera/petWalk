@@ -50,7 +50,6 @@ struct SecureQuestionView: View {
                 .padding()
             }
         }
-        .navigationBarHidden(true)
     }
 }
 

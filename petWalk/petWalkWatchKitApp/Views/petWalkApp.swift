@@ -12,9 +12,7 @@ struct petWalkApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                SetupPetRolViewFactory().make()
-            }
+            SetupPetRolViewFactory().make()
         }
     }
 }
